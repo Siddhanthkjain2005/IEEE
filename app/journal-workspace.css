@@ -1,0 +1,280 @@
+/* Evidence desk — a photographic workspace within the field journal. */
+body .mc-top-metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin: 0 0 42px; border-top: 1px solid var(--journal-line); border-bottom: 1px solid var(--journal-line); }
+body .mc-metric { min-height: 104px; padding: 19px 23px 16px; background: transparent; border: 0; border-right: 1px solid var(--journal-line); border-radius: 0; box-shadow: none; overflow: visible; }
+body .mc-metric:first-child { padding-left: 3px; }
+body .mc-metric:last-child { border: 0; }
+body .mc-metric::before, body .mc-metric::after, body .mc-metric .mc-metric-trace { display: none; }
+body .mc-metric-label { color: #5f6b57; font: 500 10px var(--font-ui); letter-spacing: 0; gap: 7px; }
+body .mc-metric-label svg { color: #5c6c53; width: 13px; height: 13px; }
+body .mc-metric > div:nth-child(2) { margin: 8px 0 3px; }
+body .mc-metric strong { color: #345438; font: 400 37px/.95 var(--font-display); letter-spacing: -1px; }
+body .mc-metric small { color: #606b5a; font-size: 12px; }
+body .mc-workspace-title { margin: 0 0 25px; align-items: center; }
+body .mc-workspace-title h2 { color: var(--journal-ink); font: 400 clamp(32px, 3.2vw, 45px)/1.1 var(--font-display); margin-top: 10px; letter-spacing: -.025em; }
+body .mc-workspace-title .rs-trigger { background: none; color: #466443; border: 1px solid #bccab5; border-radius: 5px; min-height: 41px; font-size: 12px; padding: 10px 13px; box-shadow: none; }
+body .mc-workspace-title .rs-trigger:hover { background: #e7ecde; }
+body .mc-command-bar { background: var(--journal-surface); border: 1px solid var(--journal-line); border-radius: 5px; padding: 8px 17px; margin-bottom: 18px; min-height: 57px; }
+body .mc-command-bar > label { color: #5d6d57; width: 52%; }
+body .mc-command-bar input { background: transparent; color: var(--journal-ink); font-size: 12px; min-height: 38px; }
+body .mc-command-bar input::placeholder { color: #606a5a; }
+body .mc-command-bar kbd { border-color: #d7dfcf; color: #5e6a56; background: #f4f5ed; font-size: 12px; }
+body .mc-capabilities { font-size: 12px; color: #5e6b55; gap: 14px; }
+body .mc-capabilities .ready { background: #729063; }
+body .mc-capabilities .idle { background: #acaa91; }
+body .mc-workbench, body .mc-workbench.is-map { display: grid; grid-template-columns: 205px minmax(0, 1fr); gap: 18px; align-items: start; }
+body :is(.mc-source-panel, .mc-main-panel, .mc-inspector) { background: var(--journal-surface); color: var(--journal-ink); border: 1px solid var(--journal-line); border-radius: 6px; box-shadow: none; }
+body .mc-panel-heading { min-height: 49px; padding: 15px 17px; color: #5d6b56; border-color: var(--journal-line); background: none; font: 9px/1.5 var(--mc-mono); letter-spacing: 1px; }
+body .mc-panel-heading > span:first-child { font-size: inherit; }
+body .mc-panel-heading > b { background: #e4ebdb; color: #4a7047; padding: 3px 6px; font-size: 12px; }
+body .mc-scope-buttons { padding: 10px 10px 8px; }
+body .mc-scope-buttons button { color: #606c58; min-height: 33px; font-size: 12px; border-radius: 3px; }
+body .mc-scope-buttons button[aria-pressed="true"] { color: #365a39; background: #e9efdf; border-color: #c9d6ba; }
+body .mc-source-list { max-height: 720px; padding: 8px 9px; scrollbar-color: #b4c2a7 transparent; }
+body .mc-source-card { padding: 8px; display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 9px; border-radius: 4px; margin: 0 0 4px; background: transparent; border: 1px solid transparent; box-shadow: none; }
+body .mc-source-card.selected { background: #eaf0e2; border-color: #cedbbf; box-shadow: none; }
+body .mc-source-card:hover { border-color: #b8c9a8; }
+body .mc-source-card strong { color: #35513b; font-size: 12px; font-weight: 600; }
+body .mc-source-card small { color: #5f6a58; font-size: 12px; line-height: 1.5; }
+body .mc-source-card > div:last-child { padding: 0; min-width: 0; }
+body .mc-source-thumbnail { height: 53px; border-radius: 3px; background: #1d362b; }
+body .mc-source-thumbnail > span { display: none; }
+body .mc-source-type { color: #5e6b54; font-size: 12px; margin-top: 5px; }
+body .mc-source-type > i { background: #8ca277; }
+body .mc-source-footer { padding: 16px; background: none; color: #576f4e; border-color: var(--journal-line); }
+body .mc-source-footer p { color: #5f6a58; font-size: 12px; line-height: 1.85; }
+body .mc-source-empty { color: var(--journal-muted); font-size: 12px; }
+body .mc-text-button { color: #496f4c; font-size: 12px; }
+body .mc-text-button:hover { color: #284b2e; }
+body .mc-view-tabs { background: #eff2e8; border-color: var(--journal-line); padding: 0 12px; gap: 9px; }
+body .mc-view-tabs button { min-height: 50px; padding: 13px 9px; font-size: 12px; color: #5f6b59; }
+body .mc-view-tabs button[aria-pressed="true"] { color: #254a34; background: none; box-shadow: inset 0 -2px #5d8056; }
+body .mc-canvas-heading { padding: 22px 25px 19px; }
+body .mc-canvas-heading h2 { color: var(--journal-ink); font: 400 clamp(27px, 2.5vw, 37px)/1.15 var(--font-display); letter-spacing: -.025em; margin-top: 8px; }
+body .mc-chip, body .mc-chip.violet { color: #5b6e49; border-color: #d1d9c4; background: #f0f2e7; border-radius: 3px; font-size: 10px; }
+body .mc-canvas-heading .mc-chip { white-space: normal; text-align: center; }
+body .pi-tools { background: #f4f5ed; border-color: var(--journal-line); color: #5e6c55; padding: 8px 13px; }
+body .pi-tool-group button { color: #5e6d56; border-color: #d2dcc8; background: #fffdf8; border-radius: 3px; }
+body .pi-tool-group button[aria-pressed="true"] { color: #244e32; background: #e7eddd; border-color: #a6b99b; }
+body .pi-tool-group > span, body .pi-tool-group label { color: #5e6d5a; }
+body .pi-stage { background: #142f28; min-height: 350px; }
+body .pi-caption { background: #19372d; color: #b8c8ad; padding: 12px 18px; }
+body .pi-caption .mc-text-button { color: #d3dfc5; }
+body .pi-ai-key { background: #eeeede; border-color: #d5d6b9; color: #6b6a46; }
+body .pi-ai-key small { color: #696a57; }
+body .pi-note-detail, body .pi-note-form { color: #35503b; background: #edf2e3; border-color: #cbd9c0; border-radius: 5px; }
+body .pi-note-detail p, body .pi-note-form label { color: #5b6d52; }
+body .mc-frame-attribution { border-color: var(--journal-line); background: #f4f5ed; color: #586d4e; padding: 14px 22px; }
+body .mc-frame-attribution a, body .mc-frame-attribution strong { color: #4d6944; font-size: 12px; }
+body .mc-frame-attribution span { color: #5f6a58; font-size: 12px; }
+body .mc-start-review { padding: 26px; border-color: var(--journal-line); background: #edf0e4; }
+body .mc-start-review h3 { color: #365339; font-size: 16px; margin: 8px 0; }
+body .mc-start-review p { color: #5f6b58; font-size: 12px; }
+body .mc-button { background: var(--journal-surface); border-color: #c2d0b6; color: #36543c; border-radius: 5px; min-height: 42px; box-shadow: none; font-size: 12px; }
+body .mc-button:hover { background: #e7ecdf; border-color: #9db38e; color: #1c442e; }
+body .mc-button.accent { background: #234b3e; color: #fafbf2; border-color: #234b3e; box-shadow: none; }
+body .mc-button.accent:hover { background: #34604b; color: #fafbf2; }
+body .mc-inspector { grid-column: 1/-1; display: grid; grid-template-columns: 1fr 1fr 1.25fr; padding: 0; border-radius: 5px; }
+body .mc-inspector > .mc-panel-heading { grid-column: 1/-1; }
+body .mc-inspector-source { padding: 24px; border: 0; border-right: 1px solid var(--journal-line); }
+body .mc-inspector-source h2 { color: var(--journal-ink); font: 400 30px/1.1 var(--font-display); }
+body .mc-inspector-source > p { color: #5e6a55; }
+body .mc-completeness { border: 0; background: transparent; padding: 20px; }
+body .mc-completeness h3 { color: #395d3d; font-size: 12px; }
+body .mc-completeness p { color: #5f6a56; font-size: 12px; }
+body .mc-score-ring { width: 81px; height: 81px; }
+body .mc-score-ring .ring-track { stroke: #e1e7d8; }
+body .mc-score-ring .ring-value { stroke: #709263; }
+body .mc-score-ring .score-value { fill: #345c3d; }
+body .mc-score-ring .score-unit { fill: #829473; }
+body .mc-inspector-note { padding: 24px; border: 0; border-left: 1px solid var(--journal-line); grid-column: 3; grid-row: 2/4; }
+body .mc-inspector-note p { color: #5f6b56; font-size: 12px; }
+body .mc-inspector-disclosure { grid-column: 1/3; border-top: 1px solid var(--journal-line); }
+body .mc-inspector-disclosure:last-child { grid-column: 1/-1; }
+body .mc-disclosure > summary, body .mc-inspector-disclosure > summary { color: #4f6845; font-size: 12px; border-color: var(--journal-line); padding: 17px 22px; }
+body .mc-disclosure > summary > small { color: #616959; }
+body .mc-disclosure > summary::after, body .mc-inspector-disclosure > summary::after { color: #5a6d4e; }
+body .mc-hash { color: #5b6e51; }
+body .mc-hash code, body .mc-inspector-limit { color: #606b57; }
+body .mc-signal-list { border-color: var(--journal-line); }
+body .mc-signal-list > div { color: #5e6a56; font-size: 12px; }
+body .mc-signal-list .signal-yes { color: #417146; }.signal-no { color: #7a6339; }
+body .mc-next-actions { background: #f7f7ee; border-color: var(--journal-line); border-radius: 5px; }
+body .mc-next-actions .mc-bottom-grid > section { background: transparent; border-color: var(--journal-line); }
+body .mc-next-actions .mc-bottom-grid > section + section { border-color: var(--journal-line); }
+body .mc-mini-signals span, body .mc-mini-signals b { color: #536c45; }
+body .mc-mini-signals small { color: #5f6c52; }
+body .mc-mini-signals > div > div { background: #dde5d3; }
+body .mc-footnote { color: #5e6b56; font-size: 12px; }
+body .mc-statusbar { color: #5e6d56; font-size: 10px; border-top: 1px solid var(--journal-line); margin-top: 26px; padding-top: 20px; }
+body .mc-status-dot { background: #809d6a; box-shadow: none; }
+body .mc-empty { color: #576e4d; }
+body .mc-empty h3 { color: #37593b; }
+body .mc-empty p { color: #606c58; }
+body .mission-control.is-focused .mc-workbench { grid-template-columns: 1fr; }
+body .mission-control.is-focused :is(.mc-source-panel, .mc-inspector) { display: none; }
+/* Comparison and source flow have a dark, quiet inspection stage, and paper controls. */
+body .compare-selectors label, body .compare-selectors .mc-kicker { color: #5c6c53; }
+body .compare-selectors select { color: #37543a; background: #f8faf1; border-color: #cedbc0; border-radius: 4px; }
+body .compare-stage { background: #132e28; }
+body .compare-toolbar, body .compare-credits { background: #fffdf8; border-color: var(--journal-line); }
+body .compare-toolbar button { background: #eaf0e1; color: #42603d; border-color: #c7d7bb; border-radius: 4px; }
+body .compare-credits strong, body .compare-credits a { color: #3d633e; }
+body .compare-credits span:not(.mc-kicker), body .compare-credits p { color: #5f6c56; }
+body .evidence-flow-console { background: #18382e; color: #dce7d1; }
+body .evidence-flow-console .mc-kicker, body .evidence-flow-console .mc-footnote { color: #b6c8a5; }
+body .flow-scene { background: #16342c; }
+body .flow-node { color: #e2ead8; background: #254438; border-color: #5c7354; border-radius: 5px; box-shadow: none; }
+body .flow-node b { color: #e2ead8; }
+body .flow-node small { color: #b6c5a6; }
+body .flow-node.flow-ai { background: #41462f; border-color: #929877; }
+body .flow-node.flow-human { background: #33553a; border-color: #7ea471; }
+body .flow-center .flow-node { background: #2f4d3a; color: #eff1df; }
+body .flow-center > span { color: #adbf9a; }
+body .flow-motion-toggle { background: #294734; border-color: #729261; color: #d6e4c6; }
+body .replay-main, body .evidence-replay { background: #f1f4e9; color: #5a6d4e; border-color: #ccd8bf; }
+body .replay-event h3, body .replay-event p { color: #526a47; }
+body .replay-event > span, body .replay-step button { color: #5f6d55; }
+body .replay-play { color: #e8efdc; background: #3b6242; border-color: #72945e; }
+/* Geographic context — true geography, with an uncluttered source dossier. */
+body .geographic-evidence { background: var(--journal-surface); color: var(--journal-ink); border: 1px solid var(--journal-line); border-radius: 6px; box-shadow: none; }
+body .geo-heading { background: var(--journal-surface); color: var(--journal-ink); border-color: var(--journal-line); padding: 27px; }
+body .geo-heading h2 { color: var(--journal-ink); }
+body .geo-heading .geo-kicker { color: #5e6d54; }
+body .geo-heading > div > p:last-child { color: #5f6d56; }
+body .geo-totals { background: #eef2e6; border-color: #d4dfc9; border-radius: 5px; box-shadow: none; padding: 17px 20px; }
+body .geo-totals strong { color: #4e7043; font-size: 38px; }
+body .geo-totals span { color: #5e6d53; font-size: 12px; }
+body .geo-layout { grid-template-columns: minmax(0, 1.6fr) minmax(260px, .9fr); gap: 0; }
+body .geo-stage, body .geo-stage[data-projection="globe"] { background: #122c27; border-radius: 0; }
+body .geo-map { background: #122c27; }
+body .geo-map-status { background: #18342b; color: #bbcca8; border-color: #496541; }
+body .geo-legend { color: #5a6c50; background: #edf2e6; border-color: #d3dfc7; }
+body .geo-index { background: #fffdf8; border-color: var(--journal-line); }
+body .geo-index :is(h3, h4, strong) { color: #3d623d; }
+body .geo-index > p, body .geo-index small { color: #5d6c52; }
+body .geo-record-list button { color: #496840; background: #f2f5e9; border-color: #d3dfc8; border-radius: 4px; }
+body .geo-record-list button[aria-pressed="true"] { background: #e3edda; border-color: #8fae7c; }
+body .geo-record-list span, body .geo-record-list small { color: #5e6c52; }
+body .geographic-evidence .geo-dossier { border-color: #d0ddc3; background: #eef4e4; color: #45653a; border-radius: 5px; box-shadow: none; }
+body .geographic-evidence .geo-dossier h3, body .geo-dossier strong { color: #315735; }
+body .geographic-evidence .geo-dossier p, body .geographic-evidence .geo-dossier small, body .geo-dossier dt { color: #526556; }
+body .geo-dossier dd { color: #4b6942; }
+body .geographic-evidence .geo-dossier blockquote { color: #365243; border-color: #8aa37b; }
+body .geographic-evidence .geo-metadata .geo-coordinate { color: #45653a; }
+body .geo-projection-switch { background: #eff3e7; color: #4b6941; border-color: #d5dfc7; border-radius: 5px; margin: 14px 18px; }
+body .geo-projection-switch small { color: #5e6c56; }
+body .geo-projection-switch > button { background: #fafcf3; color: #547047; border-color: #c5d7b7; border-radius: 4px; }
+body .geo-projection-switch > button[aria-pressed="true"] { background: #365c3d; color: #f2f6e8; border-color: #365c3d; }
+body .geo-context-controls { background: #fafbf3; border-color: #d9e1d1; border-radius: 5px; }
+body .geo-basemap-switch button { color: #586f4c; background: #eff3e7; border-color: #d1dfc4; }
+body .geo-basemap-switch button[aria-pressed="true"] { color: #f0f5e6; background: #3d6743; border-color: #3d6743; }
+body .geo-context-controls p, body .geo-context-controls small { color: #5e6d54; }
+body .geographic-evidence .geo-date-controls input { color-scheme: light; background: #f9fbf1; color: #4b6740; border-color: #c4d4b7; }
+body .geographic-evidence .geo-date-controls label, body .geographic-evidence .geo-date-controls button { color: #586e46; }
+body .geographic-evidence .geo-satellite-source { background: #f1f4e9; color: #527145; border-color: #d4e0c8; padding: 24px; }
+body .geographic-evidence .geo-satellite-title h3 { color: #416339; }
+body .geographic-evidence .geo-satellite-title :is(a, .geo-kicker) { color: #546e41; }
+body .geographic-evidence .geo-satellite-source dl { background: #fffdf8; border-color: #d4e0c9; border-radius: 4px; }
+body .geographic-evidence .geo-satellite-source dt { color: #5b6b50; }
+body .geographic-evidence .geo-satellite-source dd { color: #45633c; }
+body .geographic-evidence .geo-satellite-source > p { color: #5a6b55; }
+body .geographic-evidence .geo-research-context { background: #f3f6eb; color: #43643e; border-color: #d5e2c8; border-radius: 4px; margin: 20px; padding: 22px; }
+body .geographic-evidence .geo-research-context h3 { color: #416439; }
+body .geographic-evidence .geo-research-context p:not(.geo-kicker) { color: #5b6b54; }
+body .geographic-evidence .geo-research-links a { background: #e6eedc; color: #4c6f42; border-color: #c9dabc; border-radius: 4px; box-shadow: none; }
+body .geographic-evidence .geo-research-links small { color: #596e50; }
+body .eu-place-selector > button { background: #eff3e7; color: #456840; border-color: #d2dfc5; border-radius: 5px; }
+body .eu-place-selector > button[aria-pressed="true"] { background: #dfe9d4; border-color: #93ad80; }
+body .eu-place-selector strong { color: #436b3c; }
+body .eu-place-selector small { color: #5e6d52; }
+body .eu-context { background: #f0f3e7; color: #576d4c; border-color: #d2dfc4; border-radius: 5px; }
+body .eu-context :is(h2,h3,strong) { color: #44663c; }
+body .eu-context p, body .eu-context small { color: #5c6d56; }
+body .eu-context .eu-analysis-card { background: #fffdf8; border-color: #cfdcbf; }
+body .mc-disclosure .eu-context { background: #f2f5ea; }
+/* River Atlas dialog — an editorial contact sheet and source reading room. */
+body .river-no-media p { color: var(--journal-muted); }
+body .rs-dialog { background: #f5f2ea; color: #183b32; border-color: #ced9c5; border-radius: 8px; }
+body .rs-overlay { background: #162f25a1; backdrop-filter: blur(5px); }
+body .rs-header, body .rs-footer { background: #f5f2ea; border-color: #d5decf; }
+body .rs-header h2 { color: #234635; }
+body .rs-header p, body .rs-footer p { color: #5e6c57; }
+body .rs-close { background: #e8edde; color: #4b7145; border-color: #d1dec5; border-radius: 4px; }
+body .rs-city-nav { background: #efefe4; border-color: #d5dfc9; }
+body .rs-city-nav button { color: #5c6d56; border-color: #d5dfc9; }
+body .rs-city-nav button[aria-pressed="true"] { color: #315b35; background: #e3ecd8; box-shadow: inset 0 -2px #708e5d; }
+body .rs-city-nav button strong { color: #315935; }
+body .rs-city-nav button small, body .rs-city-nav button > span { color: #5c6d53; }
+body .rs-frame { background: #122e25; border-color: #385337; border-radius: 4px; }
+body .rs-photo-caption h3 { color: #375c3c; }
+body .rs-photo-caption :is(p, small, time) { color: #5c6b52; }
+body .rs-photo-caption a { color: #526e45; }
+body .rs-filmstrip button { background: #e8eedc; border-color: #d1ddc4; border-radius: 3px; }
+body .rs-filmstrip button[aria-pressed="true"] { border-color: #4c7343; }
+body .rs-filmstrip button span { background: #18372be3; color: #dbe4ce; }
+body .rs-chapters { border-color: #d4dfc8; }
+body .rs-chapters button { color: #606b54; border-color: #d4dfc8; }
+body .rs-chapters button[aria-pressed="true"] { color: #3e6438; background: #e8eddd; }
+body .rs-chapter h2, body .rs-chapter h3 { color: #355a37; }
+body .rs-chapter > p, body .rs-chapter .rs-limit { color: #5b6b54; }
+body .rs-fact { border-color: #d2dfc4; }
+body .rs-fact span { color: #5c6b50; }
+body .rs-fact strong { color: #4b7041; }
+body .rs-note, body .rs-findings > div { background: #edf2e3; color: #566e47; border-color: #d2dfc3; border-radius: 4px; }
+body .rs-findings h3, body .rs-findings strong { color: #506e43; }
+body .rs-workflow { background: #e2ecda; color: #507044; border-color: #b7ceaa; border-radius: 4px; }
+body .rs-inspect { background: #2e553b; color: #f2f5e6; border-color: #2e553b; border-radius: 4px; }
+body .rs-official { color: #586f46; }
+body .rs-footer button { background: #eef2e3; color: #526f45; border-color: #c9d8bc; border-radius: 4px; }
+body .rs-footer b { color: #4d6b42; }
+@media (max-width: 1200px) { body .mc-workbench, body .mc-workbench.is-map { grid-template-columns: 185px minmax(0, 1fr); }body .mc-view-tabs { gap: 2px; padding-inline: 6px; }body .mc-view-tabs button { padding-inline: 8px; font-size: 12px; }body .mc-capabilities > span:last-child { display: none; }body .geo-layout { grid-template-columns: minmax(0, 1fr); }body .geo-index { border-top: 1px solid var(--journal-line); } }
+@media (max-width: 850px) { body .mc-workbench, body .mc-workbench.is-map { grid-template-columns: minmax(0, 1fr); gap: 15px; }body .mc-source-panel { order: 2; }body .mc-main-panel { order: 1; }body .mc-inspector { order: 3; grid-template-columns: 1fr 1fr; }body .mc-inspector-note { grid-column: 1/-1; grid-row: auto; border: 0; border-top: 1px solid var(--journal-line); }body .mc-inspector-disclosure { grid-column: 1/-1; }body .mc-source-list { display: flex; gap: 8px; max-height: none; padding: 10px 13px 14px; overflow-x: auto; }body .mc-source-card { grid-template-columns: 52px minmax(0,1fr); flex: 0 0 190px; margin: 0; padding: 8px; }body .mc-source-footer { display: none; }body .mc-command-bar > label { width: 100%; }body .mc-command-bar { gap: 6px; }body .mc-capabilities { padding: 0 0 3px; }body .mc-completeness { border-left: 1px solid var(--journal-line); }body .mc-inspector-source { border: 0; } }
+@media (max-width: 620px) { body .mc-top-metrics { grid-template-columns: repeat(2,minmax(0,1fr)); margin-bottom: 29px; }body .mc-metric { min-height: 98px; padding: 17px 13px; }body .mc-metric:first-child { padding-left: 13px; }body .mc-metric:nth-child(2) { border-right: 0; }body .mc-metric:nth-child(-n+2) { border-bottom: 1px solid var(--journal-line); }body .mc-metric-label { font-size: 12px; }body .mc-metric strong { font-size: 33px; }body .mc-workspace-title h2 { font-size: 35px; }body .mc-view-tabs { padding: 0 5px; gap: 0; overflow-x: auto; }body .mc-view-tabs button { font-size: 12px; padding: 11px 7px; min-height: 44px; gap: 5px; }body .mc-view-tabs button svg { width: 13px; }body .mc-canvas-heading { padding: 20px 17px; }body .mc-canvas-heading h2 { font-size: 27px; }body .mc-canvas-heading .mc-chip { font-size: 10px; max-width: 75px; }body .pi-stage { min-height: 240px; }body .mc-inspector { display: block; }body .mc-inspector-source, body .mc-completeness, body .mc-inspector-note { padding: 21px; border: 0; border-bottom: 1px solid var(--journal-line); }body .mc-start-review { padding: 22px 18px; flex-direction: column; align-items: stretch; }body .mc-disclosure > summary { padding: 16px; }body .mc-capabilities { gap: 14px; font-size: 12px; }body .mc-statusbar { font-size: 10px; line-height: 1.9; }body .geo-heading { padding: 22px 18px; }body .geo-heading h2 { font-size: 35px; }body .geo-projection-switch { padding: 14px; margin: 14px; }body .geographic-evidence .geo-research-context { margin: 14px; padding: 17px; } }
+/* Context sources use the same paper reader as their retained records. */
+body .pi-tools output { color: var(--journal-muted); font-size: 11px; }
+body .eu-place-selector { background: #edf0e6; border-color: var(--journal-line); }
+body .eu-place-selector > button { box-shadow: none; }
+body .eu-place-selector > button small { color: var(--journal-muted); }
+body .eu-context .eu-archive { background: var(--journal-surface); border: 1px solid var(--journal-line); border-radius: 5px; box-shadow: none; margin-top: 0; }
+body .eu-context .eu-archive > summary { color: #426b55; border-color: var(--journal-line); }
+body .eu-context .eu-archive summary strong { color: var(--journal-ink); }
+body .eu-context .eu-archive summary small, body .eu-context .eu-archive-anchor p, body .eu-context .eu-archive-anchor small { color: var(--journal-muted); font-size: 12px; }
+body .eu-context .eu-archive-chip { color: #4c6d53; background: #eaf0e2; border-color: #bdcbb5; border-radius: 3px; }
+body .eu-context .eu-archive-anchor h4 { color: var(--journal-ink); font-family: var(--font-display); }
+body .eu-context .eu-archive-anchor img { border-radius: 4px; box-shadow: none; }
+body .eu-context .eu-chart-controls > div { border-color: var(--journal-line); border-radius: 4px; }
+body .eu-context .eu-chart-controls button { color: var(--journal-muted); min-height: 44px; }
+body .eu-context .eu-chart-controls button[aria-pressed="true"] { background: #234b3e; color: #fffdf8; }
+body .eu-context .eu-archive-toolbar > span { color: #526556; font-size: 12px; }
+body .eu-context .eu-quiet-button { background: #edf2e6; color: #3d614b; border-color: #c4d1bb; border-radius: 4px; box-shadow: none; }
+body .eu-context .eu-weather-stats { background: #eff3e7; border-color: var(--journal-line); border-radius: 4px; box-shadow: none; }
+body .eu-context .eu-weather-stats > div + div { border-color: var(--journal-line); }
+body .eu-context .eu-weather-stats strong { color: var(--journal-ink); }
+body .eu-context .eu-weather-stats :is(span,small) { color: var(--journal-muted); font-size: 12px; }
+body .eu-context .eu-weather-stats svg { color: #52795a; }
+body .eu-context .eu-weather-chart .recharts-cartesian-axis-tick text { fill: #526556; }
+body .eu-context .eu-weather-chart .recharts-reference-line text { fill: #795821; }
+body .eu-context .eu-weather-chart .recharts-cartesian-grid line { stroke: #d8ded3; }
+body .eu-context .eu-data-table { background: #f6f6ed; color: #3d5c48; border-color: var(--journal-line); border-radius: 4px; font-size: 12px; }
+body .eu-context .eu-data-table summary { min-height: 44px; display: flex; align-items: center; }
+body .eu-context .eu-data-table caption { color: var(--journal-muted); }
+body .eu-context .eu-data-table :is(th,td) { border-color: var(--journal-line); }
+body .eu-context .eu-archive .eu-source-day { background: #efe7d2; color: #70562b; }
+body .eu-context .eu-weather-provenance, body .eu-context .eu-archive-links a { color: #526556; }
+body .flow-inspector { background: #1d3e31; color: #cfddc2; border-color: #405c48; }
+body .flow-inspector .mc-kicker, body .evidence-flow-console > .mc-panel-heading { color: #b6c8a5; }
+body .eu-place-selector button > span > span { color: var(--journal-muted); font-size: 12px; }
+body .geographic-evidence .geo-context-controls { background: var(--journal-surface); border-color: var(--journal-line); }
+body .geographic-evidence .geo-basemap-switch { background: #edf1e6; border-color: #ccd8c2; border-radius: 5px; }
+body .geographic-evidence .geo-basemap-switch button { color: #45633c; background: transparent; border-radius: 4px; min-height: 44px; }
+body .geographic-evidence .geo-basemap-switch button[aria-pressed="true"] { color: #fffdf8; background: #234b3e; border-color: #234b3e; box-shadow: none; }
+body .geographic-evidence .geo-context-controls > p a { color: #2d5946; text-underline-offset: 3px; }
+body .geographic-evidence .geo-context-controls > p { color: #52614b; }
+body .geographic-evidence .geo-map-viewport { position: relative; min-width: 0; width: 100%; }
+body .geographic-evidence .geo-coverage-note { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 20px; padding: 16px 24px; background: #f3eedf; border-bottom: 1px solid var(--journal-line); color: #584b35; }
+body .geographic-evidence .geo-coverage-note p { flex: 1 1 260px; margin: 0; font-size: 12px; line-height: 1.7; }
+body .geographic-evidence .geo-coverage-note button { min-height: 44px; padding: 10px 14px; border: 1px solid #b8c9b7; border-radius: 4px; background: #fffdf8; color: #234b3e; font: inherit; font-size: 12px; cursor: pointer; }
+body .geographic-evidence .geo-imagery-label { position: absolute; bottom: 40px; left: 16px; z-index: 2; max-width: calc(100% - 32px); padding: 7px 10px; border: 1px solid #7ca79870; border-radius: 4px; background: #122c27ed; color: #e6eee7; font-size: 11px; line-height: 1.6; pointer-events: none; }
+@media (max-width: 560px) { body .geographic-evidence .geo-basemap-switch { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); } body .geographic-evidence .geo-coverage-note { padding: 14px; } }
+body .eu-context .eu-weather-chart .recharts-bar-rectangle path { fill: #357b6d; }
+body .eu-context .eu-weather-chart .recharts-area-curve { stroke: #357b6d; }

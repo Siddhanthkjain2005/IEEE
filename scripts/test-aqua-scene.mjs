@@ -11,11 +11,12 @@ const compiled = ts.transpileModule(await readFile("lib/aqua-scene.ts", "utf8"),
 }).outputText;
 function fixture({ failSize = false, failRender = false, width = 620, height = 420 } = {}) {
   const host = new EventTarget();
-  Object.assign(host, { clientWidth: width, clientHeight: height, children: [], appendChild(child) { this.children.push(child); }, getBoundingClientRect: () => ({ left: 0, top: 0, width, height }) });
+  Object.assign(host, { clientWidth: width, clientHeight: height, dataset: {}, children: [], appendChild(child) { this.children.push(child); }, getBoundingClientRect: () => ({ left: 0, top: 0, width, height }) });
   const state = { renders: 0, disposes: 0, losses: 0, failures: 0, disconnected: 0 };
   class Renderer {
     constructor() {
       state.renderer = this;
+      this.shadowMap = {};
       this.domElement = new EventTarget();
       this.domElement.setAttribute = () => {};
       this.domElement.remove = () => host.children.splice(0);
@@ -49,7 +50,7 @@ test("Scene initializes one capped-resolution frame with finite real geometry", 
 });
 test("Portrait and zero-size mounts keep a finite camera and bounded drawing size", () => {
   const { host, state, create } = fixture({ width: 280, height: 310 }); const control = create();
-  assert.ok(state.camera.right >= 3.55); assert.ok(state.camera.top >= 3.1);
+  assert.equal(state.camera.isPerspectiveCamera, true); assert.ok(state.camera.position.length() > 10);
   host.clientWidth = 0; host.clientHeight = 0; state.resize();
   assert.deepEqual(state.size, [1, 1]); assert.ok(Number.isFinite(state.camera.projectionMatrix.elements[0])); control.dispose();
 });
@@ -82,5 +83,26 @@ test("Context loss switches to fallback and cannot restart the failed renderer",
 test("Rendering and initialization failures release or stop the affected resource", () => {
   const first = fixture({ failRender: true }); const control = first.create(); assert.equal(first.state.failures, 1); control.setRunning(true); assert.equal(first.state.loop, null); control.dispose();
   const second = fixture({ failSize: true }); assert.throws(second.create, /initialization failure/); assert.equal(second.state.disposes, 1); assert.equal(second.state.disconnected, 1); assert.equal(second.host.children.length, 0);
+});
+test("Manual rotation and all three perspectives work while decorative motion is paused", () => {
+  const { state, create } = fixture(); const control = create(), sculpture = state.scene.children[0];
+  assert.equal(state.renderer.shadowMap.enabled, true);
+  assert.equal(state.renderer.shadowMap.type, THREE.PCFShadowMap);
+  control.setRotation(90); assert.ok(Math.abs(sculpture.rotation.y - Math.PI / 2) < 1e-9);
+  const original = sculpture.children.filter(node => node.geometry?.type === "ExtrudeGeometry").map(node => node.position.y);
+  control.setView("layers"); const separated = sculpture.children.filter(node => node.geometry?.type === "ExtrudeGeometry").map(node => node.position.y);
+  assert.ok(separated[0] < original[0] && separated[2] < original[2]); assert.equal(separated[3], original[3]);
+  control.setView("overhead"); assert.ok(state.camera.position.y > Math.abs(state.camera.position.z) * 10);
+  control.setView("perspective"); assert.deepEqual(sculpture.children.filter(node => node.geometry?.type === "ExtrudeGeometry").map(node => node.position.y), original);
+  assert.equal(state.loop, undefined); control.dispose();
+});
+test("Dragging rotates real geometry without needing the animation loop or changing evidence", () => {
+  const { host, state, create } = fixture(); const control = create();
+  const down = new Event("pointerdown"); Object.assign(down,{button:0,pointerId:1,clientX:100}); host.dispatchEvent(down);
+  const move = new Event("pointermove"); Object.assign(move,{pointerId:1,pointerType:"touch",clientX:255}); host.dispatchEvent(move);
+  assert.equal(host.dataset.dragging, "true"); assert.ok(Math.abs(state.scene.children[0].rotation.y - Math.PI / 3) < 1e-9);
+  host.dispatchEvent(new Event("pointercancel")); assert.equal(host.dataset.dragging, undefined);
+  control.setRotation(Infinity); assert.ok(Number.isFinite(state.scene.children[0].rotation.y));
+  control.dispose(); host.dispatchEvent(move); assert.equal(host.children.length,0);
 });
 console.log(`${count}/${count} 3D lifecycle checks passed (GPU output not exercised).`);

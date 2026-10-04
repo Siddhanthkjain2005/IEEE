@@ -1,4 +1,10 @@
-# Current expansion completion — 2026-10-03
+# AquaLens delivery status — 2026-10-05
+
+The frontend rebuild and source-based geographic river explorer are implemented and publicly hosted with optional consented Groq text/photo AI. [Live showcase](https://aqualens-ruvn5g3vna-el.a.run.app/showcase) · [Source repository](https://github.com/Siddhanthkjain2005/IEEE) · [Current README](../README.md). The authored suite now has455checks. Deployment details are in GOOGLE_CLOUD_DEPLOYMENT.md; geographic verification and limitations are in RIVER_TWINS_2026-10-04.md. Real field visits, independent scientific validation, approved team details, original-code licensing, a recorded video and final competition submission remain unverified or user-owned decisions.
+
+The October3 checklist below is retained as historical context. Its old deployment, provider and test-count statements are superseded by the current README and PROJECT_CONTEXT.md.
+
+# Earlier expansion completion — 2026-10-03
 
 Visual tasks complete:39licensed source photos, standalone observatory, truthful source chronology/analytics, readable graph/cards, responsive globe, reused Atlas/compare/receipts, optional playback/reduced motion, source export and controlled offline navigation.423checks/typecheck/lint/18CSS/build and focused browser checks pass. Four supplied Groq credentials saved only locally, Gemini→Groq consented availability fallback and401-only backup recovery implemented; actual Groq text/image200. No additional key required. Nine authored example records/eight recorded AI responses remain unchanged in count;30new sources are not field visits or approvals. Device/actual human study/hosting/video/Devpost gaps below remain; no victory guarantee.
 
@@ -21,7 +27,7 @@ The /showcase route now supplies nine real, credited historical European photos 
 | Device walkthrough | Desktop + intended phone/browser, steps and actual results using the checks below. | Agent exercised production-browser workflow/maps/Lab/presentation/320–1440px layouts; see QA.md. Physical capture/voice/GPS, native OS download UI/all formats and installed offline behavior remain device checks; two isolated-browser JSON receipt downloads completed (see QA.md). |
 | Team and credit facts | Approved member names/pseudonyms, Devpost profiles/invitations, actual contributions and permission to credit. | Do not invent membership, qualifications or completed invitations. |
 | Original-code licence choice | Confirm the intended licence and copyright holder(s). MIT is an available option, not an activated licence in this repository. | Existing dependency/media licences remain separate. Public source alone is not an open-source licence; see GitHub's licensing documentation and DEPENDENCIES. |
-| Video and delivery | Actual3–5minute video link; tested judge-access URL/access instructions if hosted, otherwise describe the source/video proof-of-concept route accurately. | No live hosted demo or recorded video is verified. A live hosted URL needs authorized hosting-account access; no hosting secret should be pasted into chat. |
+| Video and delivery | An actual recorded video link and any verified competition-specific length/access requirements. | The public Cloud Run showcase and live Groq text/photo routes are verified; the extended script is prepared. No recorded video or final submission is verified. |
 | Final Devpost entry | Fill SUBMISSION_KIT with actual facts/links and retain submission confirmation. | No account/submission has been inspected. Recheck official deadline/eligibility; source register records conflicting older wording. |
 
 ## Minimum user walkthrough

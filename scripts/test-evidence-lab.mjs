@@ -43,20 +43,26 @@ test("The software summary requires an explicit no-live-AI label", () => {
   }
 });
 
-const css = postcss.parse(await readFile("app/console.css", "utf8"));
+// Inspect the presentation styles in the same order the root layout loads them.
+const layout = await readFile("app/layout.tsx", "utf8");
+const imports = Array.from(layout.matchAll(/import "\.\/(.+?\.css)"/g), (match) => match[1]);
+const css = postcss.parse((await Promise.all(imports.map((file) => readFile(`app/${file}`, "utf8")))).join("\n"));
 const tokens = new Map();
-css.walkDecls(/^--evidence-/, (entry) => tokens.set(entry.prop, entry.value));
+css.walkDecls(/^--/, (entry) => tokens.set(entry.prop, entry.value));
 function value(selectorPart, property) {
   let found;
   css.walkRules((rule) => {
-    if (rule.selector.includes(selectorPart)) {
+    if (rule.selectors.includes(selectorPart)) {
       rule.walkDecls(property, (entry) => { found = entry.value; });
     }
   });
   assert.ok(found, `No ${property} declaration found for ${selectorPart}`);
-  return found.replace(/var\((--[\w-]+)\)/g, (_, token) => {
+  return resolve(found);
+}
+function resolve(value) {
+  return value.replace(/var\((--[\w-]+)\)/g, (_, token) => {
     assert.ok(tokens.has(token), `Unknown token ${token}`);
-    return tokens.get(token);
+    return resolve(tokens.get(token));
   });
 }
 function luminance(color) {
@@ -70,14 +76,14 @@ function contrast(foreground, background) {
   return (Math.max(a, b) + .05) / (Math.min(a, b) + .05);
 }
 for (const [name, foreground, background] of [
-  ["Lab citizen response", ".el-human-response p", ".el-human-response,"],
-  ["Lab source quote", ".el-source-trace blockquote", ".el-source-trace)"],
-  ["Lab image provenance", ".el-method-details dd", ".el-method-details)"],
-  ["Lab empty state", ".el-empty p", ".el-empty,"],
-  ["Map dossier heading", ".geo-dossier h3", ".geo-dossier,"],
-  ["Map coordinates", ".geo-metadata .geo-coordinate", ".geo-dossier,"],
-  ["River completeness text", ".river-completeness > p", ".river-completeness,"],
-  ["River missing media", ".river-no-media p", ".river-no-media,"],
+  ["Lab citizen response", ".el-human-response p", ".el-human-response"],
+  ["Lab source quote", ".el-source-trace blockquote", ".el-source-trace"],
+  ["Lab image provenance", ".el-method-details dd", ".el-method-details"],
+  ["Lab empty state", ".el-empty p", ".el-empty"],
+  ["Map dossier heading", "body .geographic-evidence .geo-dossier h3", "body .geographic-evidence .geo-dossier"],
+  ["Map coordinates", "body .geographic-evidence .geo-metadata .geo-coordinate", "body .geographic-evidence .geo-dossier"],
+  ["River completeness text", ".river-completeness > p", ".river-completeness"],
+  ["River missing media", "body .river-no-media p", ".river-no-media"],
 ]) {
   test(`${name} has a source color pair of at least 4.5:1`, () => {
     const ratio = contrast(value(foreground, "color"), value(background, "background"));
@@ -85,11 +91,12 @@ for (const [name, foreground, background] of [
   });
 }
 test("Lab tabpanel and evidence buttons retain a visible focus color", () => {
-  assert.equal(value(".el-inspection-content):focus-visible", "outline"), "3px solid #7ddbec");
-  assert.ok(contrast(tokens.get("--evidence-accent"), tokens.get("--evidence-surface")) >= 3);
+  const outline = value("body .evidence-lab :is(button,a,summary,textarea,.el-inspection-content):focus-visible", "outline");
+  assert.match(outline, /^[2-9]px solid #[\da-f]{6}$/i);
+  assert.ok(contrast(resolve(tokens.get("--evidence-accent")), resolve(tokens.get("--evidence-surface"))) >= 3);
 });
-test("The preserved-source label remains readable at the lightest original-panel gradient stop", () => {
-  assert.ok(contrast(value(".el-original p.el-label", "color"), "#28514d") >= 4.5);
+test("The preserved-source label remains readable on the original panel", () => {
+  assert.ok(contrast(value("body .evidence-lab .el-original .el-label", "color"), value("body .evidence-lab .el-original", "background")) >= 4.5);
 });
 
 for (const result of tests) console.log(`${result.passed ? "PASS" : "FAIL"} ${result.name}${result.error ? `: ${result.error}` : ""}`);

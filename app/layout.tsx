@@ -15,11 +15,14 @@ import "./geographic-map.css";
 import "./european-context.css";
 import "./presentation.css";
 import "./showcase.css";
-import "./immersive.css";
-import "./review-atmosphere.css";
 import "./clarity.css";
 import "./stories.css";
+import "./journal.css";
+import "./journal-workspace.css";
+import "./journal-tools.css";
+import "./river-hero.css";
 import "./observatory.css";
+import "./river-twins.css";
 
 export const metadata: Metadata = {
   title: "AquaLens — Evidence in focus",

@@ -1,0 +1,100 @@
+/* Field Editions — an illustrated opening to the evidence workspace. */
+.river-hero {
+  display: grid; grid-template-columns: minmax(0, .94fr) minmax(0, 1.12fr); gap: 22px;
+  width: 100%; margin: 0 0 30px; padding: 0; color: #183b32;
+  isolation: isolate; font-family: var(--font-ui, "Manrope Variable", sans-serif);
+}
+.river-hero-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 32px 0 28px 3px; min-width: 0; }
+.river-eyebrow { display: flex; align-items: center; gap: 10px; color: #5b6d5e; font-size: 10px; font-weight: 700; line-height: 1.5; letter-spacing: .16em; }
+.river-edition-mark { font: 27px/1 "Instrument Serif", Georgia, serif; color: #7e6532; }
+.river-hero .river-hero-copy h1 { margin: 27px 0 23px; color: #183b32; font-family: var(--font-display, "Instrument Serif", Georgia, serif); font-size: clamp(65px, 6.8vw, 101px); font-weight: 400; line-height: .94; letter-spacing: -.044em; }
+.river-hero .river-hero-copy h1 em { color: #5e6d56; font-weight: 400; }
+.river-hero-copy > p { max-width: 34ch; margin: 0; color: #5d6a5e; font-size: 13px; line-height: 1.9; text-wrap: pretty; }
+.river-hero-actions { display: flex; align-items: flex-start; flex-wrap: wrap; gap: 14px 22px; margin-top: 28px; }
+.river-start, .river-explore { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-family: inherit; font-size: 12px; font-weight: 650; line-height: 1.4; cursor: pointer; transition: background .2s, color .2s, transform .2s; }
+.river-start { min-height: 45px; padding: 13px 17px; background: #234b3e; color: #fffdf5; border: 1px solid #234b3e; border-radius: 6px; box-shadow: 0 3px 0 #17372d0c; }
+.river-start > svg:last-child { margin-left: 10px; }
+.river-start:hover { background: #173c2f; transform: translateY(-2px); }
+.river-explore { min-height: 45px; background: transparent; color: #244737; border: 0; padding: 11px 0; text-decoration: underline; text-underline-offset: 5px; text-decoration-color: #b2ba9e; }
+.river-explore:hover { color: #7c6231; text-decoration-color: currentColor; }
+.river-workspace-note { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 30px; color: #616b5a; font-size: 12px; line-height: 1.6; }
+.river-status-dot { width: 5px; height: 5px; background: #7b9066; border-radius: 50%; margin-right: 2px; }
+.river-note-separator { color: #b6b9a8; margin: 0 3px; }
+.river-specimen { min-width: 0; display: flex; flex-direction: column; position: relative; border-radius: 12px; background: #e9ebdf; border: 1px solid #dce0d0; overflow: hidden; }
+.river-specimen-heading { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px 0; position: relative; z-index: 1; color: #5c6e53; font-size: 10px; font-weight: 700; letter-spacing: .15em; }
+.river-specimen-number { font-family: var(--font-display, Georgia, serif); font-size: 19px; font-weight: 400; font-style: italic; color: #596d4f; letter-spacing: -.01em; }
+.river-artwork { height: 340px; position: relative; min-width: 0; flex: 1; min-height: 280px; }
+.river-artwork::before { content: ""; position: absolute; width: 65%; height: 18%; left: 19%; bottom: 11%; background: #45634d20; border-radius: 50%; filter: blur(19px); transform: rotate(-14deg); pointer-events: none; }
+.river-artwork-contours { position: absolute; inset: 2% 5% 6%; background: repeating-radial-gradient(ellipse at 58% 56%, transparent 0 22px, #aab89c22 23px, transparent 24px 43px); border-radius: 50%; opacity: .8; mask-image: radial-gradient(ellipse, #000 10%, transparent 74%); pointer-events: none; }
+.river-fallback, .river-scene { position: absolute; top: -21px; left: 0; width: 100%; height: calc(100% + 18px); transition: opacity .6s; }
+.river-fallback { display: block; opacity: 1; }
+.river-scene { opacity: 0; }
+.is-three-dimensional .river-scene { cursor: grab; touch-action: pan-y; }
+.is-three-dimensional .river-scene[data-dragging="true"] { cursor: grabbing; }
+.river-scene canvas { display: block; width: 100%; height: 100%; }
+.is-three-dimensional .river-scene { opacity: 1; }
+.is-three-dimensional .river-fallback { opacity: 0; pointer-events: none; }
+.river-artwork-caption { position: absolute; bottom: 9px; left: 24px; color: #5c6d54; font-size: 10px; line-height: 1.6; }
+.river-motion-control { position: absolute; bottom: 3px; right: 17px; display: flex; align-items: center; justify-content: center; gap: 5px; min-width: 51px; min-height: 30px; padding: 6px; background: transparent; color: #586a50; border: 1px solid transparent; border-radius: 4px; font-size: 12px; cursor: pointer; }
+.river-motion-control:hover { background: #dce2cf; border-color: #bac5aa; }
+.river-still-label { position: absolute; bottom: 9px; right: 24px; color: #5c6d54; font-size: 12px; line-height: 1.6; }
+.river-workflow { position: relative; z-index: 1; padding: 0 22px 21px; }
+.river-scene-tools { padding: 0 22px 15px; position: relative; z-index: 1; }
+.river-view-buttons { display: grid; grid-template-columns: 1fr 1fr 1.4fr; gap: 4px; padding: 4px; border: 1px solid #c6ceba; border-radius: 5px; background: #dfe4d4; }
+.river-view-buttons button { min-height: 36px; border: 0; border-radius: 3px; background: transparent; color: #4d624c; padding: 6px; font: inherit; font-size: 11px; cursor: pointer; }
+.river-view-buttons button[aria-pressed="true"] { color: #fffdf8; background: #365845; box-shadow: 0 2px 4px #203d2920; }
+.river-rotation { display: flex; align-items: center; gap: 12px; margin-top: 8px; color: #52644e; font-size: 11px; }
+.river-rotation label { flex: none; }
+.river-rotation input { min-width: 0; width: 100%; height: 36px; padding: 0; accent-color: #365845; cursor: ew-resize; }
+.river-rotation button { min-width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid #b8c4aa; border-radius: 4px; background: transparent; color: #365845; cursor: pointer; }
+.river-scene-tools > p { margin: 2px 0 0; color: #52644e; font-size: 10px; line-height: 1.6; }
+.river-stage-buttons { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid #c9d1bb; border-bottom: 1px solid #c9d1bb; }
+.river-stage-buttons button { display: flex; align-items: center; gap: 7px; min-height: 46px; position: relative; padding: 8px 0; background: transparent; color: #5c6c53; border: 0; text-align: left; font-size: 12px; font-weight: 650; cursor: pointer; transition: color .2s; }
+.river-stage-buttons button::after { content: ""; position: absolute; height: 2px; background: #3d614c; left: 0; right: 15px; bottom: -1px; transform: scaleX(0); transform-origin: left; transition: transform .25s; }
+.river-stage-buttons button[aria-pressed="true"] { color: #244536; }
+.river-stage-buttons button[aria-pressed="true"]::after { transform: scaleX(1); }
+.river-stage-buttons button > span { font-size: 12px; color: #5c6d54; font-weight: 500; }
+.river-stage-buttons button > svg { margin-left: auto; margin-right: 16px; opacity: 0; transition: opacity .2s; }
+.river-stage-buttons button:hover, .river-stage-buttons button:focus-visible { color: #254935; }
+.river-stage-buttons button[aria-pressed="true"] > svg { opacity: 1; }
+.river-stage-description { display: flex; align-items: flex-start; gap: 13px; min-height: 77px; padding-top: 18px; }
+.river-stage-description > svg { flex: none; color: #596c50; margin-top: 2px; }
+.river-stage-description strong { display: block; color: #34533d; font-size: 12px; font-weight: 650; line-height: 1.6; }
+.river-stage-description p { margin: 5px 0 0; max-width: 42ch; color: #5d6c55; font-size: 12px; line-height: 1.65; text-wrap: pretty; }
+.river-hero button:focus-visible { outline: 2px solid #9b7744; outline-offset: 4px; }
+@media (min-width: 1600px) { .river-hero { gap: 46px; } .river-artwork { height: 370px; } }
+@media (min-width: 1000px) and (max-width: 1279px) { .river-hero { gap: 16px; } .river-hero .river-hero-copy h1 { font-size: 77px; } .river-hero-actions { gap: 6px; flex-direction: column; } .river-workspace-note { margin-top: 19px; max-width: 190px; } .river-note-separator { display: none; } .river-artwork { height: 315px; } .river-artwork-caption { left: 18px; max-width: 24ch; } .river-specimen-heading { padding-inline: 18px; } .river-workflow { padding-inline: 18px; } }
+@media (max-width: 900px) { .river-hero { grid-template-columns: minmax(0, .9fr) minmax(0, 1fr); gap: 16px; } .river-hero .river-hero-copy h1 { font-size: 73px; } .river-hero-copy > p { font-size: 12px; } .river-artwork { height: 306px; } .river-hero-actions { flex-direction: column; gap: 6px; margin-top: 20px; } .river-workspace-note { margin-top: 19px; } .river-note-separator, .river-workspace-note > span:last-child { display: none; } .river-specimen-heading { padding: 18px 18px 0; font-size: 10px; } .river-workflow { padding: 0 18px 17px; } .river-artwork-caption { left: 18px; max-width: 24ch; } .river-stage-buttons button { gap: 5px; font-size: 12px; } .river-stage-buttons button > svg { display: none; } .river-stage-description { min-height: 93px; gap: 10px; } }
+@media (max-width: 620px) {
+  .river-hero { grid-template-columns: minmax(0, 1fr); gap: 23px; margin-bottom: 25px; }
+  .river-hero-copy { padding: 8px 0 0; }
+  .river-eyebrow { font-size: 10px; letter-spacing: .13em; }
+  .river-hero .river-hero-copy h1 { font-size: clamp(65px, 16vw, 90px); margin: 19px 0 16px; line-height: .95; }
+  .river-hero-copy > p { max-width: 37ch; font-size: 12px; line-height: 1.8; }
+  .river-hero-actions { flex-direction: row; flex-wrap: wrap; gap: 8px 18px; margin-top: 20px; }
+  .river-start { min-height: 44px; padding: 12px 13px; font-size: 12px; gap: 8px; }
+  .river-start > svg:last-child { margin-left: 0; }
+  .river-explore { font-size: 12px; min-height: 42px; gap: 6px; }
+  .river-workspace-note { display: none; }
+  .river-specimen { border-radius: 9px; }
+  .river-specimen-heading { padding: 15px 18px 0; }
+  .river-specimen-number { font-size: 17px; }
+  .river-artwork { height: 220px; min-height: 220px; flex: none; }
+  .river-fallback, .river-scene { top: -18px; height: calc(100% + 15px); }
+  .river-artwork-caption { bottom: 7px; font-size: 10px; max-width: none; }
+  .river-motion-control { bottom: 0; right: 11px; }
+  .river-still-label { right: 18px; bottom: 7px; font-size: 12px; }
+  .river-stage-buttons button { min-height: 41px; font-size: 12px; gap: 7px; }
+  .river-stage-buttons button > svg { display: block; margin-right: 9px; }
+  .river-stage-description { min-height: 77px; padding-top: 14px; }
+  .river-stage-description > svg { width: 18px; }
+  .river-stage-description strong { font-size: 12px; }
+  .river-stage-description p { font-size: 12px; line-height: 1.6; max-width: 38ch; }
+  .river-workflow { padding-bottom: 15px; }
+  .river-scene-tools { padding: 0 18px 12px; }
+  .river-view-buttons button { min-height: 44px; font-size: 10px; }
+  .river-rotation input { height: 44px; }
+  .river-rotation button { min-width: 44px; height: 44px; }
+}
+@media (max-width: 360px) { .river-hero .river-hero-copy h1 { font-size: 63px; } .river-hero-actions { gap: 3px 12px; } .river-start { padding: 11px 12px; } .river-explore { font-size: 12px; } .river-artwork { height: 220px; min-height: 220px; } .river-artwork-caption { font-size: 10px; } }
+@media (prefers-reduced-motion: reduce) { .river-hero *, .river-hero *::after { transition: none !important; } .river-start:hover { transform: none; } }

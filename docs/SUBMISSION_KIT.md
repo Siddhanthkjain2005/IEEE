@@ -1,6 +1,6 @@
 # AquaLens — submission working copy
 
-Updated 2026-10-03. Draft only: no submission, deployment or video is established. Repository: https://github.com/kammarohan55-crypto/ieee_hackathon . Verified application-code baseline202ead3 contains the nine-photo presentation collection and current workflow. Subsequent documentation commits may exist; inspect main and PROJECT_CONTEXT.md for exact current source. Fill in actual team credits, tested judge-access URL and video link.
+Updated 2026-10-05. Draft only: no final submission or recorded video is established. Source repository: https://github.com/Siddhanthkjain2005/IEEE . Public showcase: https://aqualens-ruvn5g3vna-el.a.run.app/showcase . The deployed version includes the frontend rebuild, optional consented live Groq text/photo AI,39historical source photos,78retained weather windows and three source-based geographic river reconstructions. Inspect README.md and PROJECT_CONTEXT.md for exact current verification and limits. Fill in actual approved team credits and a recorded video link; do not treat this draft as submission confirmation.
 
 ## Positioning
 

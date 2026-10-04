@@ -25,7 +25,36 @@ export const LANDSCAPE_CONTEXT = {
   licenseUrl: "https://creativecommons.org/licenses/by/4.0/",
   attribution: '© <a href="https://esa-worldcover.org/en/data-access">ESA WorldCover project 2021</a> / Contains modified Copernicus Sentinel data (2021) processed by ESA WorldCover consortium · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>',
 } as const;
-export type GeographicBasemap = "street" | "satellite" | "landscape";
+// Static NASA reference mosaic, kept separate from requested daily imagery.
+// Verified against GIBS EPSG:3857 capabilities on 2026-10-03; no time dimension.
+export const EARTH_CONTEXT = {
+  layerId: "BlueMarble_ShadedRelief_Bathymetry",
+  sourceId: "nasa-blue-marble-reference",
+  matrixSet: "GoogleMapsCompatible_Level8",
+  maxZoom: 8, tileSize: 256,
+  sourceName: "NASA Blue Marble · August 2004",
+  documentationUrl: "https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/",
+  attribution: 'Reference imagery: <a href="https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/">NASA Blue Marble · August 2004</a> / <a href="https://nasa-gibs.github.io/gibs-api-docs/">GIBS / ESDIS</a>',
+} as const;
+export type GeographicBasemap = "earth" | "street" | "satellite" | "landscape";
+
+export function earthMapStyle(): StyleSpecification {
+  return {
+    version: 8,
+    sources: {
+      [EARTH_CONTEXT.sourceId]: {
+        type: "raster",
+        tiles: [`https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/${EARTH_CONTEXT.layerId}/default/${EARTH_CONTEXT.matrixSet}/{z}/{y}/{x}.jpeg`],
+        tileSize: EARTH_CONTEXT.tileSize, minzoom: 0, maxzoom: EARTH_CONTEXT.maxZoom,
+        attribution: EARTH_CONTEXT.attribution,
+      },
+    },
+    layers: [
+      { id: "earth-no-coverage", type: "background", paint: { "background-color": "#122c27" } },
+      { id: "earth-reference", type: "raster", source: EARTH_CONTEXT.sourceId, paint: { "raster-fade-duration": 0 } },
+    ],
+  };
+}
 
 // Verified anonymous KVP endpoint. The advertised REST template returned400.
 // TIME is a service dimension for an annual median, not a January1 capture.

@@ -19,19 +19,17 @@ import {
   Compass,
   Eye,
   Fingerprint,
-  FlaskConical,
-  Leaf,
   LoaderCircle,
   MapPin,
-  Plus,
   Search,
-  Backpack,
   ChartNoAxesCombined,
   ShieldCheck,
   Sparkles,
   Waves,
 } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent } from "@/components/ui/tabs";
+import { WorkspaceNavigation } from "./workspace-navigation";
+import { RiverTwins } from "./river-twins";
 import {
   Select,
   SelectContent,
@@ -165,6 +163,14 @@ export default function StreamCheck({ presentation = false }: { presentation?: b
   const draftEpoch = useRef(0);
   const [draftRevision, setDraftRevision] = useState(0);
   const [online, setOnline] = useState(true);
+  const [compactNavigation, setCompactNavigation] = useState(true);
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 1050px)");
+    const update = () => setCompactNavigation(media.matches);
+    update();
+    media.addEventListener("change", update);
+    return () => media.removeEventListener("change", update);
+  }, []);
   const [tab, setTab] = useState("overview"),
     [records, setRecords] = useState<Report[]>([]),
     [loaded, setLoaded] = useState(false),
@@ -374,7 +380,7 @@ export default function StreamCheck({ presentation = false }: { presentation?: b
     reviewed = records.filter((r) => r.status === "reviewed").length;
   const go = (value: string) => {
     setTab(value);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
   };
   const reset = () => {
     draftEpoch.current += 1;
@@ -578,64 +584,13 @@ export default function StreamCheck({ presentation = false }: { presentation?: b
     setField(followup.field);
   }
   return (
-    <div className="app-shell">
+    <div className="app-shell journal-app">
       <a href="#workspace-content" className="skip-link">
         Skip to workspace
       </a>
       <Toaster position="bottom-right" />
-      <header className="topbar">
-        <button
-          className="brand"
-          onClick={() => go("overview")}
-          aria-label="AquaLens overview"
-        >
-          <span className="brand-mark">
-            <Waves size={24} />
-          </span>
-          <span className="brand-wordmark">Aqua<span>Lens</span></span>
-          <span className="brand-caption">
-            RIVER EVIDENCE
-            <br />
-            HUMAN JUDGMENT
-          </span>
-        </button>
-        <div className="header-right">
-          <a className="workspace-switch" href={presentation ? "/" : "/showcase"}>{presentation ? "My observations" : "Presentation collection"}<ArrowUpRight size={14} /></a>
-          <a className="workspace-observatory-link" href={presentation ? "/visuals?collection=showcase" : "/visuals"}><ChartNoAxesCombined size={16} /> Visual observatory</a>
-          <span className="workspace-label">
-            <span className="live-dot" />{" "}
-            {presentation ? "Presentation workspace" : online ? "Local workspace" : "Offline · local rules"}
-          </span>
-          <button className="btn primary small" onClick={reset} aria-label="New observation">
-            <Plus size={17} />
-            <span className="header-action-label">New observation</span>
-            <span className="header-action-compact">Observe</span>
-          </button>
-        </div>
-      </header>
-      <Tabs value={tab} onValueChange={go}>
-        <div className="navline">
-          <TabsList className="main-nav" variant="line">
-            <TabsTrigger value="overview">
-              <Compass size={16} /> Mission control
-            </TabsTrigger>
-            <TabsTrigger value="observe">
-              <Leaf size={16} /> Field notebook
-            </TabsTrigger>
-            <TabsTrigger value="review">
-              <ClipboardCheck size={16} /> Review desk{" "}
-              <span className="nav-count">{awaiting}</span>
-            </TabsTrigger>
-            <TabsTrigger value="lab">
-              <FlaskConical size={16} /> Evidence lab
-            </TabsTrigger>
-            <TabsTrigger value="insights"><ChartNoAxesCombined size={16} /> Insights</TabsTrigger>
-            <TabsTrigger value="kit"><Backpack size={16} /> Field kit</TabsTrigger>
-          </TabsList>
-          <span className="track-label">
-            ONEAQUAHEALTH CHALLENGE <span>EVIDENCE / STORY</span>
-          </span>
-        </div>
+      <Tabs className="journal-tabs" value={tab} onValueChange={go} orientation={compactNavigation ? "horizontal" : "vertical"}>
+        <WorkspaceNavigation active={tab} awaiting={awaiting} online={online} presentation={presentation} onNavigate={go} onNew={reset} />
         <main id="workspace-content" className="main">
           {presentation && <aside className="presentation-workspace-banner" aria-label="Presentation collection provenance"><span className="showcase-emblem"><Waves size={23} /></span><div><strong>{loaded ? `${records.length} European river examples, ready to explore.` : "Preparing European river evidence…"}</strong><p>Real, credited photos · recorded AI candidates · example descriptions and initial review decisions. No field visit or expert validation. Your edits stay in this separate collection.</p></div><button type="button" onClick={() => go("insights")} disabled={!loaded}><ChartNoAxesCombined size={16} /> Explore insights <ArrowRight size={15} /></button></aside>}
           {storageError && (
@@ -655,8 +610,11 @@ export default function StreamCheck({ presentation = false }: { presentation?: b
           <TabsContent value="insights" className="view-enter">
             <EvidenceInsights records={records} onOpen={openReport} onStart={() => go("kit")} />
           </TabsContent>
+          <TabsContent value="twins" className="view-enter">
+            <RiverTwins presentation={presentation} />
+          </TabsContent>
 
-          <TabsContent value="observe" className="view-enter">
+          <TabsContent value="observe" className="view-enter journal-notebook">
             <Heading
               eyebrow="THE FIELD NOTEBOOK"
               title={field.reference ? "Read the photograph. Keep the source." : "Start with what you noticed."}
@@ -668,18 +626,6 @@ export default function StreamCheck({ presentation = false }: { presentation?: b
             {field.reference && <ReferenceCredit reference={field.reference} />}
             {referenceLoading && <p className="notice" role="status">Preparing the source image and its digest…</p>}
             {referenceRetry && !referenceLoading && <div className="notice" role="status"><p>{formError || "The source photo is not retained yet. Retry to continue."}</p><div className="button-row"><button type="button" className="btn primary" onClick={() => void reviewReference(referenceRetry)}>Retry source photo</button><button type="button" className="btn secondary" onClick={reset}>Cancel photo review</button></div></div>}
-            {stage === 0 && !referenceLoading && !referenceRetry && (
-              <FieldStudio
-                key={draftRevision}
-                value={field}
-                onChange={updateField}
-                aiReady={aiReady && online}
-                aiRecipients={aiRecipients(aiStatus, true)}
-                aiConsentScope={aiStatus?.consentScope}
-                onConsentChanged={refreshAIStatus}
-                onBusy={updateCaptureBusy}
-              />
-            )}
             <div className="stepper" aria-label="Observation progress">
               {["Observe", "Clarify", "Confirm"].map((s, i) => (
                 <div
@@ -751,6 +697,8 @@ export default function StreamCheck({ presentation = false }: { presentation?: b
                       {field.reference ? "What can you see in this historical photograph?" : "What did you directly observe?"}
                       <textarea
                         required
+                        aria-label={field.reference ? "What can you see in this historical photograph?" : "What did you directly observe?"}
+                        aria-describedby="observation-note-help"
                         maxLength={4000}
                         rows={5}
                         value={draft.note}
@@ -759,7 +707,7 @@ export default function StreamCheck({ presentation = false }: { presentation?: b
                         }
                         placeholder={field.reference ? "Describe visible details in your own words. What is obscured or uncertain?" : "The water looked brown beside the footbridge. I saw leaves collecting near the bank. I don’t know what caused the color."}
                       />
-                      <span className="field-hint">
+                      <span className="field-hint" id="observation-note-help">
                         Details, uncertainty, and context are all useful.{" "}
                         <span>{draft.note.length}/4000</span>
                       </span>
@@ -1025,6 +973,18 @@ export default function StreamCheck({ presentation = false }: { presentation?: b
                 )}
               </section>
               <aside className="capture-aside">
+                {stage === 0 && !referenceLoading && !referenceRetry && (
+                  <FieldStudio
+                    key={draftRevision}
+                    value={field}
+                    onChange={updateField}
+                    aiReady={aiReady && online}
+                    aiRecipients={aiRecipients(aiStatus, true)}
+                    aiConsentScope={aiStatus?.consentScope}
+                    onConsentChanged={refreshAIStatus}
+                    onBusy={updateCaptureBusy}
+                  />
+                )}
                 <section className="dark-card">
                   <Fingerprint size={32} />
                   <h3>Evidence has a memory.</h3>
@@ -1081,7 +1041,7 @@ export default function StreamCheck({ presentation = false }: { presentation?: b
                 </span>
               </div>
             </div>
-            <div className="section-heading">
+            <div className="section-heading review-toolbar">
               <h2>Observation records <span className="result-count">{list.length}</span></h2>
               <label className="record-search"><Search size={17} /><input type="search" aria-label="Search observations" placeholder="Search sites, notes or record IDs" value={search} onChange={(event) => setSearch(event.target.value)} /></label>
               <Select value={filter} onValueChange={setFilter}>
@@ -1103,7 +1063,7 @@ export default function StreamCheck({ presentation = false }: { presentation?: b
                 </SelectContent>
               </Select>
             </div>
-            <div className="review-grid">
+            <div className="review-grid journal-review-list">
               {list.map((r) => (
                 <button
                   key={r.id}
@@ -1147,7 +1107,8 @@ export default function StreamCheck({ presentation = false }: { presentation?: b
               <div className="empty-state">
                 <ClipboardCheck size={38} />
                 <h3>No records in this view</h3>
-                <p>Choose another filter or record an observation.</p>
+                <p>{search || filter !== "all" ? "Try another search or filter to find your saved observations." : "An observation becomes part of your collection after you confirm it."}</p>
+                <button type="button" className="btn primary" onClick={search || filter !== "all" ? () => { setSearch(""); setFilter("all"); } : reset}>{search || filter !== "all" ? "Clear filters" : "Make your first observation"}<ArrowUpRight size={15} /></button>
               </div>
             )}
             <p className="privacy-note">
@@ -1164,7 +1125,7 @@ export default function StreamCheck({ presentation = false }: { presentation?: b
             <details className="kit-advanced"><summary>Additional evidence views</summary><p>The river view groups retained field reports in a labeled schematic. It is not a physical model or a geographic map.</p><button type="button" className="btn secondary" onClick={() => go("atlas")}><Waves size={16} /> Open schematic evidence view</button></details>
           </TabsContent>
           <TabsContent value="lab" className="view-enter">
-            <EvidenceLab records={records} onOpen={openReport} />
+            <EvidenceLab records={records} onOpen={openReport} onStart={reset} />
           </TabsContent>
           <TabsContent value="atlas" className="view-enter">
             <div className="atlas-return"><button type="button" className="plain-btn" onClick={() => go("overview")}><ArrowRight size={15} /> Return to Mission control</button><span>Schematic field evidence · advanced view</span></div>

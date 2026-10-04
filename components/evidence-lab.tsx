@@ -138,7 +138,7 @@ function DecisionBrief({ report, onInspect }: { report: Report; onInspect: (view
   </section>;
 }
 
-function SavedRecordInspector({ records, onOpen }: { records: Report[]; onOpen: (id: string) => void }) {
+function SavedRecordInspector({ records, onOpen, onStart }: { records: Report[]; onOpen: (id: string) => void; onStart?: () => void }) {
   const id = useId();
   const [recordId, setRecordId] = useState("");
   const [replay, setReplay] = useState<{ report: Report; result: ReturnType<typeof replayReportRules> } | null>(null);
@@ -146,9 +146,9 @@ function SavedRecordInspector({ records, onOpen }: { records: Report[]; onOpen: 
   const [inspectionView, setInspectionView] = useState("brief");
   const ordered = useMemo(() => records.slice().sort((a, b) => (Date.parse(b.createdAt) || 0) - (Date.parse(a.createdAt) || 0)), [records]);
   const report = ordered.find((entry) => entry.id === recordId) ?? ordered[0];
-  const activeReplay = replay?.report === report ? replay.result : undefined;
+  const activeReplay = replay && replay.report === report ? replay.result : undefined;
   const useReplay = checkView === "replay" && !!activeReplay;
-  if (!report) return <div className="el-empty el-start-empty"><Layers size={36} /><h3>Your evidence workbench starts with a saved observation.</h3><p>Record and confirm an observation in the Field Studio, then return to inspect its original evidence, assessment and human decisions.</p></div>;
+  if (!report) return <div className="el-empty el-start-empty"><Layers size={36} /><h3>Your evidence workbench starts with a saved observation.</h3><p>Record and confirm an observation in the Field notebook, then return to inspect its original evidence, assessment and human decisions.</p>{onStart && <button type="button" className="btn primary" onClick={onStart}>Record an observation <ArrowRight size={16} /></button>}</div>;
   const quality = observationQuality(report);
   const summary = labRecordSummary(report);
   return <>
@@ -188,7 +188,7 @@ function EngineeringEvidence() {
   return <details className="el-engineering" onToggle={(event) => setOpen(event.currentTarget.open)}><summary><div><ShieldCheck size={19} /><span>Inspect the engineering evidence</span></div><span>{result ? `${result.passed}/${result.total} assertions passed · no live AI` : failed ? "Report unavailable" : open ? "Loading software report…" : "Software fixtures · load on request"}</span></summary><div><p>Authored development fixtures check retention, uncertainty, decisions and export. These are software checks, not held-out AI accuracy, independent ecological validation or a claim that all device interactions were tested. This report uses no live AI.</p>{result && <p>Generated {timeLabel(result.generatedAt)}.</p>}{failed && <p role="status">The software report could not be loaded or validated. <button type="button" className="el-button" onClick={() => { setFailed(false); setAttempt((value) => value + 1); }}>Retry report</button></p>}<a href="/evaluation.json" target="_blank" rel="noreferrer">Open the test report <ArrowUpRight size={15} /></a></div></details>;
 }
 
-export function EvidenceLab({ records, onOpen }: { records: Report[]; onOpen: (id: string) => void }) {
+export function EvidenceLab({ records, onOpen, onStart }: { records: Report[]; onOpen: (id: string) => void; onStart?: () => void }) {
   const id = useId();
-  return <section className="evidence-lab" aria-labelledby={`${id}-title`}><header className="el-heading"><div><p className="el-label"><FlaskConical size={15} /> THE EVIDENCE LAB · CITIZEN TO REVIEWER</p><h1 id={`${id}-title`}>See the evidence.<br /><em>Question the assessment.</em></h1><p>A practical workbench for original observations, explainable checks and human judgment.</p></div><div className="el-heading-seal"><Fingerprint size={31} /><span>Original evidence retained<br />Human decisions visible</span></div></header><SavedRecordInspector records={records} onOpen={onOpen} /><EngineeringEvidence /></section>;
+  return <section className="evidence-lab" aria-labelledby={`${id}-title`}><header className="el-heading"><div><p className="el-label"><FlaskConical size={15} /> THE EVIDENCE LAB · CITIZEN TO REVIEWER</p><h1 id={`${id}-title`}>See the evidence.<br /><em>Question the assessment.</em></h1><p>A practical workbench for original observations, explainable checks and human judgment.</p></div><div className="el-heading-seal"><Fingerprint size={31} /><span>Original evidence retained<br />Human decisions visible</span></div></header><SavedRecordInspector records={records} onOpen={onOpen} onStart={onStart} /><EngineeringEvidence /></section>;
 }

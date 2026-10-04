@@ -1,24 +1,45 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { sourceWeatherModules } from "./source-weather-modules.mjs";
 
-// Nine real, keyless city-overview requests. Never generates observation records.
+// Public, keyless context only. Preserve v1 and every retained retrieval time.
 const { source, route, catalogue } = await sourceWeatherModules();
 const target = `public${source.SOURCE_WEATHER_ASSET}`;
-let previous;
-try { previous = await readFile(target, "utf8"); } catch (error) { if (error.code !== "ENOENT") throw error; }
-if (previous) {
-  const checked = source.sourceWeatherBundleSchema.parse(JSON.parse(previous));
-  if (checked.entries.length !== catalogue.referencePhotos.length || checked.entries.some((entry) => entry.days !== 7)) throw new Error("Incomplete immutable archive: change SOURCE_WEATHER_ASSET revision before creating a different bundle.");
-  console.log(`Preserved ${checked.entries.length} recorded seven-day windows with original retrieval times; no requests made.`);
+const checkpoint = `.sites-runtime${source.SOURCE_WEATHER_ASSET}.partial`;
+const expected = catalogue.europeanPhotoLibrary.flatMap(photo => [7, 15].map(days => ({ photoId: photo.id, days })));
+const identity = entry => `${entry.photoId}:${entry.days}`;
+const complete = entries => entries.length === expected.length && expected.every(window => entries.some(entry => identity(entry) === identity(window)));
+async function readBundle(path) {
+  try { return source.sourceWeatherBundleSchema.parse(JSON.parse(await readFile(path, "utf8"))); }
+  catch (error) { if (error.code === "ENOENT") return null; throw error; }
+}
+const existing = await readBundle(target);
+if (existing) {
+  if (!complete(existing.entries)) throw new Error("Incomplete immutable archive; use a new asset revision.");
+  console.log(`Preserved ${existing.entries.length} recorded windows with their original retrieval times; no requests made.`);
 } else {
-  const entries = [];
-  for (const photo of catalogue.referencePhotos) {
-    const response = await route.GET(new Request(`https://source-preparation.test/api/source-weather?photoId=${photo.id}&days=7`));
-    if (!response.ok) throw new Error(`Archive unavailable for ${photo.id}; no file or substitute written. Retry when connected.`);
-    entries.push(source.sourceWeatherSchema.parse(await response.json()));
-    console.log(JSON.stringify({ photoId: photo.id, status: response.status, days: 7, kind: "historical_weather_model_context" }));
+  const original = await readBundle("public/source-weather-v1.json");
+  const pending = await readBundle(checkpoint);
+  const retained = new Map((pending?.entries ?? []).map(entry => [identity(entry), entry]));
+  for (const entry of original?.entries ?? []) retained.set(identity(entry), entry);
+  await mkdir(".sites-runtime", { recursive: true });
+  const failures = [];
+  for (const window of expected) {
+    const id = identity(window);
+    if (retained.has(id)) continue;
+    const response = await route.GET(new Request(`https://source-preparation.test/api/source-weather?photoId=${encodeURIComponent(window.photoId)}&days=${window.days}`));
+    if (response.ok) {
+      retained.set(id, source.sourceWeatherSchema.parse(await response.json()));
+      const partial = source.sourceWeatherBundleSchema.parse({ kind: "recorded_archive_context", entries: [...retained.values()] });
+      await writeFile(checkpoint, JSON.stringify(partial, null, 2) + "\n");
+      console.log(JSON.stringify({ photoId: window.photoId, days: window.days, retained: retained.size, kind: "historical_weather_model_context" }));
+    } else { failures.push(id); console.log(JSON.stringify({ photoId: window.photoId, days: window.days, status: response.status, retained: false })); }
+    // Bounded public-service pacing; no quota bypass or substitute values.
+    await new Promise(resolve => setTimeout(resolve, 1100));
   }
+  if (failures.length) throw new Error(`${failures.length} source windows remain unavailable. Progress is retained locally; no incomplete public bundle or replacement values written.`);
+  const entries = expected.map(window => retained.get(identity(window)));
   const checked = source.sourceWeatherBundleSchema.parse({ kind: "recorded_archive_context", entries });
+  if (!complete(checked.entries)) throw new Error("Source coverage is incomplete; no bundle written.");
   await writeFile(target, JSON.stringify(checked, null, 2) + "\n", { flag: "wx" });
-  console.log(`Retained ${entries.length} genuine archive windows; no AI or private evidence sent.`);
+  console.log(`Retained ${entries.length} genuine source windows; no AI, private evidence or generated readings.`);
 }

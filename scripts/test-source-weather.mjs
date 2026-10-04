@@ -5,11 +5,23 @@ const { source: s, route, catalogue } = await sourceWeatherModules();
 const bundle = JSON.parse(await readFile(`public${s.SOURCE_WEATHER_ASSET}`, "utf8")), sample = bundle.entries[0], results = [];
 async function test(name, run) { try { await run(); results.push({ name, passed: true }); } catch (error) { results.push({ name, passed: false, error: error.message }); } }
 const invalid = (change) => assert.equal(s.sourceWeatherSchema.safeParse({ ...sample, ...change }).success, false);
-await test("Nine recorded real archive windows match every active source digest, city and date", () => {
+await test("Both recorded archive windows match all 39 credited source digests, cities and dates", () => {
   const checked = s.sourceWeatherBundleSchema.parse(bundle);
-  assert.equal(checked.entries.length, 9);
-  assert.deepEqual(checked.entries.map((entry) => entry.photoId), catalogue.referencePhotos.map((photo) => photo.id));
-  assert.ok(checked.entries.every((entry) => entry.days === 7 && entry.kind === "historical_weather_model_context"));
+  assert.equal(checked.entries.length, catalogue.europeanPhotoLibrary.length * 2);
+  for (const photo of catalogue.europeanPhotoLibrary) for (const days of [7, 15]) assert.ok(checked.entries.some(entry => entry.photoId === photo.id && entry.days === days));
+  assert.ok(checked.entries.every((entry) => entry.kind === "historical_weather_model_context"));
+});
+await test("Original recorded windows and their retrieval times survive the catalogue extension unchanged", async () => {
+  const original = JSON.parse(await readFile("public/source-weather-v1.json", "utf8"));
+  for (const entry of original.entries) assert.deepEqual(bundle.entries.find(value => value.photoId === entry.photoId && value.days === entry.days), entry);
+});
+await test("Fifteen-day retained windows have their own exact source URLs and UTC ranges", () => {
+  for (const entry of bundle.entries.filter(value => value.days === 15)) {
+    assert.equal(entry.sourceUrl, s.archiveRequest(entry.photoId, 15));
+    assert.equal(entry.daily.time.length, 15);
+    assert.equal(entry.daily.time[7], entry.sourceDate);
+    assert.equal(new URL(entry.sourceUrl).hostname, "archive-api.open-meteo.com");
+  }
 });
 await test("Historical Indian sources and unknown IDs cannot acquire European coordinates", () => { assert.equal(s.sourceWeatherAnchor("mutha-river"), null); assert.equal(s.sourceWeatherAnchor("made-up"), null); });
 await test("Calendar windows cross leap days and years in UTC without local timezone drift", () => {

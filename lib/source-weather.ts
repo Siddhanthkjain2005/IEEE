@@ -2,7 +2,8 @@ import { z } from "zod";
 import { europeanPhotoLibrary } from "./references";
 import { europeanPlaces } from "./european-sites";
 
-export const SOURCE_WEATHER_ASSET = "/source-weather-v1.json";
+// v1 remains unchanged; v2 adds both windows for the full credited catalogue.
+export const SOURCE_WEATHER_ASSET = "/source-weather-v2.json";
 export const archiveMetrics = "temperature_2m_mean,precipitation_sum,wind_speed_10m_max";
 export function sourceWeatherAnchor(photoId: string) {
   const photo = europeanPhotoLibrary.find((item) => item.id === photoId);
@@ -49,7 +50,7 @@ export const sourceWeatherSchema = z.object({
 }, "Archive must match this source photo, city overview and exact UTC window");
 export type SourceWeather = z.infer<typeof sourceWeatherSchema>;
 export const sourceWeatherBundleSchema = z.object({
-  kind: z.literal("recorded_archive_context"), entries: z.array(sourceWeatherSchema).max(18),
+  kind: z.literal("recorded_archive_context"), entries: z.array(sourceWeatherSchema).max(europeanPhotoLibrary.length * 2),
 }).strict().refine((value) => new Set(value.entries.map((entry) => `${entry.photoId}:${entry.days}`)).size === value.entries.length, "Duplicate source window");
 export function archiveSeries(value: SourceWeather) {
   return value.daily.time.map((day, index) => ({ day, rain: value.daily.precipitation_sum[index], temperature: value.daily.temperature_2m_mean[index], wind: value.daily.wind_speed_10m_max[index] }));

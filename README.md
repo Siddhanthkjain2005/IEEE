@@ -1,156 +1,200 @@
-# AquaLens · Evidence in focus
+<div align="center">
 
-Latest update (2026-10-03): **Visual observatory** adds a dedicated photo chronicle, independent comparisons, responsive globe and readable evidence constellation. **30 more licensed river photos** make39sources with real dates2005–2026, source-coverage charts, calendar/format views and catalogue export. Existing citizen/reviewer logic and nine labelled example reviews remain. **423 authored checks**, TypeScript/lint/18CSS parses/build pass; focused Chrome/mobile/offline checks and live Groq text/photo checks passed. [Demo guide](docs/DEMO_GUIDE.md), [current feature boundaries](docs/OBSERVATORY_2026-10-03.md), [QA](docs/QA.md).
+# AquaLens
 
-[Source repository](https://github.com/kammarohan55-crypto/ieee_hackathon) · OneAquaHealth hackathon prototype
+### Every river has a story. Keep the evidence behind it.
 
-AquaLens evolved from StreamCheck without rebuilding its tested workflow: citizen evidence → explicit uncertainty → human review → portable Decision Receipt. **Primary submission decision: Track 3 — AI-Supported Assessment**, with supporting capabilities relevant to Tracks 1, 2 and 4. This follows the supplied project instructions and the implemented AI/checks/human-review evidence trail; it does not establish winning odds or organizer endorsement. The [organizer extension](https://oneaquahealth-ieee-hackathon.devpost.com/updates/46660-deadline-extended-to-october-4-keep-innovating-keep-submitting) explicitly permits naturally spanning multiple tracks; leading with Track 3 remains this project's presentation decision. Appearance, satellite context and human review do not establish water safety, pollutants, species or ecological health.
+A river field journal that connects citizen observations, optional AI assistance, human review and geographic context in one traceable workspace.
 
-## Presentation collection
+[![Quality checks](https://github.com/Siddhanthkjain2005/IEEE/actions/workflows/ci.yml/badge.svg)](https://github.com/Siddhanthkjain2005/IEEE/actions/workflows/ci.yml)
+![React](https://img.shields.io/badge/React-19-224d40?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-224d40?logo=typescript&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-3D-224d40?logo=threedotjs&logoColor=white)
+![Hosting](https://img.shields.io/badge/Google_Cloud-Cloud_Run-224d40?logo=googlecloud&logoColor=white)
 
-Mission Control now opens with an abstract 3D water study, pointer-responsive lens and two working shortcuts: **New observation** and **Explore river insights**. **Pause motion** stops the decorative scene; OS reduced motion shows a still frame. Rendering stops off-screen/in background tabs, and static CSS artwork remains if WebGL2 fails. This is explicitly decorative, never a measured river model. `components/aqua-hero.tsx` owns the presentation/lifecycle; dynamically imported `lib/aqua-scene.ts` owns the disposable scene. No new API, model, evidence, storage format or server component is introduced. Fonts and renderer are self-hosted; bundled license notices are in [public/VISUAL_LICENSES.txt](public/VISUAL_LICENSES.txt).
+**[Open the live demo](https://aqualens-ruvn5g3vna-el.a.run.app/showcase)** · **[Explore the 3D rivers](https://aqualens-ruvn5g3vna-el.a.run.app/twins?collection=showcase)** · **[Browse the visual archive](https://aqualens-ruvn5g3vna-el.a.run.app/visuals?collection=showcase)**
 
-Open **http://localhost:5173/showcase** for a populated walkthrough: nine licensed European river photographs, eight genuine recorded Gemini visual responses, ten unverified candidate findings, local browser image checks, original example descriptions and three example review states. The initial notes, confirmations, review decisions and pipe pin are AI-authored demonstrations, visibly labelled and retained in exports. They do not represent citizen field visits or expert review.
+![AquaLens deployed overview: field-journal navigation and an interactive conceptual river sculpture](docs/assets/aqualens-overview.jpg)
 
-**Insights** has photographic city cards, source-photo chronology, city/status filters, coverage bars, a review donut and an evidence matrix. **Mission control** adds zoom, coarse AI regions, the evidence flow, photo comparison and sourced geographic context. **Review desk** and **Evidence Lab** expose originals, pending judgments, replay and receipts. Live AI remains separately consented; the provider disclosure is under **AI & data use**.
+</div>
 
-The versioned /european-context-v2.json asset and v2 preset keys avoid stale offline results while preserving older saved examples. Persistence is gated on the matching workspace/draft key having loaded. The route reuses the working citizen/reviewer components with separate localStorage record/draft keys and dedicated IndexedDB media IDs. First preparation verifies all image hashes/dimensions and runs the same canvas heuristics as user uploads. Failed preparation shows a retryable error and never overwrites personal data. There are no invented GPS points, instrument readings, current river observations or backdated saving activity. Examples cannot be imported into the personal collection; presentation exports are for inspection. Personal backup/restore behavior is preserved.
+A photograph can start a conversation about a river. It cannot, on its own, establish water safety or ecological health. AquaLens helps people preserve what they actually observed, ask useful follow-up questions, inspect uncertainty and document the human decisions that follow.
 
-## Setup
+The result is a **Decision Receipt**: an inspectable record of the original evidence, checks, optional AI suggestions, clarifications, confirmation and review. The interface pairs a warm paper-and-forest visual language with photographic inspection, maps, evidence graphs and interactive 3D geography.
 
-Node 22.13+ (tested: Node 24). Run from this folder:
+Built as an independent OneAquaHealth hackathon prototype. No organizer endorsement, competition result or scientific validation is claimed.
 
-```sh
-npm ci
-npm run dev
-npm test
-npm run typecheck
-npm run lint
-npm run build
-npm run verify:release
-npm start
+## Start exploring
+
+| Entry point | What opens |
+| --- | --- |
+| **[Live showcase](https://aqualens-ruvn5g3vna-el.a.run.app/showcase)** | A separate collection with nine clearly labelled demonstration records. Real credited photographs and retained AI responses are distinguished from authored example notes and review decisions. |
+| **[Your field workspace](https://aqualens-ruvn5g3vna-el.a.run.app/)** | A personal collection stored in your browser. Capture or upload evidence and follow the citizen-to-reviewer workflow. |
+| **[Visual observatory](https://aqualens-ruvn5g3vna-el.a.run.app/visuals?collection=showcase)** | A photo chronicle, comparisons, source coverage, geographic context and an evidence constellation. |
+| **[3D river explorer](https://aqualens-ruvn5g3vna-el.a.run.app/twins?collection=showcase)** | Geographic reconstructions of the Mondego, Garonne and Hoffselva, with layer controls, feature inspection and downloadable source receipts. |
+
+For a walkthrough, open the showcase, inspect a source in **Overview**, follow a record into **Review desk**, then open **Evidence lab** and its receipt. Finish with **3D River twins** and the visual archive. A fresh AI assessment requires a separate consent action; replaying a recorded response does not call a provider.
+
+## Seven sections, one evidence trail
+
+| Section | What you can do |
+| --- | --- |
+| **Overview** | Explore the river study, inspect credited photos, add visual note pins, compare frames, inspect the evidence graph and open geographic context. |
+| **Field notebook** | Capture or upload media, write your own observation, inspect local usability checks, supply readings you actually have, answer follow-up questions and explicitly confirm the record. |
+| **Review desk** | Inspect original evidence and AI candidates, record agreement, disagreement or uncertainty with a reason, and retain the review history. |
+| **Evidence lab** | Read decisions and their limits, inspect contradictions and completeness, replay retained events and export a Decision Receipt. |
+| **Insights** | Explore collection coverage, source chronology, status filters, comparisons, charts and the evidence matrix. |
+| **3D River twins** | Rotate, zoom and inspect three mapped river reaches; switch cameras, lighting and layers; inspect original feature tags and source provenance. |
+| **Field kit** | Read evidence guidance and credits; export JSON, CSV, GeoJSON and portable field packs; preview imports and resolve conflicts explicitly. |
+
+### From observation to Decision Receipt
+
+```mermaid
+flowchart LR
+    A[Original observation and media] --> B[Local usability checks]
+    B --> C[Clarifications and supplied readings]
+    B --> D[Optional AI with explicit consent]
+    D --> C
+    C --> E[Citizen confirmation]
+    E --> F[Human review and reasons]
+    F --> G[Decision Receipt and field pack]
 ```
 
-Development: http://127.0.0.1:5173 (explicit hostname overrides supported). Production preview: use the URL printed by npm start. If the Windows npm launcher is broken, use `node "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js"` in place of npm. Direct build: `node scripts/build.mjs`.
+Original words and media remain available throughout. AI suggestions require an explicit human acceptance step; unknown fields stay unknown. File digests support integrity checks, while review history explains decisions. Neither a digest nor a human approval establishes scientific truth.
 
-Optional live AI: copy `.dev.vars.example` to ignored `.dev.vars` only if no configured file exists. Default: `AI_PROVIDER="gemini"`, server-only `GEMINI_API_KEY` and `GEMINI_MODEL="gemini-3.5-flash-lite"`; the visual model defaults to the same model. This installation's supplied key is saved locally. Google documents a limited free tier and use of free-tier content to improve its products; availability/quota are account-dependent. Optional xAI/Groq adapters and their own keys remain supported. Restart after changing configuration. Never use client/public environment variables or commit keys. No key is needed for local checks, maps or modeled weather. `AI_FALLBACK_PROVIDER` optionally names a different, separately configured provider; this installation selects Groq after Gemini availability failure. Four Groq credentials are local/server-only; optional GROQ_API_KEY_2/_3/_4 recover rejected401credentials only, never bypass organization quota/permission/service limits. The consent UI names recipients; stale provider/model scopes are rejected before transmission. See [Google pricing/privacy labels](https://ai.google.dev/gemini-api/docs/pricing).
+## Geography you can inspect
 
-The production-local launcher passes the root `.dev.vars` path to Wrangler when it exists; it never copies secrets into `dist`. Hosted secrets must be configured separately. `verify:release` checks required build assets, passing authored test reports and accidental inclusion of all locally configured Gemini/xAI/Groq keys; it is not a comprehensive security audit.
+![The deployed Mondego 3D reconstruction, with mapped terrain, river geometry, buildings and source attribution](docs/assets/mondego-twin.png)
 
-## Presentation media and connection check
+The **3D River twins** section combines OpenStreetMap geometry, decoded terrain elevations and an annual ESA WorldCover Sentinel RGB composite. It retains **22,078 mapped features**, including **9,797 building footprints** and **5,953 mapped tree points** across three bounded reaches.
 
-39 licensed historical river photographs are ready in **Mission control → Photo desk → Review this photo**. This path preserves source dates and credits; it does not invent new field visits. The original nine-photo checked local kit is `outputs/presentation-media/`, with a ZIP at `outputs/aqualens-presentation-media.zip`. These ignored outputs are not included in source-only archives. Recreate the folder with `npm test` then `npm run prepare:media`. Read [the demo guide](docs/DEMO_GUIDE.md) before recording.
+| River | Location | Display extent |
+| --- | --- | --- |
+| Mondego | Coimbra, Portugal | 1,700 m |
+| Garonne | Toulouse, France | 1,700 m |
+| Hoffselva | Western Oslo, Norway | 1,400 m |
 
-For an explicitly authorized terminal integration check without starting the app, run `node scripts/test-api.mjs` then `npm run verify:ai -- --consent`. This sends exactly one authored synthetic note and one credited historical photo through the actual route code with an isolated Worker environment binding. It saves a sanitized ignored result; it is excluded from npm test, and does not create approved records or benchmark scientific accuracy. This terminal check does not start an app or browser.
+Each scene offers aerial, river-focus and overhead cameras; pointer and keyboard navigation; lighting and layer switches; optional orbit; fullscreen; mapped-feature selection; and a downloadable source receipt containing URLs, dates, tags and digests. The renderer suspends when hidden or offscreen and provides a fallback when rendering is unavailable.
 
-## European river explorer
+These are **static geographic reconstructions**. Terrain is rendered at 1:1 vertical scale; the surface imagery is an annual **2021** composite. Missing building heights, facades, tree shapes, some widths, bridge elevations and animated water are visibly disclosed approximations. There is no live water-level feed, bathymetry, hydraulic calibration or surveyed facade model. [Implementation and verification](docs/RIVER_TWINS_2026-10-04.md) · [Dataset attribution and ODbL extracts](public/river-twins/CREDITS.md).
 
-The active gallery uses the **Mondego in Coimbra, Garonne in Toulouse and Hoffselva in Oslo**, all official OneAquaHealth research cities. The39credited historical photos date from2005–2026; no team authorship or current river-monitoring claim. Retired Pune files/catalogue remain only to protect prior receipts and are removed from the active gallery/hero/new media kit.
+## Real sources, distinct clocks
 
-**Mission control → Geographic map** opens an interactive dark globe with distinct sea-glass city-context markers and source-photo dossiers. **Globe overview / Flat map** changes projection; a river card or city marker flies to its city. **European overview** fits the three cities; street/NASA/2021 landscape controls remain available. Positions are sourced Wikidata city centers, never invented camera/GPS/station coordinates or citizen reports. Actual supplied observation coordinates/counts remain separate.
+The active archive contains **39 licensed historical photographs**: 18 from Coimbra, 17 from Toulouse and four from Oslo, with source dates spanning **2005–2026**. Photographer credits, license links, original source metadata and retained-file digests accompany the images.
 
-**Three clocks** distinguishes the historical photograph, real recorded Gemini run and independent weather-model timestamp. Eight genuine recorded analyses retain ten candidate findings across the nine-frame catalogue. The people-visible Parque Verde frame stays local-only. Earlier three-frame responses and their original timestamps are preserved. Results/confidence are labeled recorded, uncalibrated and human review pending. **Recorded regions** shows coarse matching-frame regions without editing bytes or creating a field record. A fresh assessment needs explicit consent in the review workflow.
+**78 retained Open-Meteo ERA5 windows** provide seven- and fifteen-day weather context around all 39 source dates. Regional modeled temperature, precipitation and wind remain separate from the photograph and from any citizen readings. The archive exposes source URLs, units, retrieval times and a UTC table.
 
-**Weather context** has actual Open-Meteo snapshots, air temperature, interval precipitation and wind; charts switch recent24h/next24h modeled projections and expose a UTC data table/source/grid/retrieval metadata. **Refresh live context** requests new model data; optional15minute polling runs while visible. Old/missing snapshots and failures remain explicit. These are weather models, not stream sensors or water-health forecasts. **Context JSON** exports a separate public-source bundle, not a Decision Receipt or importable field pack.
-
-To deliberately update recorded public context: `node scripts/test-api.mjs` then `npm run prepare:context -- --consent`. Processes the eligible licensed source photos and requests three city weather contexts, creating no personal notes or human approvals. Use --missing-only to reuse retained responses without repeat provider calls. Versioned recorded assets are immutable: bump EUROPEAN_CONTEXT_ASSET and the presentation preset revision before deliberately replacing recorded content. Recorded assets are precached; network maps/weather/AI still need connectivity.
-
-## Implemented experience
-
-The interface uses a dark navy control-room layout with cyan, violet, mint and amber accents. Mission control opens on39credited European river photographs, with a searchable source rail, inspection canvas and evidence inspector. A fresh personal collection contains zero saved records: source photos become historical reviews only after the user writes and confirms a note. Recorded public-source AI is labelled separately. The separate /showcase route prepares nine labelled presentation examples without touching personal records.
-
-- **Mission control:** source search, field/historical filters, focus view, collection coverage and a supplied-coordinate map. **Evidence Actions** uses actual nonsynthetic records to explain review priorities and optional fresh visits; filters, inspectable reasons and show-more controls keep the list manageable. Priorities concern evidence workflow, never ecological danger. Weather can be explicitly loaded for any saved field location, including records without photos.
-- **Photo desk:** full-frame viewing, zoom, inspection grid and human note pins. Each pin retains its image position, note, category, timestamp and local role without editing image bytes. Notes reopen review and travel in receipts/field packs; restored notes are checked against the correct photo. Recorded visual AI candidates can show their coarse frame regions, visibly distinguished from human notes and detector boxes.
-- **Comparison and replay:** choose two distinct images for wipe or side-by-side inspection; replay the selected record's actual retained events. Different photographs are not registered images or measurements of environmental change.
-- **Evidence flow:** inspect original words, source media, supplied context, assessment, clarification, human review and portable receipts. Before a record exists, it is explicitly a workflow preview.
-- **Insights:** workflow distribution, evidence coverage, 14-day UTC saving activity, retained source counts and an interactive evidence matrix. Every value comes from saved records. Historical reviews are separately filterable and excluded from the GPS denominator. Optional software diagnostics read four generated test reports; these are not model-performance or ecological scores.
-- **Presentation mode:** **Present this evidence** opens a read-only four-chapter view of original evidence, checks/clarification, human judgment and Decision Receipt. Actual review reasons, gaps and uncertainty stay visible. Export JSON or a readable Markdown brief with unchanged original text; the brief contains metadata, not original media bytes. Opening it never analyzes or approves the record.
-
-- Credited Wikimedia reference gallery: inspect a real historical frame, write your own note, confirm it, review it, and export the source-linked receipt. Source date stays date-only; no GPS or instrument values are invented. The atlas and weather use field observations only. [Photo credits and licences](public/images/references/CREDITS.md).
-- Citizen note/time/appearance, transparent English checks, optional structured Gemini/xAI/Groq text suggestions, adaptive questions, uncertainty/dismissal, explicit confirmation.
-- Camera photos, ten-second silent video capture, original photo and MP4/WebM uploads (up to 15 seconds), manual repeat-photo ghost guide. Original Blobs in IndexedDB; SHA-256 digests in records. Video quality checks sample the first frame; video AI is not implemented.
-- Local luminance, edge-detail and resolution checks. These are uncalibrated heuristics, not scientific quality assessment.
-- Visual Gemini/xAI/Groq endpoint returns only enumerated candidate appearances, frame regions and low/medium/high uncalibrated model confidence. Explicit consent sends a resized JPEG only. No inferred instrument measurements or diagnoses.
-- Instrument readings with units, instrument/calibration metadata and broad input plausibility checks. Implausible values are retained and flagged, never silently corrected.
-- Transparent 100-point evidence-completeness rubric, human visual judgments/disagreement with reasons, retained original suggestions, review trail and Decision Receipt. The interactive evidence graph distinguishes citizen, public photo source, rules, AI, human and pending sources, with a keyboard-readable list.
-- River schematic: an explicitly illustrative scene, site labels, chronology and Story/Evidence/Method views. Available under **Field kit → Additional evidence views**; matching labels do not establish connected waterways or a physical twin.
-- Geographic map: exact-coordinate groups, location dossier, source/accuracy/time, accessible record index, fit and retry/fallback. Switch street maps, dated NASA Terra/MODIS regional imagery, and **Landscape · 2021**: a historical annual Sentinel-2 RGB median with 10 m source bands, zoom 6–14 and latitude −60° to 83°. Broad zoom prompts a detail control; coverage gaps and source limits are explicit. It is not a current scene, numerical reflectance, NDWI or stream measurement. Missing locations are never guessed; valid polar coordinates remain in records outside imagery coverage.
-- Evidence Lab: default **Decision brief** links four retained provenance stages, actual latest human reason, uncertainty and missing/inconsistent history. Inspect originals, highlighted quotes, rule/AI provenance, media/readings and decisions. Replay current local rules using record creation time without modifying the saved report. Software diagnostics load only on request, validate their schema and support retry/cancellation.
-- Site filtering, retained-photo comparison and rule-based follow-up missions. Supporting timeline/comparisons are collapsible so the main evidence story stays clear.
-- Explicit visit connections show a retained parent and direct follow-ups, or disclose an unavailable parent. Fresh visits carry only site label/parent ID and require new time/note/media plus any optional readings/GPS; historical reviews do not become fresh visits. Links do not prove matching viewpoints or environmental change. Later visual judgments reopen reviews and preserve earlier history.
-- pH comparison only with three non-synthetic reports at distinct times, one site and the same named instrument with calibration reported checked. No ecological trend or outlier claims.
-- Field kit: three-view photo guide, personal preparation checklist, optional One Health context (riverbank, wildlife, nearby human activity), and original upload filenames.
-- Review-desk search across site names, notes and record IDs, combined with workflow filters.
-- Site weather: explicit user-triggered Open-Meteo requests for an observation's coordinates; validated units, source/grid/time retained, no default city and no historical-weather claim.
-- Portable field packs: original reports plus optional local photo/video bytes, SHA-256 checks before import, preview, duplicate detection and conflict preservation. Supports prior JSON receipts/collections; synthetic imports are rejected. Up to 500 reports, 36 MB embedded media, 64 MB JSON file. Missing media is reported, never replaced.
-- JSON/CSV/GeoJSON export. CSV neutralizes formula prefixes; GeoJSON omits unknown coordinates. FAIR-oriented metadata includes provenance/access/license limits. Individual receipts keep media references; field packs optionally include originals and verify their digests on import.
-- Saved reports and draft recovery, cross-tab report refresh, responsive Radix controls, reduced-motion support.
-- Workbox production asset precache and navigation caching after an online controlled visit. Reload online after first installation before expecting offline navigation. Local capture/rules/review remain available; AI, weather and tiles need network.
-- Browser speech recognition with reviewed transcript adoption when supported. It may use the browser provider's remote service. It does not infer measurements/location from speech.
-
-## Historical weather tied to the photograph
-
-In Photo desk or Geographic map, expand **Weather around the source date**. Nine credited European photos have genuine recorded seven-day ERA5 context; choose rainfall, mean air temperature or maximum wind, inspect UTC values and the source-date marker, or explicitly load fifteen days. Export **Archive JSON** separately from a Decision Receipt. Source date/timezone and city/model-grid limits remain visible; no water-health or causal conclusion is inferred.
-
-`npm run prepare:history` creates the keyless source kit only if absent and preserves an existing immutable bundle. No additional key, dependency or private evidence is needed. The production asset cache includes the recorded kit; remote refresh needs a server/network. See [research review](docs/RESEARCH_REVIEW_2026-10-03.md) and [primary sources/limits](docs/SOURCES.md).
+The globe separates a dated **NASA Blue Marble August 2004 reference** from selectable daily satellite imagery, whose coverage gaps remain visible. City markers are geographic context, not camera GPS or sampling stations. Eight genuine retained Gemini responses are labelled recorded AI output; the nine showcase notes and initial review decisions are labelled authored examples.
 
 ## Architecture
 
-| File | Responsibility |
-|---|---|
-| components/streamcheck.tsx | Existing workspace, local report lifecycle, clarification and confirmation |
-| components/mission-control.tsx + lib/mission-control.ts | Source desk, scopes, real-record metrics, queue and retained-event replay |
-| components/photo-inspector.tsx + components/evidence-visuals.tsx | Image note pins, comparison, source flow and event controls |
-| components/evidence-insights.tsx + app/console.css | Real-record analytics and the dark responsive visual system |
-| components/field-studio.tsx | Camera/media, ghost overlay, dictation, measurements |
-| components/evidence-workbench.tsx | Completeness, review additions, graph, atlas, timeline/comparison |
-| components/river-observatory.tsx | Illustrative site stories and selected observation evidence |
-| components/geographic-evidence-map.tsx + lib/geographic.ts | Supplied-coordinate map, location index and date-line-safe extents |
-| components/evidence-lab.tsx + lib/evidence-lab.ts | Read-only report inspection, source spans and deterministic replay |
-| components/decision-presentation.tsx + lib/presentation-brief.ts | Four retained provenance chapters and readable Markdown export |
-| components/sampling-plan.tsx + lib/sampling-plan.ts | Grounded evidence actions and optional linked visits |
-| components/linked-visits.tsx + lib/visit-links.ts | Explicit parent/child record connections |
-| lib/satellite-context.ts | Dated NASA and historical annual WorldCover tile contracts |
-| lib/evidence-trail.ts + lib/atlas.ts | Provenance graph data, filters, distinct-photo pairs and comparable pH |
-| lib/assessment.ts | Original schema, text engine, decisions, evidence preservation |
-| lib/field.ts | Field schema, visual vocabulary, measurement checks and exports |
-| lib/media-store.ts | IndexedDB, hashing, image heuristics, clip poster extraction, resized JPEG |
-| lib/workspace.ts + components/collection-tools.tsx | Real-data migration, search, portable field packs, integrity and conflict checks |
-| lib/references.ts + components/reference-gallery.tsx | Credited historical photo catalogue, source dates and review entry point |
-| components/field-guide.tsx | Photo guide, visit checklist, optional One Health notes |
-| components/site-conditions.tsx | User-triggered weather for actual supplied coordinates |
-| app/api/assess + app/api/visual | Server-side Gemini/xAI/Groq, consent binding and strict response validation |
-| app/api/conditions | Cached Open-Meteo modeled weather, separately labeled |
-| scripts/prepare-map-worker.mjs | Unmodified licensed MapLibre Worker assets, avoiding framework dev injection |
-| scripts/build-offline.mjs | Workbox production service worker |
+```mermaid
+flowchart TB
+    subgraph Browser[Browser workspace]
+        UI[React and TypeScript interface]
+        Local[IndexedDB media and localStorage records]
+        Views[Three.js / MapLibre / React Flow / Recharts]
+        Offline[Workbox service worker]
+        UI <--> Local
+        UI --> Views
+        Offline --> UI
+    end
+    UI -->|Separately consented assessment| API[Server-side assessment routes]
+    API --> Rules[Local rules fallback]
+    API --> Provider[Configured Groq / Gemini / xAI adapter]
+    Secrets[Cloud Secret Manager] -->|Runtime-only credentials| API
+    Sources[Credited photos / weather / geographic assets] --> Views
+```
 
-## Four-minute demo
+| Layer | Implementation |
+| --- | --- |
+| Application | React 19, TypeScript, Next-compatible routes through Vinext and Vite |
+| Interface | Radix primitives, Tailwind/CSS, Lucide, self-hosted Manrope and Instrument Serif |
+| Exploration | Three.js, MapLibre GL JS, React Flow and Recharts |
+| Validation and persistence | Zod, IndexedDB via `idb`, localStorage and versioned records |
+| Optional AI | Server-side Groq, Gemini and xAI adapters; structured response validation and bounded failure handling |
+| Hosting | Google Cloud Run, a multi-stage Node 22 container and Secret Manager; the original Cloudflare build target is retained |
+| Offline assets | Workbox precaching for application and retained source assets; uncached maps, live weather and AI require a connection |
 
-1. Open **Mission control**. Inspect a credited photo, compare two source frames and click through the evidence flow. Explain why saved-record counts are initially zero.
-2. Choose **Review this photo**, write your own visible-detail note and keep uncertainty. Run local checks or explicitly consent to configured AI, then confirm.
-3. Return to Mission control, choose the saved photo, add a human visual-note pin and show the retained-event replay. Original pixels and previous decisions remain intact.
-4. Open the full receipt in **Review desk**, inspect provenance and judge any visual candidates. Add your own review note.
-5. Open **Present this evidence**, walk through its four chapters and export a readable brief. Show Evidence Lab's Decision brief, Mission control's Evidence Actions and Insights' actual counts. Switch the geographic map between dated NASA, **Landscape · 2021** and street context; explain the requested-day versus historical-annual limits. Organizer links are context, not imported research measurements.
-6. Export a field pack with originals. Preview and import it in another browser to demonstrate a file-based handoff.
+The public deployment uses **Groq for consented text and photo assistance**. Browser storage remains local to each origin; there is no shared cloud observation database or authenticated reviewer identity in this release.
 
-See [satellite limits](docs/SATELLITE_CONTEXT.md), [official platform review](docs/OFFICIAL_PLATFORM_REVIEW.md), [copyable deep-research prompt](docs/DEEP_RESEARCH_PROMPT.md) and [the demo guide](docs/DEMO_GUIDE.md), [real-data readiness checklist](docs/REAL_DATA_READINESS.md) and [visit-notes template](docs/VISIT_NOTES_TEMPLATE.txt). Bundled credited images support the historical-photo workflow. A firsthand field demo still needs your actual photos and visit details; unknowns stay unknown. Team credits, judge-access delivery and the recorded 3–5 minute video remain submission tasks. Production-browser flows were exercised; physical-device and native-download limits are in QA.md.
+## Run locally
 
-## Verification and boundaries
+Use **Node.js 22.13 or newer** and npm. Node 22 is used by the Cloud Run container and CI.
 
-Latest complete suite: **412/412** authored checks; TypeScript, full lint,17 CSS parses and production build pass. The build precaches47 assets / 10,161,106bytes; existing large-chunk and Vinext route-classification notices remain. Final release results are recorded in [QA](docs/QA.md). Four bundled reports cover223;189 run separately. None measure ecological or model accuracy. Automated tests double hooks/recorders/MapLibre/timers/renderer. Current focused browser QA exercised River Atlas, exact-photo candidates, direct comparison drag/keyboard, selected-flow motion,320–1440 layouts and source-verified JSON download. Prior QA covered the globe and layered receipt. Prior published-revision QA covered hero/capture/review and cached offline navigation; it was not repeated in full. Physical device performance, installation and permissions remain unmeasured. Optional `node scripts/test-live-ai.mjs --consent` makes synthetic requests against a separately running app; it is excluded from npm test and is not a benchmark. Development preview is running at http://127.0.0.1:5173/showcase; the temporary production helper is stopped.
+```bash
+git clone https://github.com/Siddhanthkjain2005/IEEE.git
+cd IEEE
+npm ci
+npm run dev
+```
 
-October3 local-time integration checks: actual text and image route handlers received HTTP200 from Gemini 3.5 Flash-Lite and passed shared validation. The initial access check used one synthetic note and a now-retired historical Scenic Reflection photo. The earlier authorized three-photo run retained 0/1/1 candidate findings and weather context for all three cities. Five subsequent public-photo requests returned valid responses, giving eight recorded analyses and ten unverified candidates; one people-visible frame was deliberately not transmitted. Recorded outputs are labeled and human review remains pending; no citizen records or approvals were created. These establish bounded access, not model accuracy, a field study or browser verification. Earlier 3.8 requests returned503, and October2 xAI received403; sanitized local logs retain these failures. Availability and quota may change. Successful xAI/Groq image output remains unverified.
+Open **http://127.0.0.1:5173/showcase** for the demonstration collection, or `/` for your personal workspace. The photographs, retained weather and geographic assets are already included. You do not need to regenerate datasets or configure AI to explore the application.
 
-This is a browser-local prototype, not a production service: no authenticated community/reviewer identities, shared database, signed history, physical digital twin, FHIR integration, held-out ecological evaluation or FAIR certification. Storage can be evicted; export backups. Production needs authentication, durable storage, access control, durable rate limits and expert validation. Per-isolate AI throttles are best-effort, not a billing cap.
+### Optional live AI
 
-Live AI requires explicit consent to the named provider(s); their processing terms apply. AI adapters send no coordinates, instrument details or video. Exported coordinates/photos may be sensitive; you control exports. Confirmed records survive refresh; clarification-in-progress restarts from the saved draft. Judge access and the recorded submission video remain separate delivery tasks.
+Copy `.dev.vars.example` to the ignored `.dev.vars` file only if it does not already exist. For Groq, set these **server-only** entries using your own account:
 
-## Attribution and continuity
+```dotenv
+AI_PROVIDER="groq"
+GROQ_API_KEY=""
+GROQ_MODEL="qwen/qwen3.8-27b"
+GROQ_VISUAL_MODEL="qwen/qwen3.8-27b"
+```
 
-MapLibre BSD-3-Clause; React Flow MIT (attribution retained); Lucide/idb ISC; Workbox/Recharts/React/Radix/shadcn/Zod/Three/Motion MIT; self-hosted fonts OFL. Street maps credit OpenFreeMap, OpenMapTiles and OpenStreetMap; OSM data uses ODbL. NASA imagery credits GIBS/ESDIS/Terra MODIS. Historical annual landscape credits ESA WorldCover and modified Copernicus Sentinel data under CC BY 4.0. Satellite context never supplies water-quality grades or replaces field evidence. Open-Meteo modeled weather is CC BY 4.0. The earlier bitmap hero and seeded synthetic field observations were removed; the current procedural3D hero is labelled decorative. Reference photos retain their own Creative Commons credits in public/images/references/CREDITS.md. See docs/DEPENDENCIES.md and docs/SOURCES.md.
+Enter your key locally and restart the server. The model shown is the deployed configuration, not a promise of future provider availability. A different model must support the route's required image and structured-output capabilities. Provider recipients are disclosed before consent; local rules remain available when live AI is unconfigured or fails.
 
-A new AI should read AGENTS.md and PROJECT_CONTEXT.md, then inspect actual code/tests. These files preserve context; chat memory is not assumed.
+Optional backup credentials recover rejected credentials only; they do not rotate on rate, quota or permission failures. Keep keys out of client variables, commits, screenshots and exports. Hosted credentials belong in Secret Manager, not a build image. See [environment examples](.dev.vars.example) and [security notes](SECURITY.md).
 
-See docs/SUBMISSION_KIT.md for a submission draft, rubric evidence and a four-minute recording script. Deployed judge access and the recorded video remain delivery tasks.
+### Production preview
 
-For the exact remaining inputs and user-owned checks, use [the completion checklist](docs/COMPLETION_CHECKLIST.md). Gemini access is configured and terminal-verified here. You still supply actual review decisions, team/credit facts, intended code licence, device results and video/submission links. Firsthand evidence is optional for the historical-photo demo and required only when presenting a new field visit.
+```bash
+npm run build:cloud
+PORT=8080 HOST=127.0.0.1 npm run start:cloud
+```
+
+Open **http://127.0.0.1:8080/showcase**. To opt into local server credentials, start the standalone server with `node --env-file=.dev.vars dist/standalone/server.js` and the same `PORT`/`HOST` values. The default `npm run build` / `npm start` pair retains the Cloudflare preview path. [Cloud Run deployment guide](docs/GOOGLE_CLOUD_DEPLOYMENT.md).
+
+## Verification
+
+```bash
+npm test
+npm run typecheck
+npm run lint
+npm run build:cloud
+```
+
+The authored suite currently contains **455 checks**, covering the evidence domain, workspace transitions, API handling, photo capture, review/replay, exports, source metadata, weather and 3D geometry/lifecycle. The GitHub workflow runs this suite, TypeScript, lint and the standalone production build on pushes and pull requests. AI route tests use mocks; CI does not receive provider keys or deploy the site.
+
+Recorded release verification includes hosted route/asset checks, three geographic scenes, responsive layouts down to 320 px, source-receipt downloads and bounded live Groq text/photo requests. Those requests establish observed connectivity, not model accuracy. Physical capture/GPS permissions, every browser/device and a fresh offline run of the latest geographic explorer remain outside the latest verification. [Release record](docs/RIVER_TWINS_2026-10-04.md) · [Frontend QA](docs/FRONTEND_REBUILD_2026-10-03.md).
+
+## Project map
+
+```text
+app/                 Routes, API endpoints and interface styles
+components/          Citizen, reviewer and visualization interfaces
+lib/                 Evidence models, validation, storage and scene logic
+public/              Credited photos, retained context, geographic data and PWA assets
+scripts/             Tests, source preparation, build and verification tools
+docs/                Design, source register, deployment and presentation material
+.github/             Quality-check workflow and issue templates
+Dockerfile           Cloud Run build and non-root runtime
+```
+
+| Read next | Purpose |
+| --- | --- |
+| [Project context](PROJECT_CONTEXT.md) | Current implementation, verification and handoff boundaries |
+| [Evidence rules](AGENTS.md) | Rules for preserving observations, uncertainty and truthful claims |
+| [Source register](docs/SOURCES.md) | External claims, checked dates, primary URLs and limitations |
+| [3D river report](docs/RIVER_TWINS_2026-10-04.md) | Source processing, renderer behavior and actual checks |
+| [Cloud Run guide](docs/GOOGLE_CLOUD_DEPLOYMENT.md) | Build, public deployment and runtime-only AI credentials |
+| [Detailed presentation script](docs/AQUALENS_FULL_VIDEO_SCRIPT.txt) | Extended spoken walkthrough of the product and technology |
+| [Contribution guide](CONTRIBUTING.md) | Reproduce issues and propose evidence-preserving changes |
+
+## Evidence boundaries and credits
+
+Evidence completeness measures documented coverage, **not river health**. AI confidence is uncalibrated. Photos, text, weather and rendered geography cannot establish pathogens, pollutant identity, disease risk, water safety or ecological status. Roles are unauthenticated; stored records can be lost if browser data is cleared or evicted. Export a field pack when you need a portable copy.
+
+Photographs belong to their credited creators. Geographic extracts retain OpenStreetMap contributor attribution and ODbL terms; annual imagery, terrain, weather, fonts and libraries retain their separate notices. See [third-party notices](THIRD_PARTY_NOTICES.md), [photo credits](public/images/references/CREDITS.md), [visual licenses](public/VISUAL_LICENSES.txt) and [geographic credits](public/river-twins/CREDITS.md).
+
+An original-code license has **not been selected**. Public availability does not itself grant an open-source license; the separately licensed data and dependencies retain their own terms. This repository preserves the development history of AquaLens and its earlier StreamCheck workflow.

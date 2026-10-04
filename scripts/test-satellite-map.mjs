@@ -66,6 +66,16 @@ await test("Raster style caps tile requests to z9 and retains NASA attribution",
   assert.equal(style.layers.at(-1).source, satellite.SATELLITE_CONTEXT.sourceId);
 });
 
+await test("Complete Earth reference uses its static NASA contract and never the requested daily date", () => {
+  const style = satellite.earthMapStyle();
+  const source = style.sources[satellite.EARTH_CONTEXT.sourceId];
+  assert.equal(source.tiles[0], "https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpeg");
+  assert.equal(source.type, "raster"); assert.equal(source.tileSize, 256); assert.equal(source.maxzoom, 8);
+  assert.match(source.attribution, /NASA Blue Marble · August 2004/);
+  assert.equal(style.layers.at(-1).source, satellite.EARTH_CONTEXT.sourceId);
+  assert.ok(!source.tiles[0].includes("2026-"));
+});
+
 const jsx = { Fragment: "fragment", jsx: (type, props, key) => ({ type, props, key }), jsxs: (type, props, key) => ({ type, props, key }) };
 const icons = new Proxy({}, { get: (_, name) => `icon:${String(name)}` });
 function nodes(tree) {
@@ -326,7 +336,7 @@ await test("European city selection moves the map without rewriting or manufactu
   assert.deepEqual(plain(citizen.coordinates), [73.85, 18.52]);
   fixture.unmount();
 });
-await test("Unknown reference city falls back to sourced context; Europe overview fits actual centres with a world-scale street layer", async () => {
+await test("Unknown reference city falls back to sourced context; Europe overview fits actual centres with the Earth reference", async () => {
   const fixture = mapFixture([], { publicContext: true, initialReferenceCity: "unknown-city" }); fixture.render(); await flush();
   fixture.maps[0].events.load(); const tree = fixture.render(); button(tree, "European overview").props.onClick();
   const bounds = plain(fixture.maps[0].fit.bounds);
@@ -334,7 +344,7 @@ await test("Unknown reference city falls back to sourced context; Europe overvie
   assert.equal(fixture.maps[0].fit.options.maxZoom, 6);
   assert.match(textOf(tree), /European overview/);
   fixture.render(); await flush();
-  assert.equal(fixture.maps.at(-1).options.style, "https://tiles.openfreemap.org/styles/dark");
+  assert.ok(fixture.maps.at(-1).options.style.sources[satellite.EARTH_CONTEXT.sourceId]);
   assert.match(textOf(fixture.render()), /0plotted records0not plotted/);
   fixture.unmount();
 });
@@ -350,16 +360,40 @@ await test("Globe and flat perspectives keep all records intact and reset pitch 
   fixture.unmount(); assert.ok(map.removed);
 });
 
-await test("Globe request from historical landscape restores world-scale streets and preserves source/coordinate separation", async () => {
+await test("Globe request from historical landscape restores the complete Earth reference and preserves source/coordinate separation", async () => {
   const fixture = mapFixture([], { publicContext: true }); fixture.render(); await flush();
   fixture.maps[0].events.load(); button(fixture.render(), "Landscape · 2021").props.onClick();
   fixture.render(); await flush(); fixture.maps.at(-1).events.load();
   button(fixture.render(), "Globe overview").props.onClick();
   const tree = fixture.render(); await flush();
-  assert.equal(fixture.maps.at(-1).options.style, "https://tiles.openfreemap.org/styles/dark");
+  assert.ok(fixture.maps.at(-1).options.style.sources[satellite.EARTH_CONTEXT.sourceId]);
   assert.equal(fixture.maps.at(-1).options.zoom, geographic.globeOverviewZoom(700, 510));
   assert.match(textOf(tree), /0plotted records0not plotted/);
   assert.match(textOf(tree), /Not the camera position/);
+  fixture.unmount();
+});
+await test("Public globe starts with a visibly dated reference and no daily-image date controls", async () => {
+  const fixture = mapFixture([], { publicContext: true }); fixture.render(); await flush();
+  const map = fixture.maps[0], tree = fixture.render();
+  assert.ok(map.options.style.sources[satellite.EARTH_CONTEXT.sourceId]);
+  assert.match(map.canvasLabel, /August 2004.*not current or requested-day imagery/);
+  assert.match(textOf(tree), /Historical reference mosaic/);
+  assert.equal(nodes(tree).filter((node) => node.type === "input" && node.props.type === "date").length, 0);
+  fixture.unmount();
+});
+await test("Daily coverage gaps stay explicit; complete overview and return preserve the requested day and evidence", async () => {
+  const original = JSON.stringify(record), fixture = mapFixture([record], { publicContext: true });
+  fixture.render(); await flush(); button(fixture.render(), "NASA satellite").props.onClick(); fixture.render(); await flush();
+  let tree = fixture.render();
+  const day = nodes(tree).find((node) => node.type === "input" && node.props.type === "date").props.value;
+  assert.match(textOf(tree), /Black strips are gaps/);
+  assert.match(fixture.maps.at(-1).canvasLabel, /black areas have no imagery coverage/);
+  button(tree, "Show complete Earth overview").props.onClick(); fixture.render(); await flush();
+  assert.ok(fixture.maps.at(-1).options.style.sources[satellite.EARTH_CONTEXT.sourceId]);
+  button(fixture.render(), "NASA satellite").props.onClick(); fixture.render(); await flush(); tree = fixture.render();
+  assert.equal(nodes(tree).find((node) => node.type === "input" && node.props.type === "date").props.value, day);
+  assert.ok(fixture.maps.at(-1).options.style.sources[satellite.SATELLITE_CONTEXT.sourceId].tiles[0].includes(day));
+  assert.equal(JSON.stringify(record), original);
   fixture.unmount();
 });
 for (const result of tests) console.log(`${result.passed ? "PASS" : "FAIL"} ${result.name}${result.error ? `: ${result.error}` : ""}`);

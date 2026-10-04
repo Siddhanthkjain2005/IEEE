@@ -1,0 +1,5933 @@
+{
+  "kind": "recorded_archive_context",
+  "entries": [
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-coimbra",
+      "photoSha256": "11fd35e5308a706ab533e84e249f3f51fd8f57d664858c0b3a836f43ee7e851d",
+      "sourceDate": "2011-09-20",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2011-09-17&end_date=2011-09-23&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-02T23:41:01.594Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2011-09-17",
+          "2011-09-18",
+          "2011-09-19",
+          "2011-09-20",
+          "2011-09-21",
+          "2011-09-22",
+          "2011-09-23"
+        ],
+        "temperature_2m_mean": [
+          18.7,
+          17.9,
+          18.9,
+          20.8,
+          18.6,
+          18,
+          17.7
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.1
+        ],
+        "wind_speed_10m_max": [
+          20.1,
+          27.3,
+          13.4,
+          14.8,
+          14,
+          13.7,
+          17.2
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-coimbra",
+      "photoSha256": "11fd35e5308a706ab533e84e249f3f51fd8f57d664858c0b3a836f43ee7e851d",
+      "sourceDate": "2011-09-20",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2011-09-13&end_date=2011-09-27&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:47:38.133Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2011-09-13",
+          "2011-09-14",
+          "2011-09-15",
+          "2011-09-16",
+          "2011-09-17",
+          "2011-09-18",
+          "2011-09-19",
+          "2011-09-20",
+          "2011-09-21",
+          "2011-09-22",
+          "2011-09-23",
+          "2011-09-24",
+          "2011-09-25",
+          "2011-09-26",
+          "2011-09-27"
+        ],
+        "temperature_2m_mean": [
+          23.1,
+          24.7,
+          22.3,
+          20.8,
+          18.7,
+          17.9,
+          18.9,
+          20.8,
+          18.6,
+          18,
+          17.7,
+          18.2,
+          19.8,
+          20.3,
+          21.1
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          14.5,
+          13.3,
+          14.7,
+          17.8,
+          20.1,
+          27.3,
+          13.4,
+          14.8,
+          14,
+          13.7,
+          17.2,
+          12.8,
+          13.7,
+          13.8,
+          13.8
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-toulouse",
+      "photoSha256": "34c11fa89a03c1aa0dbf43de16c1f2732a3e046c0055c869c96bad447eb794de",
+      "sourceDate": "2012-08-28",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2012-08-25&end_date=2012-08-31&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-02T23:41:01.888Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2012-08-25",
+          "2012-08-26",
+          "2012-08-27",
+          "2012-08-28",
+          "2012-08-29",
+          "2012-08-30",
+          "2012-08-31"
+        ],
+        "temperature_2m_mean": [
+          21.8,
+          21.1,
+          23.6,
+          25.2,
+          24.7,
+          18.3,
+          17.9
+        ],
+        "precipitation_sum": [
+          1.5,
+          0,
+          0,
+          0.8,
+          12.2,
+          27.3,
+          0.5
+        ],
+        "wind_speed_10m_max": [
+          24.3,
+          15.9,
+          20.6,
+          16.6,
+          12.3,
+          19.6,
+          25.2
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-toulouse",
+      "photoSha256": "34c11fa89a03c1aa0dbf43de16c1f2732a3e046c0055c869c96bad447eb794de",
+      "sourceDate": "2012-08-28",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2012-08-21&end_date=2012-09-04&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:47:39.397Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2012-08-21",
+          "2012-08-22",
+          "2012-08-23",
+          "2012-08-24",
+          "2012-08-25",
+          "2012-08-26",
+          "2012-08-27",
+          "2012-08-28",
+          "2012-08-29",
+          "2012-08-30",
+          "2012-08-31",
+          "2012-09-01",
+          "2012-09-02",
+          "2012-09-03",
+          "2012-09-04"
+        ],
+        "temperature_2m_mean": [
+          29.7,
+          27.4,
+          28.9,
+          26.2,
+          21.8,
+          21.1,
+          23.6,
+          25.2,
+          24.7,
+          18.3,
+          17.9,
+          16.4,
+          17.7,
+          19.6,
+          21.3
+        ],
+        "precipitation_sum": [
+          1.8,
+          0,
+          0.5,
+          0,
+          1.5,
+          0,
+          0,
+          0.8,
+          12.2,
+          27.3,
+          0.5,
+          0,
+          0,
+          0.3,
+          0
+        ],
+        "wind_speed_10m_max": [
+          20,
+          18,
+          20.5,
+          18.4,
+          24.3,
+          15.9,
+          20.6,
+          16.6,
+          12.3,
+          19.6,
+          25.2,
+          22.6,
+          20.9,
+          22.2,
+          19.6
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "hoffselva-oslo",
+      "photoSha256": "8d5217786fdf35351f94c8ba3e105225046766eeb50d75e4da93be770c573053",
+      "sourceDate": "2014-05-12",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=59.9133&longitude=10.7389&start_date=2014-05-09&end_date=2014-05-15&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-02T23:41:02.094Z",
+      "requestedCoordinates": {
+        "lat": 59.9133,
+        "lon": 10.7389
+      },
+      "gridCoordinates": {
+        "lat": 60,
+        "lon": 10.75
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2014-05-09",
+          "2014-05-10",
+          "2014-05-11",
+          "2014-05-12",
+          "2014-05-13",
+          "2014-05-14",
+          "2014-05-15"
+        ],
+        "temperature_2m_mean": [
+          7.6,
+          9.5,
+          9.9,
+          9.8,
+          10.8,
+          10.1,
+          10.2
+        ],
+        "precipitation_sum": [
+          0,
+          0.4,
+          1.6,
+          3.2,
+          8,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          12.3,
+          8,
+          12.9,
+          12.6,
+          10.4,
+          14.6,
+          18.3
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "hoffselva-oslo",
+      "photoSha256": "8d5217786fdf35351f94c8ba3e105225046766eeb50d75e4da93be770c573053",
+      "sourceDate": "2014-05-12",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=59.9133&longitude=10.7389&start_date=2014-05-05&end_date=2014-05-19&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:47:40.666Z",
+      "requestedCoordinates": {
+        "lat": 59.9133,
+        "lon": 10.7389
+      },
+      "gridCoordinates": {
+        "lat": 60,
+        "lon": 10.75
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2014-05-05",
+          "2014-05-06",
+          "2014-05-07",
+          "2014-05-08",
+          "2014-05-09",
+          "2014-05-10",
+          "2014-05-11",
+          "2014-05-12",
+          "2014-05-13",
+          "2014-05-14",
+          "2014-05-15",
+          "2014-05-16",
+          "2014-05-17",
+          "2014-05-18",
+          "2014-05-19"
+        ],
+        "temperature_2m_mean": [
+          7.2,
+          7.2,
+          4.7,
+          5.4,
+          7.6,
+          9.5,
+          9.9,
+          9.8,
+          10.8,
+          10.1,
+          10.2,
+          14.8,
+          14.7,
+          16.2,
+          17.3
+        ],
+        "precipitation_sum": [
+          2.2,
+          19.9,
+          12.8,
+          0.4,
+          0,
+          0.4,
+          1.6,
+          3.2,
+          8,
+          0,
+          0,
+          0,
+          0.1,
+          0.3,
+          4.6
+        ],
+        "wind_speed_10m_max": [
+          12.4,
+          15.1,
+          16.1,
+          14.3,
+          12.3,
+          8,
+          12.9,
+          12.6,
+          10.4,
+          14.6,
+          18.3,
+          11.7,
+          15.5,
+          9.1,
+          10.2
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-bridge",
+      "photoSha256": "672b46738dea3579bba8b8227e07eda036ebcac7ef11b5c9cab0e5978ed1bd63",
+      "sourceDate": "2021-08-20",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2021-08-17&end_date=2021-08-23&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-02T23:41:02.299Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2021-08-17",
+          "2021-08-18",
+          "2021-08-19",
+          "2021-08-20",
+          "2021-08-21",
+          "2021-08-22",
+          "2021-08-23"
+        ],
+        "temperature_2m_mean": [
+          23.2,
+          21.2,
+          18.9,
+          18.8,
+          20.6,
+          21.9,
+          23.7
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          19.8,
+          19.4,
+          16.4,
+          17.8,
+          18.3,
+          17.6,
+          16.3
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-bridge",
+      "photoSha256": "672b46738dea3579bba8b8227e07eda036ebcac7ef11b5c9cab0e5978ed1bd63",
+      "sourceDate": "2021-08-20",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2021-08-13&end_date=2021-08-27&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:47:41.936Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2021-08-13",
+          "2021-08-14",
+          "2021-08-15",
+          "2021-08-16",
+          "2021-08-17",
+          "2021-08-18",
+          "2021-08-19",
+          "2021-08-20",
+          "2021-08-21",
+          "2021-08-22",
+          "2021-08-23",
+          "2021-08-24",
+          "2021-08-25",
+          "2021-08-26",
+          "2021-08-27"
+        ],
+        "temperature_2m_mean": [
+          22.3,
+          21.9,
+          22.1,
+          22,
+          23.2,
+          21.2,
+          18.9,
+          18.8,
+          20.6,
+          21.9,
+          23.7,
+          24.2,
+          22.4,
+          22,
+          20.4
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          15,
+          15.8,
+          18.7,
+          24.7,
+          19.8,
+          19.4,
+          16.4,
+          17.8,
+          18.3,
+          17.6,
+          16.3,
+          15,
+          16.3,
+          15,
+          17.1
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-riverbank",
+      "photoSha256": "7a6141fc6aa8bc9a4b7371d98b6779bba288a380ee79b2ab9fcf6e71f73a92b7",
+      "sourceDate": "2012-03-10",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2012-03-07&end_date=2012-03-13&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-02T23:41:02.505Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2012-03-07",
+          "2012-03-08",
+          "2012-03-09",
+          "2012-03-10",
+          "2012-03-11",
+          "2012-03-12",
+          "2012-03-13"
+        ],
+        "temperature_2m_mean": [
+          13.1,
+          14.6,
+          15.6,
+          16.2,
+          15,
+          15,
+          14.7
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          11.5,
+          12.1,
+          14.3,
+          12.6,
+          14.5,
+          12.4,
+          13.8
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-riverbank",
+      "photoSha256": "7a6141fc6aa8bc9a4b7371d98b6779bba288a380ee79b2ab9fcf6e71f73a92b7",
+      "sourceDate": "2012-03-10",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2012-03-03&end_date=2012-03-17&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:47:43.198Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2012-03-03",
+          "2012-03-04",
+          "2012-03-05",
+          "2012-03-06",
+          "2012-03-07",
+          "2012-03-08",
+          "2012-03-09",
+          "2012-03-10",
+          "2012-03-11",
+          "2012-03-12",
+          "2012-03-13",
+          "2012-03-14",
+          "2012-03-15",
+          "2012-03-16",
+          "2012-03-17"
+        ],
+        "temperature_2m_mean": [
+          12,
+          13.2,
+          11.1,
+          10.9,
+          13.1,
+          14.6,
+          15.6,
+          16.2,
+          15,
+          15,
+          14.7,
+          16.3,
+          15.5,
+          13.3,
+          11.2
+        ],
+        "precipitation_sum": [
+          9.7,
+          2.1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.2,
+          2.1
+        ],
+        "wind_speed_10m_max": [
+          15.4,
+          19.5,
+          13.3,
+          17.9,
+          11.5,
+          12.1,
+          14.3,
+          12.6,
+          14.5,
+          12.4,
+          13.8,
+          8.9,
+          11.2,
+          16.5,
+          19.4
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-pont-neuf",
+      "photoSha256": "30627519bc5c920b97ba7490331e6b4f26640a437a34896918adb6f4468d967c",
+      "sourceDate": "2010-06-18",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2010-06-15&end_date=2010-06-21&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-02T23:41:02.707Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2010-06-15",
+          "2010-06-16",
+          "2010-06-17",
+          "2010-06-18",
+          "2010-06-19",
+          "2010-06-20",
+          "2010-06-21"
+        ],
+        "temperature_2m_mean": [
+          15.2,
+          16.8,
+          16.6,
+          17.4,
+          15.3,
+          14.2,
+          15.5
+        ],
+        "precipitation_sum": [
+          0.1,
+          7,
+          0.8,
+          1.8,
+          13.4,
+          1.6,
+          0
+        ],
+        "wind_speed_10m_max": [
+          17.1,
+          15.9,
+          19.5,
+          15.8,
+          28.1,
+          26.9,
+          18.9
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-pont-neuf",
+      "photoSha256": "30627519bc5c920b97ba7490331e6b4f26640a437a34896918adb6f4468d967c",
+      "sourceDate": "2010-06-18",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2010-06-11&end_date=2010-06-25&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:47:44.455Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2010-06-11",
+          "2010-06-12",
+          "2010-06-13",
+          "2010-06-14",
+          "2010-06-15",
+          "2010-06-16",
+          "2010-06-17",
+          "2010-06-18",
+          "2010-06-19",
+          "2010-06-20",
+          "2010-06-21",
+          "2010-06-22",
+          "2010-06-23",
+          "2010-06-24",
+          "2010-06-25"
+        ],
+        "temperature_2m_mean": [
+          19.2,
+          19.3,
+          19.6,
+          14.7,
+          15.2,
+          16.8,
+          16.6,
+          17.4,
+          15.3,
+          14.2,
+          15.5,
+          17.3,
+          19.3,
+          21.3,
+          23.3
+        ],
+        "precipitation_sum": [
+          3.1,
+          0.2,
+          1.5,
+          10,
+          0.1,
+          7,
+          0.8,
+          1.8,
+          13.4,
+          1.6,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          13.3,
+          14.4,
+          22.1,
+          13.2,
+          17.1,
+          15.9,
+          19.5,
+          15.8,
+          28.1,
+          26.9,
+          18.9,
+          12.8,
+          10,
+          8.2,
+          7
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-promenade",
+      "photoSha256": "aba0b073ccfd348ce5ce1f57dcf8b7e2220aa21772464184fe16149b0a542eaa",
+      "sourceDate": "2019-06-18",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2019-06-15&end_date=2019-06-21&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-02T23:41:02.916Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2019-06-15",
+          "2019-06-16",
+          "2019-06-17",
+          "2019-06-18",
+          "2019-06-19",
+          "2019-06-20",
+          "2019-06-21"
+        ],
+        "temperature_2m_mean": [
+          16.2,
+          18.7,
+          22.3,
+          24.7,
+          22.7,
+          19.5,
+          17.7
+        ],
+        "precipitation_sum": [
+          2.3,
+          0,
+          0,
+          0,
+          1.2,
+          3.6,
+          0.6
+        ],
+        "wind_speed_10m_max": [
+          20.2,
+          8.3,
+          10.3,
+          23.8,
+          12.5,
+          12.4,
+          20.2
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-promenade",
+      "photoSha256": "aba0b073ccfd348ce5ce1f57dcf8b7e2220aa21772464184fe16149b0a542eaa",
+      "sourceDate": "2019-06-18",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2019-06-11&end_date=2019-06-25&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:47:45.722Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2019-06-11",
+          "2019-06-12",
+          "2019-06-13",
+          "2019-06-14",
+          "2019-06-15",
+          "2019-06-16",
+          "2019-06-17",
+          "2019-06-18",
+          "2019-06-19",
+          "2019-06-20",
+          "2019-06-21",
+          "2019-06-22",
+          "2019-06-23",
+          "2019-06-24",
+          "2019-06-25"
+        ],
+        "temperature_2m_mean": [
+          13.2,
+          14.8,
+          18.6,
+          16.9,
+          16.2,
+          18.7,
+          22.3,
+          24.7,
+          22.7,
+          19.5,
+          17.7,
+          19.6,
+          23.9,
+          24.2,
+          24.7
+        ],
+        "precipitation_sum": [
+          3.7,
+          0,
+          0,
+          0.1,
+          2.3,
+          0,
+          0,
+          0,
+          1.2,
+          3.6,
+          0.6,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          22,
+          11.7,
+          23.8,
+          13.1,
+          20.2,
+          8.3,
+          10.3,
+          23.8,
+          12.5,
+          12.4,
+          20.2,
+          13,
+          18.8,
+          23.2,
+          20.8
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "hoffselva-engebrets",
+      "photoSha256": "a9de74b759c913603a0103fe8c1be32965d37ec7b11c95c6c5b9a2404b31f547",
+      "sourceDate": "2016-05-25",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=59.9133&longitude=10.7389&start_date=2016-05-22&end_date=2016-05-28&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-02T23:41:03.100Z",
+      "requestedCoordinates": {
+        "lat": 59.9133,
+        "lon": 10.7389
+      },
+      "gridCoordinates": {
+        "lat": 60,
+        "lon": 10.75
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2016-05-22",
+          "2016-05-23",
+          "2016-05-24",
+          "2016-05-25",
+          "2016-05-26",
+          "2016-05-27",
+          "2016-05-28"
+        ],
+        "temperature_2m_mean": [
+          14,
+          14.4,
+          11.6,
+          13.8,
+          13.8,
+          16,
+          14.2
+        ],
+        "precipitation_sum": [
+          13.2,
+          25.4,
+          1.3,
+          0,
+          0,
+          0,
+          1.8
+        ],
+        "wind_speed_10m_max": [
+          15.6,
+          13,
+          20.4,
+          20.1,
+          13.1,
+          13.8,
+          10
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "hoffselva-engebrets",
+      "photoSha256": "a9de74b759c913603a0103fe8c1be32965d37ec7b11c95c6c5b9a2404b31f547",
+      "sourceDate": "2016-05-25",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=59.9133&longitude=10.7389&start_date=2016-05-18&end_date=2016-06-01&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:47:47.000Z",
+      "requestedCoordinates": {
+        "lat": 59.9133,
+        "lon": 10.7389
+      },
+      "gridCoordinates": {
+        "lat": 60,
+        "lon": 10.75
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2016-05-18",
+          "2016-05-19",
+          "2016-05-20",
+          "2016-05-21",
+          "2016-05-22",
+          "2016-05-23",
+          "2016-05-24",
+          "2016-05-25",
+          "2016-05-26",
+          "2016-05-27",
+          "2016-05-28",
+          "2016-05-29",
+          "2016-05-30",
+          "2016-05-31",
+          "2016-06-01"
+        ],
+        "temperature_2m_mean": [
+          12.1,
+          12.7,
+          11.8,
+          12,
+          14,
+          14.4,
+          11.6,
+          13.8,
+          13.8,
+          16,
+          14.2,
+          13.9,
+          16.4,
+          20.2,
+          21.9
+        ],
+        "precipitation_sum": [
+          0,
+          2.3,
+          8.1,
+          1.6,
+          13.2,
+          25.4,
+          1.3,
+          0,
+          0,
+          0,
+          1.8,
+          6.5,
+          2,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          15.9,
+          14.5,
+          17.1,
+          16.2,
+          15.6,
+          13,
+          20.4,
+          20.1,
+          13.1,
+          13.8,
+          10,
+          15.4,
+          17.2,
+          9.2,
+          8.7
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "hoffselva-nedre",
+      "photoSha256": "70e5d79751fe00348fedddbd13fa0d3675d72870f086fa697094c81d7751d0bf",
+      "sourceDate": "2020-04-26",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=59.9133&longitude=10.7389&start_date=2020-04-23&end_date=2020-04-29&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-02T23:41:03.324Z",
+      "requestedCoordinates": {
+        "lat": 59.9133,
+        "lon": 10.7389
+      },
+      "gridCoordinates": {
+        "lat": 60,
+        "lon": 10.75
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2020-04-23",
+          "2020-04-24",
+          "2020-04-25",
+          "2020-04-26",
+          "2020-04-27",
+          "2020-04-28",
+          "2020-04-29"
+        ],
+        "temperature_2m_mean": [
+          13.1,
+          10,
+          9.8,
+          9.6,
+          6.4,
+          5.2,
+          6
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          13.7,
+          4.2,
+          0.5
+        ],
+        "wind_speed_10m_max": [
+          14.8,
+          18.9,
+          12.6,
+          10.7,
+          17.3,
+          17.6,
+          10
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "hoffselva-nedre",
+      "photoSha256": "70e5d79751fe00348fedddbd13fa0d3675d72870f086fa697094c81d7751d0bf",
+      "sourceDate": "2020-04-26",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=59.9133&longitude=10.7389&start_date=2020-04-19&end_date=2020-05-03&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:47:48.281Z",
+      "requestedCoordinates": {
+        "lat": 59.9133,
+        "lon": 10.7389
+      },
+      "gridCoordinates": {
+        "lat": 60,
+        "lon": 10.75
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2020-04-19",
+          "2020-04-20",
+          "2020-04-21",
+          "2020-04-22",
+          "2020-04-23",
+          "2020-04-24",
+          "2020-04-25",
+          "2020-04-26",
+          "2020-04-27",
+          "2020-04-28",
+          "2020-04-29",
+          "2020-04-30",
+          "2020-05-01",
+          "2020-05-02",
+          "2020-05-03"
+        ],
+        "temperature_2m_mean": [
+          10.1,
+          12,
+          13.3,
+          14,
+          13.1,
+          10,
+          9.8,
+          9.6,
+          6.4,
+          5.2,
+          6,
+          5.7,
+          6.2,
+          9.5,
+          9.1
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          13.7,
+          4.2,
+          0.5,
+          5.6,
+          9.7,
+          0.5,
+          4.2
+        ],
+        "wind_speed_10m_max": [
+          13.3,
+          12,
+          11.4,
+          11.7,
+          14.8,
+          18.9,
+          12.6,
+          10.7,
+          17.3,
+          17.6,
+          10,
+          17.2,
+          12.1,
+          10.5,
+          11.9
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-01",
+      "photoSha256": "65c528338ccc8ee279cbcb2557452214a74776ec72522797521bad5714738490",
+      "sourceDate": "2026-05-17",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2026-05-14&end_date=2026-05-20&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:47:49.545Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2026-05-14",
+          "2026-05-15",
+          "2026-05-16",
+          "2026-05-17",
+          "2026-05-18",
+          "2026-05-19",
+          "2026-05-20"
+        ],
+        "temperature_2m_mean": [
+          15.4,
+          15.2,
+          14.9,
+          15,
+          14.6,
+          16.7,
+          20.5
+        ],
+        "precipitation_sum": [
+          0,
+          0.4,
+          0,
+          0,
+          0,
+          0.8,
+          0
+        ],
+        "wind_speed_10m_max": [
+          26.1,
+          25.6,
+          22.6,
+          19.6,
+          13.3,
+          10.4,
+          9.5
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-01",
+      "photoSha256": "65c528338ccc8ee279cbcb2557452214a74776ec72522797521bad5714738490",
+      "sourceDate": "2026-05-17",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2026-05-10&end_date=2026-05-24&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:47:50.803Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2026-05-10",
+          "2026-05-11",
+          "2026-05-12",
+          "2026-05-13",
+          "2026-05-14",
+          "2026-05-15",
+          "2026-05-16",
+          "2026-05-17",
+          "2026-05-18",
+          "2026-05-19",
+          "2026-05-20",
+          "2026-05-21",
+          "2026-05-22",
+          "2026-05-23",
+          "2026-05-24"
+        ],
+        "temperature_2m_mean": [
+          15,
+          15.8,
+          15.9,
+          15.2,
+          15.4,
+          15.2,
+          14.9,
+          15,
+          14.6,
+          16.7,
+          20.5,
+          22.7,
+          24,
+          22.5,
+          21.4
+        ],
+        "precipitation_sum": [
+          24.5,
+          16.9,
+          7,
+          1.4,
+          0,
+          0.4,
+          0,
+          0,
+          0,
+          0.8,
+          0,
+          0,
+          0,
+          3,
+          0.8
+        ],
+        "wind_speed_10m_max": [
+          24.5,
+          17.9,
+          13,
+          13.9,
+          26.1,
+          25.6,
+          22.6,
+          19.6,
+          13.3,
+          10.4,
+          9.5,
+          11.5,
+          20.5,
+          13.1,
+          12.9
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-02",
+      "photoSha256": "49e2499b4daf8724ca335b047776f45a01ac65fa5844947adfc0cebf3ffed651",
+      "sourceDate": "2023-08-28",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2023-08-25&end_date=2023-08-31&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:47:52.077Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2023-08-25",
+          "2023-08-26",
+          "2023-08-27",
+          "2023-08-28",
+          "2023-08-29",
+          "2023-08-30",
+          "2023-08-31"
+        ],
+        "temperature_2m_mean": [
+          22.1,
+          19.8,
+          19.7,
+          20.7,
+          20.8,
+          21.1,
+          21.7
+        ],
+        "precipitation_sum": [
+          0.1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          18.8,
+          28.8,
+          27.9,
+          27,
+          26.4,
+          21.6,
+          18.9
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-02",
+      "photoSha256": "49e2499b4daf8724ca335b047776f45a01ac65fa5844947adfc0cebf3ffed651",
+      "sourceDate": "2023-08-28",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2023-08-21&end_date=2023-09-04&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:47:53.333Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2023-08-21",
+          "2023-08-22",
+          "2023-08-23",
+          "2023-08-24",
+          "2023-08-25",
+          "2023-08-26",
+          "2023-08-27",
+          "2023-08-28",
+          "2023-08-29",
+          "2023-08-30",
+          "2023-08-31",
+          "2023-09-01",
+          "2023-09-02",
+          "2023-09-03",
+          "2023-09-04"
+        ],
+        "temperature_2m_mean": [
+          25.4,
+          28.1,
+          27,
+          23.9,
+          22.1,
+          19.8,
+          19.7,
+          20.7,
+          20.8,
+          21.1,
+          21.7,
+          19.9,
+          19.7,
+          20.2,
+          20.3
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0.1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3.2,
+          14.6,
+          4
+        ],
+        "wind_speed_10m_max": [
+          17.2,
+          15.8,
+          16.9,
+          16.1,
+          18.8,
+          28.8,
+          27.9,
+          27,
+          26.4,
+          21.6,
+          18.9,
+          18.2,
+          14.6,
+          14.5,
+          26.4
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-03",
+      "photoSha256": "3e58c887cb2ea1ea64190d90ac9892906f4a4dbe2885c0974683e6eaf9d27e5c",
+      "sourceDate": "2007-10-10",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2007-10-07&end_date=2007-10-13&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:47:54.600Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2007-10-07",
+          "2007-10-08",
+          "2007-10-09",
+          "2007-10-10",
+          "2007-10-11",
+          "2007-10-12",
+          "2007-10-13"
+        ],
+        "temperature_2m_mean": [
+          18,
+          17.8,
+          19.8,
+          19.9,
+          19,
+          18,
+          18.8
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          10.2,
+          16.7,
+          14.7,
+          12.4,
+          18.2,
+          11.7,
+          9.8
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-03",
+      "photoSha256": "3e58c887cb2ea1ea64190d90ac9892906f4a4dbe2885c0974683e6eaf9d27e5c",
+      "sourceDate": "2007-10-10",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2007-10-03&end_date=2007-10-17&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:47:55.861Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2007-10-03",
+          "2007-10-04",
+          "2007-10-05",
+          "2007-10-06",
+          "2007-10-07",
+          "2007-10-08",
+          "2007-10-09",
+          "2007-10-10",
+          "2007-10-11",
+          "2007-10-12",
+          "2007-10-13",
+          "2007-10-14",
+          "2007-10-15",
+          "2007-10-16",
+          "2007-10-17"
+        ],
+        "temperature_2m_mean": [
+          17,
+          18.9,
+          17.5,
+          17.3,
+          18,
+          17.8,
+          19.8,
+          19.9,
+          19,
+          18,
+          18.8,
+          19.3,
+          19.3,
+          18.3,
+          17.8
+        ],
+        "precipitation_sum": [
+          1.1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.1,
+          0.4,
+          0
+        ],
+        "wind_speed_10m_max": [
+          7.7,
+          13.7,
+          11.7,
+          9.5,
+          10.2,
+          16.7,
+          14.7,
+          12.4,
+          18.2,
+          11.7,
+          9.8,
+          9,
+          8.2,
+          15,
+          14
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-04",
+      "photoSha256": "521285d7152e95e62cf43e6e8731b556cf95bf969b0cfc1a671d7c14763513f3",
+      "sourceDate": "2009-10-02",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2009-09-29&end_date=2009-10-05&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:47:57.133Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2009-09-29",
+          "2009-09-30",
+          "2009-10-01",
+          "2009-10-02",
+          "2009-10-03",
+          "2009-10-04",
+          "2009-10-05"
+        ],
+        "temperature_2m_mean": [
+          22.5,
+          21.2,
+          19.1,
+          18.3,
+          19.7,
+          22.1,
+          21.2
+        ],
+        "precipitation_sum": [
+          0.1,
+          0.9,
+          0,
+          0,
+          0,
+          0.2,
+          16.7
+        ],
+        "wind_speed_10m_max": [
+          10.7,
+          13.4,
+          12.1,
+          12.5,
+          12.7,
+          16.9,
+          20
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-04",
+      "photoSha256": "521285d7152e95e62cf43e6e8731b556cf95bf969b0cfc1a671d7c14763513f3",
+      "sourceDate": "2009-10-02",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2009-09-25&end_date=2009-10-09&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:47:58.392Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2009-09-25",
+          "2009-09-26",
+          "2009-09-27",
+          "2009-09-28",
+          "2009-09-29",
+          "2009-09-30",
+          "2009-10-01",
+          "2009-10-02",
+          "2009-10-03",
+          "2009-10-04",
+          "2009-10-05",
+          "2009-10-06",
+          "2009-10-07",
+          "2009-10-08",
+          "2009-10-09"
+        ],
+        "temperature_2m_mean": [
+          23.2,
+          22.9,
+          20.9,
+          22.3,
+          22.5,
+          21.2,
+          19.1,
+          18.3,
+          19.7,
+          22.1,
+          21.2,
+          21.5,
+          20.7,
+          18.9,
+          18
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0.1,
+          0.9,
+          0,
+          0,
+          0,
+          0.2,
+          16.7,
+          11.7,
+          20.9,
+          1,
+          0
+        ],
+        "wind_speed_10m_max": [
+          13.9,
+          14.2,
+          14.3,
+          12.3,
+          10.7,
+          13.4,
+          12.1,
+          12.5,
+          12.7,
+          16.9,
+          20,
+          21.5,
+          23.7,
+          12.4,
+          14.6
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-05",
+      "photoSha256": "202afd3957795a9095fd83acf18e4a6ddae7e78ae108af9a4c1ca883cbaaa234",
+      "sourceDate": "2016-04-17",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2016-04-14&end_date=2016-04-20&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:47:59.663Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2016-04-14",
+          "2016-04-15",
+          "2016-04-16",
+          "2016-04-17",
+          "2016-04-18",
+          "2016-04-19",
+          "2016-04-20"
+        ],
+        "temperature_2m_mean": [
+          14.6,
+          14.6,
+          14.5,
+          13.3,
+          15.2,
+          16.3,
+          14.5
+        ],
+        "precipitation_sum": [
+          47.4,
+          22.5,
+          15.5,
+          6.1,
+          1.4,
+          12.9,
+          2.5
+        ],
+        "wind_speed_10m_max": [
+          27,
+          24.5,
+          25,
+          13,
+          17.5,
+          20.2,
+          16.8
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-05",
+      "photoSha256": "202afd3957795a9095fd83acf18e4a6ddae7e78ae108af9a4c1ca883cbaaa234",
+      "sourceDate": "2016-04-17",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2016-04-10&end_date=2016-04-24&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:00.931Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2016-04-10",
+          "2016-04-11",
+          "2016-04-12",
+          "2016-04-13",
+          "2016-04-14",
+          "2016-04-15",
+          "2016-04-16",
+          "2016-04-17",
+          "2016-04-18",
+          "2016-04-19",
+          "2016-04-20",
+          "2016-04-21",
+          "2016-04-22",
+          "2016-04-23",
+          "2016-04-24"
+        ],
+        "temperature_2m_mean": [
+          10.6,
+          10.9,
+          12.2,
+          13.6,
+          14.6,
+          14.6,
+          14.5,
+          13.3,
+          15.2,
+          16.3,
+          14.5,
+          14.2,
+          15.3,
+          15.3,
+          15.6
+        ],
+        "precipitation_sum": [
+          10.7,
+          6.2,
+          16.6,
+          5.9,
+          47.4,
+          22.5,
+          15.5,
+          6.1,
+          1.4,
+          12.9,
+          2.5,
+          5.2,
+          0.3,
+          0.4,
+          0
+        ],
+        "wind_speed_10m_max": [
+          29.2,
+          26.7,
+          27,
+          22.6,
+          27,
+          24.5,
+          25,
+          13,
+          17.5,
+          20.2,
+          16.8,
+          16.4,
+          11.3,
+          17,
+          15.6
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-06",
+      "photoSha256": "bacbef6fe806cdb81ae5df32cc68bb169cf16f9247b48a01bafae4e74ee0f6b9",
+      "sourceDate": "2012-06-11",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2012-06-08&end_date=2012-06-14&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:02.189Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2012-06-08",
+          "2012-06-09",
+          "2012-06-10",
+          "2012-06-11",
+          "2012-06-12",
+          "2012-06-13",
+          "2012-06-14"
+        ],
+        "temperature_2m_mean": [
+          17,
+          17.2,
+          19.7,
+          18.3,
+          17.4,
+          17,
+          17.4
+        ],
+        "precipitation_sum": [
+          0.3,
+          0.5,
+          2,
+          2.3,
+          0.5,
+          0,
+          0.5
+        ],
+        "wind_speed_10m_max": [
+          17.7,
+          16.1,
+          19.3,
+          25.1,
+          20.5,
+          15.9,
+          16.6
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-06",
+      "photoSha256": "bacbef6fe806cdb81ae5df32cc68bb169cf16f9247b48a01bafae4e74ee0f6b9",
+      "sourceDate": "2012-06-11",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2012-06-04&end_date=2012-06-18&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:03.450Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2012-06-04",
+          "2012-06-05",
+          "2012-06-06",
+          "2012-06-07",
+          "2012-06-08",
+          "2012-06-09",
+          "2012-06-10",
+          "2012-06-11",
+          "2012-06-12",
+          "2012-06-13",
+          "2012-06-14",
+          "2012-06-15",
+          "2012-06-16",
+          "2012-06-17",
+          "2012-06-18"
+        ],
+        "temperature_2m_mean": [
+          20.3,
+          20.6,
+          20.1,
+          19.1,
+          17,
+          17.2,
+          19.7,
+          18.3,
+          17.4,
+          17,
+          17.4,
+          19,
+          20.2,
+          19.6,
+          17.6
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          1.4,
+          1.9,
+          0.3,
+          0.5,
+          2,
+          2.3,
+          0.5,
+          0,
+          0.5,
+          0,
+          0.7,
+          1,
+          0
+        ],
+        "wind_speed_10m_max": [
+          16.3,
+          19.1,
+          16.4,
+          19.4,
+          17.7,
+          16.1,
+          19.3,
+          25.1,
+          20.5,
+          15.9,
+          16.6,
+          15.3,
+          15.6,
+          21.6,
+          18.9
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-07",
+      "photoSha256": "5b09c60cda8a3380fe1a554dd5b69b39686292cb4f8d1a895d62134e3bacbf74",
+      "sourceDate": "2012-12-10",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2012-12-07&end_date=2012-12-13&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:04.730Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2012-12-07",
+          "2012-12-08",
+          "2012-12-09",
+          "2012-12-10",
+          "2012-12-11",
+          "2012-12-12",
+          "2012-12-13"
+        ],
+        "temperature_2m_mean": [
+          12.7,
+          9.4,
+          7.8,
+          8.8,
+          6.3,
+          7.6,
+          12.5
+        ],
+        "precipitation_sum": [
+          1.7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5.5
+        ],
+        "wind_speed_10m_max": [
+          20.9,
+          9.2,
+          10.6,
+          7.9,
+          9.1,
+          12.6,
+          25.5
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-07",
+      "photoSha256": "5b09c60cda8a3380fe1a554dd5b69b39686292cb4f8d1a895d62134e3bacbf74",
+      "sourceDate": "2012-12-10",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2012-12-03&end_date=2012-12-17&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:05.998Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2012-12-03",
+          "2012-12-04",
+          "2012-12-05",
+          "2012-12-06",
+          "2012-12-07",
+          "2012-12-08",
+          "2012-12-09",
+          "2012-12-10",
+          "2012-12-11",
+          "2012-12-12",
+          "2012-12-13",
+          "2012-12-14",
+          "2012-12-15",
+          "2012-12-16",
+          "2012-12-17"
+        ],
+        "temperature_2m_mean": [
+          7.2,
+          11.5,
+          10.1,
+          11.5,
+          12.7,
+          9.4,
+          7.8,
+          8.8,
+          6.3,
+          7.6,
+          12.5,
+          15.1,
+          14.1,
+          14.3,
+          13.5
+        ],
+        "precipitation_sum": [
+          0,
+          1.1,
+          0,
+          10.8,
+          1.7,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5.5,
+          42.5,
+          1.7,
+          6.1,
+          0
+        ],
+        "wind_speed_10m_max": [
+          10.2,
+          12.2,
+          8.2,
+          25.7,
+          20.9,
+          9.2,
+          10.6,
+          7.9,
+          9.1,
+          12.6,
+          25.5,
+          39.6,
+          18.2,
+          27.2,
+          7.4
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-08",
+      "photoSha256": "7071f1467538c7b3c82291e111d099c86684a25e2163972d50629ec2216709ff",
+      "sourceDate": "2025-08-01",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2025-07-29&end_date=2025-08-04&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:07.268Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2025-07-29",
+          "2025-07-30",
+          "2025-07-31",
+          "2025-08-01",
+          "2025-08-02",
+          "2025-08-03",
+          "2025-08-04"
+        ],
+        "temperature_2m_mean": [
+          28.6,
+          28.7,
+          26.7,
+          23.5,
+          23.8,
+          27.8,
+          27.2
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          18.7,
+          18.1,
+          15.3,
+          13.5,
+          12.6,
+          16.8,
+          14.9
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-08",
+      "photoSha256": "7071f1467538c7b3c82291e111d099c86684a25e2163972d50629ec2216709ff",
+      "sourceDate": "2025-08-01",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2025-07-25&end_date=2025-08-08&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:08.531Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2025-07-25",
+          "2025-07-26",
+          "2025-07-27",
+          "2025-07-28",
+          "2025-07-29",
+          "2025-07-30",
+          "2025-07-31",
+          "2025-08-01",
+          "2025-08-02",
+          "2025-08-03",
+          "2025-08-04",
+          "2025-08-05",
+          "2025-08-06",
+          "2025-08-07",
+          "2025-08-08"
+        ],
+        "temperature_2m_mean": [
+          26,
+          26,
+          23.4,
+          25.1,
+          28.6,
+          28.7,
+          26.7,
+          23.5,
+          23.8,
+          27.8,
+          27.2,
+          26.6,
+          23.6,
+          21.2,
+          21.6
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          18.4,
+          17.2,
+          20.9,
+          19.8,
+          18.7,
+          18.1,
+          15.3,
+          13.5,
+          12.6,
+          16.8,
+          14.9,
+          14.9,
+          13.8,
+          16,
+          14.5
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-09",
+      "photoSha256": "2877d12930d4e9f33dfc77e94691c57fc322e77a051403d55bbc4d35bafc53b6",
+      "sourceDate": "2015-09-04",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2015-09-01&end_date=2015-09-07&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:09.803Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2015-09-01",
+          "2015-09-02",
+          "2015-09-03",
+          "2015-09-04",
+          "2015-09-05",
+          "2015-09-06",
+          "2015-09-07"
+        ],
+        "temperature_2m_mean": [
+          21,
+          18.8,
+          19.4,
+          18.8,
+          19.6,
+          20.8,
+          22.7
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0.2,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          17.5,
+          16.9,
+          18.9,
+          19.1,
+          15.3,
+          15.3,
+          16.6
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-09",
+      "photoSha256": "2877d12930d4e9f33dfc77e94691c57fc322e77a051403d55bbc4d35bafc53b6",
+      "sourceDate": "2015-09-04",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2015-08-28&end_date=2015-09-11&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:11.063Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2015-08-28",
+          "2015-08-29",
+          "2015-08-30",
+          "2015-08-31",
+          "2015-09-01",
+          "2015-09-02",
+          "2015-09-03",
+          "2015-09-04",
+          "2015-09-05",
+          "2015-09-06",
+          "2015-09-07",
+          "2015-09-08",
+          "2015-09-09",
+          "2015-09-10",
+          "2015-09-11"
+        ],
+        "temperature_2m_mean": [
+          23.8,
+          23.2,
+          24.2,
+          22,
+          21,
+          18.8,
+          19.4,
+          18.8,
+          19.6,
+          20.8,
+          22.7,
+          20.9,
+          18.4,
+          18.7,
+          18.2
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0.1,
+          1,
+          0,
+          0,
+          0,
+          0.2,
+          0,
+          0,
+          0,
+          0,
+          0.2,
+          0,
+          0.2
+        ],
+        "wind_speed_10m_max": [
+          15.3,
+          14.6,
+          16.6,
+          12.5,
+          17.5,
+          16.9,
+          18.9,
+          19.1,
+          15.3,
+          15.3,
+          16.6,
+          18.2,
+          13.4,
+          17.6,
+          15.3
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-10",
+      "photoSha256": "5afde1024f6becdffaf379006a3c2223a11ded7cb1b3c7c8ce89ea095a43fb22",
+      "sourceDate": "2008-01-02",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2007-12-30&end_date=2008-01-05&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:12.333Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2007-12-30",
+          "2007-12-31",
+          "2008-01-01",
+          "2008-01-02",
+          "2008-01-03",
+          "2008-01-04",
+          "2008-01-05"
+        ],
+        "temperature_2m_mean": [
+          9.4,
+          8,
+          8.2,
+          11.7,
+          10,
+          9.1,
+          13.3
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          10,
+          15.7,
+          34.4,
+          3,
+          3.3
+        ],
+        "wind_speed_10m_max": [
+          8.2,
+          7.6,
+          27.5,
+          24.8,
+          34.5,
+          8.2,
+          15
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-10",
+      "photoSha256": "5afde1024f6becdffaf379006a3c2223a11ded7cb1b3c7c8ce89ea095a43fb22",
+      "sourceDate": "2008-01-02",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2007-12-26&end_date=2008-01-09&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:13.601Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2007-12-26",
+          "2007-12-27",
+          "2007-12-28",
+          "2007-12-29",
+          "2007-12-30",
+          "2007-12-31",
+          "2008-01-01",
+          "2008-01-02",
+          "2008-01-03",
+          "2008-01-04",
+          "2008-01-05",
+          "2008-01-06",
+          "2008-01-07",
+          "2008-01-08",
+          "2008-01-09"
+        ],
+        "temperature_2m_mean": [
+          9.4,
+          8.2,
+          7.8,
+          7.6,
+          9.4,
+          8,
+          8.2,
+          11.7,
+          10,
+          9.1,
+          13.3,
+          14.1,
+          14.5,
+          14.2,
+          13.6
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          10,
+          15.7,
+          34.4,
+          3,
+          3.3,
+          0,
+          0,
+          1.3,
+          9.1
+        ],
+        "wind_speed_10m_max": [
+          23,
+          11.2,
+          9.4,
+          8.3,
+          8.2,
+          7.6,
+          27.5,
+          24.8,
+          34.5,
+          8.2,
+          15,
+          9.3,
+          10,
+          10,
+          8.1
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-11",
+      "photoSha256": "e47d0134d358d3a95116db178fcce96e62fdca3a480690cd2fadddf53ef2a513",
+      "sourceDate": "2008-07-13",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2008-07-10&end_date=2008-07-16&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:14.860Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2008-07-10",
+          "2008-07-11",
+          "2008-07-12",
+          "2008-07-13",
+          "2008-07-14",
+          "2008-07-15",
+          "2008-07-16"
+        ],
+        "temperature_2m_mean": [
+          20.6,
+          19.6,
+          18.2,
+          19.2,
+          23.4,
+          26.4,
+          26.1
+        ],
+        "precipitation_sum": [
+          0,
+          1.3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          15.8,
+          16.8,
+          24.3,
+          21.3,
+          16,
+          15.6,
+          18.4
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-11",
+      "photoSha256": "e47d0134d358d3a95116db178fcce96e62fdca3a480690cd2fadddf53ef2a513",
+      "sourceDate": "2008-07-13",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2008-07-06&end_date=2008-07-20&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:16.130Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2008-07-06",
+          "2008-07-07",
+          "2008-07-08",
+          "2008-07-09",
+          "2008-07-10",
+          "2008-07-11",
+          "2008-07-12",
+          "2008-07-13",
+          "2008-07-14",
+          "2008-07-15",
+          "2008-07-16",
+          "2008-07-17",
+          "2008-07-18",
+          "2008-07-19",
+          "2008-07-20"
+        ],
+        "temperature_2m_mean": [
+          17.2,
+          17.7,
+          19.5,
+          19.8,
+          20.6,
+          19.6,
+          18.2,
+          19.2,
+          23.4,
+          26.4,
+          26.1,
+          24.2,
+          25.8,
+          26.2,
+          22.7
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1.3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          23,
+          21.7,
+          18.3,
+          16.5,
+          15.8,
+          16.8,
+          24.3,
+          21.3,
+          16,
+          15.6,
+          18.4,
+          16.7,
+          17.7,
+          15,
+          14.1
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-12",
+      "photoSha256": "4bb58ae1660edd76b7d537018d89f44376d8db4a98187ce5e9483c97fd505688",
+      "sourceDate": "2012-06-22",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2012-06-19&end_date=2012-06-25&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:17.387Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2012-06-19",
+          "2012-06-20",
+          "2012-06-21",
+          "2012-06-22",
+          "2012-06-23",
+          "2012-06-24",
+          "2012-06-25"
+        ],
+        "temperature_2m_mean": [
+          17.3,
+          17.7,
+          18.7,
+          17.7,
+          18.9,
+          22,
+          25.5
+        ],
+        "precipitation_sum": [
+          0,
+          4.5,
+          1.2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          17.1,
+          18.7,
+          18.7,
+          21.4,
+          18.7,
+          19.8,
+          15.2
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-12",
+      "photoSha256": "4bb58ae1660edd76b7d537018d89f44376d8db4a98187ce5e9483c97fd505688",
+      "sourceDate": "2012-06-22",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2012-06-15&end_date=2012-06-29&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:18.654Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2012-06-15",
+          "2012-06-16",
+          "2012-06-17",
+          "2012-06-18",
+          "2012-06-19",
+          "2012-06-20",
+          "2012-06-21",
+          "2012-06-22",
+          "2012-06-23",
+          "2012-06-24",
+          "2012-06-25",
+          "2012-06-26",
+          "2012-06-27",
+          "2012-06-28",
+          "2012-06-29"
+        ],
+        "temperature_2m_mean": [
+          19,
+          20.2,
+          19.6,
+          17.6,
+          17.3,
+          17.7,
+          18.7,
+          17.7,
+          18.9,
+          22,
+          25.5,
+          28.5,
+          24.8,
+          20.6,
+          18.8
+        ],
+        "precipitation_sum": [
+          0,
+          0.7,
+          1,
+          0,
+          0,
+          4.5,
+          1.2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          15.3,
+          15.6,
+          21.6,
+          18.9,
+          17.1,
+          18.7,
+          18.7,
+          21.4,
+          18.7,
+          19.8,
+          15.2,
+          10.5,
+          15.5,
+          17.3,
+          16.2
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-13",
+      "photoSha256": "74e355233dcfd3c3f5f9efc228ef5a97a6c34b768e7764ee33e0301fc428acc1",
+      "sourceDate": "2013-03-18",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2013-03-15&end_date=2013-03-21&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:19.922Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2013-03-15",
+          "2013-03-16",
+          "2013-03-17",
+          "2013-03-18",
+          "2013-03-19",
+          "2013-03-20",
+          "2013-03-21"
+        ],
+        "temperature_2m_mean": [
+          10.1,
+          11.5,
+          11.3,
+          10.4,
+          8,
+          11,
+          14
+        ],
+        "precipitation_sum": [
+          0.3,
+          9.1,
+          7.8,
+          0,
+          5.1,
+          0,
+          0.9
+        ],
+        "wind_speed_10m_max": [
+          9.3,
+          13.4,
+          22.9,
+          16.9,
+          15.7,
+          15.4,
+          30
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-13",
+      "photoSha256": "74e355233dcfd3c3f5f9efc228ef5a97a6c34b768e7764ee33e0301fc428acc1",
+      "sourceDate": "2013-03-18",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2013-03-11&end_date=2013-03-25&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:21.180Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2013-03-11",
+          "2013-03-12",
+          "2013-03-13",
+          "2013-03-14",
+          "2013-03-15",
+          "2013-03-16",
+          "2013-03-17",
+          "2013-03-18",
+          "2013-03-19",
+          "2013-03-20",
+          "2013-03-21",
+          "2013-03-22",
+          "2013-03-23",
+          "2013-03-24",
+          "2013-03-25"
+        ],
+        "temperature_2m_mean": [
+          11.8,
+          9.9,
+          7.5,
+          8.4,
+          10.1,
+          11.5,
+          11.3,
+          10.4,
+          8,
+          11,
+          14,
+          13,
+          11.2,
+          12.1,
+          13.6
+        ],
+        "precipitation_sum": [
+          17.6,
+          4.6,
+          0,
+          0,
+          0.3,
+          9.1,
+          7.8,
+          0,
+          5.1,
+          0,
+          0.9,
+          18.1,
+          6.3,
+          6.7,
+          16.8
+        ],
+        "wind_speed_10m_max": [
+          28.6,
+          23.1,
+          22.2,
+          15.8,
+          9.3,
+          13.4,
+          22.9,
+          16.9,
+          15.7,
+          15.4,
+          30,
+          24.1,
+          17.4,
+          23.3,
+          29
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-14",
+      "photoSha256": "aa766729cd9ef3182ddf3d3c0c26f224e01f973c342df4d83fae9087a4130a4f",
+      "sourceDate": "2005-11-06",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2005-11-03&end_date=2005-11-09&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:22.450Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2005-11-03",
+          "2005-11-04",
+          "2005-11-05",
+          "2005-11-06",
+          "2005-11-07",
+          "2005-11-08",
+          "2005-11-09"
+        ],
+        "temperature_2m_mean": [
+          15.4,
+          12.6,
+          11.5,
+          11.5,
+          12.1,
+          12,
+          11.3
+        ],
+        "precipitation_sum": [
+          46.3,
+          0.1,
+          0,
+          0,
+          0,
+          10.4,
+          0
+        ],
+        "wind_speed_10m_max": [
+          15.6,
+          15.1,
+          9,
+          8.4,
+          7.6,
+          24,
+          18.4
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-14",
+      "photoSha256": "aa766729cd9ef3182ddf3d3c0c26f224e01f973c342df4d83fae9087a4130a4f",
+      "sourceDate": "2005-11-06",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2005-10-30&end_date=2005-11-13&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:23.710Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2005-10-30",
+          "2005-10-31",
+          "2005-11-01",
+          "2005-11-02",
+          "2005-11-03",
+          "2005-11-04",
+          "2005-11-05",
+          "2005-11-06",
+          "2005-11-07",
+          "2005-11-08",
+          "2005-11-09",
+          "2005-11-10",
+          "2005-11-11",
+          "2005-11-12",
+          "2005-11-13"
+        ],
+        "temperature_2m_mean": [
+          16.5,
+          14.7,
+          17.2,
+          17.9,
+          15.4,
+          12.6,
+          11.5,
+          11.5,
+          12.1,
+          12,
+          11.3,
+          11.9,
+          11.9,
+          10.4,
+          8.9
+        ],
+        "precipitation_sum": [
+          45.4,
+          14,
+          0.9,
+          6.7,
+          46.3,
+          0.1,
+          0,
+          0,
+          0,
+          10.4,
+          0,
+          0,
+          0,
+          1,
+          2.1
+        ],
+        "wind_speed_10m_max": [
+          21.3,
+          19.6,
+          23.2,
+          20.8,
+          15.6,
+          15.1,
+          9,
+          8.4,
+          7.6,
+          24,
+          18.4,
+          17.8,
+          11.5,
+          17.2,
+          23.4
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-15",
+      "photoSha256": "ab818e2a9368646567b3f4f6d22272c5d2cffb5b00f4ce73882c498d634a7f48",
+      "sourceDate": "2013-12-31",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2013-12-28&end_date=2014-01-03&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:24.973Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2013-12-28",
+          "2013-12-29",
+          "2013-12-30",
+          "2013-12-31",
+          "2014-01-01",
+          "2014-01-02",
+          "2014-01-03"
+        ],
+        "temperature_2m_mean": [
+          9.6,
+          7.3,
+          8.7,
+          12.1,
+          13.6,
+          15,
+          14.3
+        ],
+        "precipitation_sum": [
+          2.1,
+          0.4,
+          6.7,
+          8.4,
+          12.2,
+          38.7,
+          14.7
+        ],
+        "wind_speed_10m_max": [
+          20.8,
+          8.7,
+          19.8,
+          22.4,
+          28.6,
+          25.2,
+          22.4
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "mondego-archive-15",
+      "photoSha256": "ab818e2a9368646567b3f4f6d22272c5d2cffb5b00f4ce73882c498d634a7f48",
+      "sourceDate": "2013-12-31",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=40.2111&longitude=-8.4289&start_date=2013-12-24&end_date=2014-01-07&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:26.238Z",
+      "requestedCoordinates": {
+        "lat": 40.2111,
+        "lon": -8.4289
+      },
+      "gridCoordinates": {
+        "lat": 40.25,
+        "lon": -8.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2013-12-24",
+          "2013-12-25",
+          "2013-12-26",
+          "2013-12-27",
+          "2013-12-28",
+          "2013-12-29",
+          "2013-12-30",
+          "2013-12-31",
+          "2014-01-01",
+          "2014-01-02",
+          "2014-01-03",
+          "2014-01-04",
+          "2014-01-05",
+          "2014-01-06",
+          "2014-01-07"
+        ],
+        "temperature_2m_mean": [
+          14.5,
+          10.5,
+          12,
+          14.7,
+          9.6,
+          7.3,
+          8.7,
+          12.1,
+          13.6,
+          15,
+          14.3,
+          11.2,
+          13,
+          14.2,
+          14.3
+        ],
+        "precipitation_sum": [
+          43.2,
+          23.8,
+          2,
+          11.8,
+          2.1,
+          0.4,
+          6.7,
+          8.4,
+          12.2,
+          38.7,
+          14.7,
+          21.3,
+          0.5,
+          15,
+          8.3
+        ],
+        "wind_speed_10m_max": [
+          43.3,
+          29.7,
+          19.1,
+          27.5,
+          20.8,
+          8.7,
+          19.8,
+          22.4,
+          28.6,
+          25.2,
+          22.4,
+          46.4,
+          24.1,
+          25.9,
+          19
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-01",
+      "photoSha256": "1155e53d750e141a6e9aec77453077bec891eb4391b94184d853a8b67ee20f1a",
+      "sourceDate": "2012-02-22",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2012-02-19&end_date=2012-02-25&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:27.503Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2012-02-19",
+          "2012-02-20",
+          "2012-02-21",
+          "2012-02-22",
+          "2012-02-23",
+          "2012-02-24",
+          "2012-02-25"
+        ],
+        "temperature_2m_mean": [
+          7.1,
+          3.3,
+          1.1,
+          1.9,
+          5.5,
+          9.2,
+          8.6
+        ],
+        "precipitation_sum": [
+          2.5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          22.9,
+          20.9,
+          10.7,
+          11.2,
+          10,
+          7.1,
+          13.2
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-01",
+      "photoSha256": "1155e53d750e141a6e9aec77453077bec891eb4391b94184d853a8b67ee20f1a",
+      "sourceDate": "2012-02-22",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2012-02-15&end_date=2012-02-29&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:28.767Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2012-02-15",
+          "2012-02-16",
+          "2012-02-17",
+          "2012-02-18",
+          "2012-02-19",
+          "2012-02-20",
+          "2012-02-21",
+          "2012-02-22",
+          "2012-02-23",
+          "2012-02-24",
+          "2012-02-25",
+          "2012-02-26",
+          "2012-02-27",
+          "2012-02-28",
+          "2012-02-29"
+        ],
+        "temperature_2m_mean": [
+          4.9,
+          6.3,
+          6.5,
+          5,
+          7.1,
+          3.3,
+          1.1,
+          1.9,
+          5.5,
+          9.2,
+          8.6,
+          10.7,
+          7.3,
+          7.3,
+          9.3
+        ],
+        "precipitation_sum": [
+          0.4,
+          1.5,
+          0,
+          0,
+          2.5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          22.6,
+          21.3,
+          10.9,
+          11.7,
+          22.9,
+          20.9,
+          10.7,
+          11.2,
+          10,
+          7.1,
+          13.2,
+          20.4,
+          10.5,
+          11.5,
+          8.7
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-02",
+      "photoSha256": "24e508bee36d7d4602932c0a7a15afe12a7dd449f68e9a719aaa2a3456547bef",
+      "sourceDate": "2018-08-15",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2018-08-12&end_date=2018-08-18&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:30.032Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2018-08-12",
+          "2018-08-13",
+          "2018-08-14",
+          "2018-08-15",
+          "2018-08-16",
+          "2018-08-17",
+          "2018-08-18"
+        ],
+        "temperature_2m_mean": [
+          24.8,
+          21.7,
+          21.5,
+          22.7,
+          24,
+          21.1,
+          21
+        ],
+        "precipitation_sum": [
+          14.2,
+          1.2,
+          0.7,
+          0,
+          2,
+          2.2,
+          0
+        ],
+        "wind_speed_10m_max": [
+          18.5,
+          16.2,
+          19.2,
+          13.1,
+          19.1,
+          18.9,
+          18.4
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-02",
+      "photoSha256": "24e508bee36d7d4602932c0a7a15afe12a7dd449f68e9a719aaa2a3456547bef",
+      "sourceDate": "2018-08-15",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2018-08-08&end_date=2018-08-22&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:31.295Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2018-08-08",
+          "2018-08-09",
+          "2018-08-10",
+          "2018-08-11",
+          "2018-08-12",
+          "2018-08-13",
+          "2018-08-14",
+          "2018-08-15",
+          "2018-08-16",
+          "2018-08-17",
+          "2018-08-18",
+          "2018-08-19",
+          "2018-08-20",
+          "2018-08-21",
+          "2018-08-22"
+        ],
+        "temperature_2m_mean": [
+          25.2,
+          21.4,
+          21.5,
+          22.8,
+          24.8,
+          21.7,
+          21.5,
+          22.7,
+          24,
+          21.1,
+          21,
+          23.5,
+          23.9,
+          24.9,
+          26
+        ],
+        "precipitation_sum": [
+          0.8,
+          1.6,
+          0,
+          0,
+          14.2,
+          1.2,
+          0.7,
+          0,
+          2,
+          2.2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          17.7,
+          25.7,
+          12.6,
+          7.4,
+          18.5,
+          16.2,
+          19.2,
+          13.1,
+          19.1,
+          18.9,
+          18.4,
+          13,
+          14.6,
+          12,
+          9.2
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-03",
+      "photoSha256": "05bede73410c49b7e4cd3e3757f4d38be54543e7063c3a916849084641de5561",
+      "sourceDate": "2021-08-20",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2021-08-17&end_date=2021-08-23&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:32.553Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2021-08-17",
+          "2021-08-18",
+          "2021-08-19",
+          "2021-08-20",
+          "2021-08-21",
+          "2021-08-22",
+          "2021-08-23"
+        ],
+        "temperature_2m_mean": [
+          20.7,
+          19.7,
+          20.6,
+          23.8,
+          25.4,
+          23.8,
+          22.6
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0.6,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          19.8,
+          14.7,
+          10.2,
+          8.6,
+          15.9,
+          14,
+          16.5
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-03",
+      "photoSha256": "05bede73410c49b7e4cd3e3757f4d38be54543e7063c3a916849084641de5561",
+      "sourceDate": "2021-08-20",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2021-08-13&end_date=2021-08-27&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:33.815Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2021-08-13",
+          "2021-08-14",
+          "2021-08-15",
+          "2021-08-16",
+          "2021-08-17",
+          "2021-08-18",
+          "2021-08-19",
+          "2021-08-20",
+          "2021-08-21",
+          "2021-08-22",
+          "2021-08-23",
+          "2021-08-24",
+          "2021-08-25",
+          "2021-08-26",
+          "2021-08-27"
+        ],
+        "temperature_2m_mean": [
+          25.4,
+          28.8,
+          25.4,
+          21.9,
+          20.7,
+          19.7,
+          20.6,
+          23.8,
+          25.4,
+          23.8,
+          22.6,
+          22.1,
+          23.2,
+          24.3,
+          22.6
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0.2,
+          0,
+          0,
+          0,
+          0,
+          0.6,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          12,
+          14.8,
+          19.7,
+          21.6,
+          19.8,
+          14.7,
+          10.2,
+          8.6,
+          15.9,
+          14,
+          16.5,
+          13.4,
+          9.6,
+          16.4,
+          21.3
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-04",
+      "photoSha256": "da35cc40ec9f90b0a54c24d7f341d36e19c41bcb973c83e1c77e39c40b752d9c",
+      "sourceDate": "2020-06-22",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2020-06-19&end_date=2020-06-25&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:35.078Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2020-06-19",
+          "2020-06-20",
+          "2020-06-21",
+          "2020-06-22",
+          "2020-06-23",
+          "2020-06-24",
+          "2020-06-25"
+        ],
+        "temperature_2m_mean": [
+          18.6,
+          21.1,
+          21.3,
+          21.4,
+          23.3,
+          25.2,
+          25.4
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.5
+        ],
+        "wind_speed_10m_max": [
+          11.4,
+          13.8,
+          18.6,
+          12.2,
+          14.7,
+          18.6,
+          11.3
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-04",
+      "photoSha256": "da35cc40ec9f90b0a54c24d7f341d36e19c41bcb973c83e1c77e39c40b752d9c",
+      "sourceDate": "2020-06-22",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2020-06-15&end_date=2020-06-29&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:36.352Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2020-06-15",
+          "2020-06-16",
+          "2020-06-17",
+          "2020-06-18",
+          "2020-06-19",
+          "2020-06-20",
+          "2020-06-21",
+          "2020-06-22",
+          "2020-06-23",
+          "2020-06-24",
+          "2020-06-25",
+          "2020-06-26",
+          "2020-06-27",
+          "2020-06-28",
+          "2020-06-29"
+        ],
+        "temperature_2m_mean": [
+          18.9,
+          17.2,
+          17.2,
+          17,
+          18.6,
+          21.1,
+          21.3,
+          21.4,
+          23.3,
+          25.2,
+          25.4,
+          24.4,
+          23.9,
+          23.7,
+          21.3
+        ],
+        "precipitation_sum": [
+          0,
+          3.5,
+          1.2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.5,
+          2.8,
+          4.2,
+          0.8,
+          0.3
+        ],
+        "wind_speed_10m_max": [
+          15.2,
+          18.1,
+          21.5,
+          10,
+          11.4,
+          13.8,
+          18.6,
+          12.2,
+          14.7,
+          18.6,
+          11.3,
+          14.8,
+          7.8,
+          14.3,
+          14.2
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-05",
+      "photoSha256": "83b5e8f14ae4e63fe5bc339700cbe1b6916347a2428dfb592f6a3163f4bde78b",
+      "sourceDate": "2013-05-24",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2013-05-21&end_date=2013-05-27&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:37.622Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2013-05-21",
+          "2013-05-22",
+          "2013-05-23",
+          "2013-05-24",
+          "2013-05-25",
+          "2013-05-26",
+          "2013-05-27"
+        ],
+        "temperature_2m_mean": [
+          11.4,
+          13.7,
+          13,
+          10.5,
+          10.8,
+          11.7,
+          14.1
+        ],
+        "precipitation_sum": [
+          2.7,
+          9.8,
+          2.3,
+          4,
+          6.1,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          21.8,
+          24.5,
+          31.1,
+          26,
+          27.4,
+          10.7,
+          13.8
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-05",
+      "photoSha256": "83b5e8f14ae4e63fe5bc339700cbe1b6916347a2428dfb592f6a3163f4bde78b",
+      "sourceDate": "2013-05-24",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2013-05-17&end_date=2013-05-31&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:38.909Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2013-05-17",
+          "2013-05-18",
+          "2013-05-19",
+          "2013-05-20",
+          "2013-05-21",
+          "2013-05-22",
+          "2013-05-23",
+          "2013-05-24",
+          "2013-05-25",
+          "2013-05-26",
+          "2013-05-27",
+          "2013-05-28",
+          "2013-05-29",
+          "2013-05-30",
+          "2013-05-31"
+        ],
+        "temperature_2m_mean": [
+          12.6,
+          11.7,
+          12.5,
+          12.5,
+          11.4,
+          13.7,
+          13,
+          10.5,
+          10.8,
+          11.7,
+          14.1,
+          11.8,
+          10.7,
+          11.5,
+          14.3
+        ],
+        "precipitation_sum": [
+          0.3,
+          4.6,
+          1.5,
+          0,
+          2.7,
+          9.8,
+          2.3,
+          4,
+          6.1,
+          0,
+          0,
+          7,
+          2.8,
+          26.2,
+          21.2
+        ],
+        "wind_speed_10m_max": [
+          19.8,
+          24.9,
+          25.7,
+          14.8,
+          21.8,
+          24.5,
+          31.1,
+          26,
+          27.4,
+          10.7,
+          13.8,
+          25.7,
+          29.2,
+          32.2,
+          33.1
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-06",
+      "photoSha256": "f25f24f352cd247f25d30843c171597186d268a373457de30f2adb547218a92d",
+      "sourceDate": "2023-01-19",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2023-01-16&end_date=2023-01-22&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:40.181Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2023-01-16",
+          "2023-01-17",
+          "2023-01-18",
+          "2023-01-19",
+          "2023-01-20",
+          "2023-01-21",
+          "2023-01-22"
+        ],
+        "temperature_2m_mean": [
+          6.2,
+          6.1,
+          3.8,
+          3.6,
+          2.7,
+          1.8,
+          0.4
+        ],
+        "precipitation_sum": [
+          12,
+          11.7,
+          5.4,
+          18.1,
+          0.7,
+          1.5,
+          0
+        ],
+        "wind_speed_10m_max": [
+          32.7,
+          37.1,
+          25.1,
+          19.4,
+          21.4,
+          26.3,
+          24.8
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-06",
+      "photoSha256": "f25f24f352cd247f25d30843c171597186d268a373457de30f2adb547218a92d",
+      "sourceDate": "2023-01-19",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2023-01-12&end_date=2023-01-26&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:41.459Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2023-01-12",
+          "2023-01-13",
+          "2023-01-14",
+          "2023-01-15",
+          "2023-01-16",
+          "2023-01-17",
+          "2023-01-18",
+          "2023-01-19",
+          "2023-01-20",
+          "2023-01-21",
+          "2023-01-22",
+          "2023-01-23",
+          "2023-01-24",
+          "2023-01-25",
+          "2023-01-26"
+        ],
+        "temperature_2m_mean": [
+          8.3,
+          9.8,
+          9,
+          7.4,
+          6.2,
+          6.1,
+          3.8,
+          3.6,
+          2.7,
+          1.8,
+          0.4,
+          0.6,
+          1.6,
+          0.9,
+          2.6
+        ],
+        "precipitation_sum": [
+          0,
+          2.7,
+          0,
+          2.5,
+          12,
+          11.7,
+          5.4,
+          18.1,
+          0.7,
+          1.5,
+          0,
+          0,
+          0,
+          0,
+          0.7
+        ],
+        "wind_speed_10m_max": [
+          13.6,
+          22.5,
+          10.4,
+          23.2,
+          32.7,
+          37.1,
+          25.1,
+          19.4,
+          21.4,
+          26.3,
+          24.8,
+          19.1,
+          14.9,
+          18.8,
+          17.7
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-07",
+      "photoSha256": "c0470b9eea86c4a61bd4e9619b94fd828fdff28e8b5f7ce4674c3072fcc94e92",
+      "sourceDate": "2020-06-22",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2020-06-19&end_date=2020-06-25&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:42.719Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2020-06-19",
+          "2020-06-20",
+          "2020-06-21",
+          "2020-06-22",
+          "2020-06-23",
+          "2020-06-24",
+          "2020-06-25"
+        ],
+        "temperature_2m_mean": [
+          18.6,
+          21.1,
+          21.3,
+          21.4,
+          23.3,
+          25.2,
+          25.4
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.5
+        ],
+        "wind_speed_10m_max": [
+          11.4,
+          13.8,
+          18.6,
+          12.2,
+          14.7,
+          18.6,
+          11.3
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-07",
+      "photoSha256": "c0470b9eea86c4a61bd4e9619b94fd828fdff28e8b5f7ce4674c3072fcc94e92",
+      "sourceDate": "2020-06-22",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2020-06-15&end_date=2020-06-29&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:43.988Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2020-06-15",
+          "2020-06-16",
+          "2020-06-17",
+          "2020-06-18",
+          "2020-06-19",
+          "2020-06-20",
+          "2020-06-21",
+          "2020-06-22",
+          "2020-06-23",
+          "2020-06-24",
+          "2020-06-25",
+          "2020-06-26",
+          "2020-06-27",
+          "2020-06-28",
+          "2020-06-29"
+        ],
+        "temperature_2m_mean": [
+          18.9,
+          17.2,
+          17.2,
+          17,
+          18.6,
+          21.1,
+          21.3,
+          21.4,
+          23.3,
+          25.2,
+          25.4,
+          24.4,
+          23.9,
+          23.7,
+          21.3
+        ],
+        "precipitation_sum": [
+          0,
+          3.5,
+          1.2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.5,
+          2.8,
+          4.2,
+          0.8,
+          0.3
+        ],
+        "wind_speed_10m_max": [
+          15.2,
+          18.1,
+          21.5,
+          10,
+          11.4,
+          13.8,
+          18.6,
+          12.2,
+          14.7,
+          18.6,
+          11.3,
+          14.8,
+          7.8,
+          14.3,
+          14.2
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-08",
+      "photoSha256": "ec3d14ba1cacbc7fde205bec36967a9570e01e86275ad7a9884709daccd94f72",
+      "sourceDate": "2023-09-07",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2023-09-04&end_date=2023-09-10&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:45.250Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2023-09-04",
+          "2023-09-05",
+          "2023-09-06",
+          "2023-09-07",
+          "2023-09-08",
+          "2023-09-09",
+          "2023-09-10"
+        ],
+        "temperature_2m_mean": [
+          27.5,
+          26.3,
+          25.7,
+          25,
+          25.1,
+          25.4,
+          25.6
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          35.3,
+          22.3,
+          20.9,
+          20,
+          19.2,
+          21.7,
+          15.9
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-08",
+      "photoSha256": "ec3d14ba1cacbc7fde205bec36967a9570e01e86275ad7a9884709daccd94f72",
+      "sourceDate": "2023-09-07",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2023-08-31&end_date=2023-09-14&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:46.517Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2023-08-31",
+          "2023-09-01",
+          "2023-09-02",
+          "2023-09-03",
+          "2023-09-04",
+          "2023-09-05",
+          "2023-09-06",
+          "2023-09-07",
+          "2023-09-08",
+          "2023-09-09",
+          "2023-09-10",
+          "2023-09-11",
+          "2023-09-12",
+          "2023-09-13",
+          "2023-09-14"
+        ],
+        "temperature_2m_mean": [
+          20.7,
+          23.7,
+          23.2,
+          24.4,
+          27.5,
+          26.3,
+          25.7,
+          25,
+          25.1,
+          25.4,
+          25.6,
+          24.5,
+          21.7,
+          21.4,
+          21.9
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0.4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          6.9,
+          3.7,
+          1.6,
+          0
+        ],
+        "wind_speed_10m_max": [
+          15.5,
+          23.2,
+          25.1,
+          29.2,
+          35.3,
+          22.3,
+          20.9,
+          20,
+          19.2,
+          21.7,
+          15.9,
+          15.3,
+          16.1,
+          15.8,
+          7.9
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-09",
+      "photoSha256": "227d461afe153dba99ea42ab493c2005fff0472a09f6ec40da8f7763b762aa71",
+      "sourceDate": "2019-09-29",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2019-09-26&end_date=2019-10-02&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:47.783Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2019-09-26",
+          "2019-09-27",
+          "2019-09-28",
+          "2019-09-29",
+          "2019-09-30",
+          "2019-10-01",
+          "2019-10-02"
+        ],
+        "temperature_2m_mean": [
+          20.6,
+          19.7,
+          20.1,
+          21.9,
+          21.7,
+          19.6,
+          18
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          5.1,
+          2.7
+        ],
+        "wind_speed_10m_max": [
+          15.7,
+          14.6,
+          10,
+          17.1,
+          10.8,
+          22.4,
+          24.4
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-09",
+      "photoSha256": "227d461afe153dba99ea42ab493c2005fff0472a09f6ec40da8f7763b762aa71",
+      "sourceDate": "2019-09-29",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2019-09-22&end_date=2019-10-06&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:49.051Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2019-09-22",
+          "2019-09-23",
+          "2019-09-24",
+          "2019-09-25",
+          "2019-09-26",
+          "2019-09-27",
+          "2019-09-28",
+          "2019-09-29",
+          "2019-09-30",
+          "2019-10-01",
+          "2019-10-02",
+          "2019-10-03",
+          "2019-10-04",
+          "2019-10-05",
+          "2019-10-06"
+        ],
+        "temperature_2m_mean": [
+          18.8,
+          17.8,
+          20.4,
+          18.7,
+          20.6,
+          19.7,
+          20.1,
+          21.9,
+          21.7,
+          19.6,
+          18,
+          16.8,
+          16.4,
+          17.2,
+          17.5
+        ],
+        "precipitation_sum": [
+          3.5,
+          0,
+          1.5,
+          2.2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5.1,
+          2.7,
+          0,
+          0.6,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          25.3,
+          7.9,
+          15,
+          22.8,
+          15.7,
+          14.6,
+          10,
+          17.1,
+          10.8,
+          22.4,
+          24.4,
+          13.8,
+          17.1,
+          13,
+          26
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-10",
+      "photoSha256": "30a2495d91ebf4e92fb94b51fc1898caa4a59e2afea1d56793d58519dfce95b8",
+      "sourceDate": "2013-08-15",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2013-08-12&end_date=2013-08-18&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:50.324Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2013-08-12",
+          "2013-08-13",
+          "2013-08-14",
+          "2013-08-15",
+          "2013-08-16",
+          "2013-08-17",
+          "2013-08-18"
+        ],
+        "temperature_2m_mean": [
+          24.5,
+          24,
+          22,
+          22.1,
+          23.7,
+          23.2,
+          24
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          2,
+          3.4,
+          0
+        ],
+        "wind_speed_10m_max": [
+          13,
+          15,
+          13.7,
+          7.7,
+          23.6,
+          16.9,
+          9.5
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-10",
+      "photoSha256": "30a2495d91ebf4e92fb94b51fc1898caa4a59e2afea1d56793d58519dfce95b8",
+      "sourceDate": "2013-08-15",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2013-08-08&end_date=2013-08-22&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:51.596Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2013-08-08",
+          "2013-08-09",
+          "2013-08-10",
+          "2013-08-11",
+          "2013-08-12",
+          "2013-08-13",
+          "2013-08-14",
+          "2013-08-15",
+          "2013-08-16",
+          "2013-08-17",
+          "2013-08-18",
+          "2013-08-19",
+          "2013-08-20",
+          "2013-08-21",
+          "2013-08-22"
+        ],
+        "temperature_2m_mean": [
+          19.6,
+          21.4,
+          21.8,
+          23.1,
+          24.5,
+          24,
+          22,
+          22.1,
+          23.7,
+          23.2,
+          24,
+          21.2,
+          21.5,
+          22.8,
+          24
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          3.4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          17.4,
+          18.1,
+          13.9,
+          8.9,
+          13,
+          15,
+          13.7,
+          7.7,
+          23.6,
+          16.9,
+          9.5,
+          19.4,
+          11.3,
+          12,
+          17.2
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-11",
+      "photoSha256": "db6835bd52f95b86e4fe14cc8702571f2c56282112a6fd5e2b93c76106af7184",
+      "sourceDate": "2022-12-21",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2022-12-18&end_date=2022-12-24&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:52.868Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2022-12-18",
+          "2022-12-19",
+          "2022-12-20",
+          "2022-12-21",
+          "2022-12-22",
+          "2022-12-23",
+          "2022-12-24"
+        ],
+        "temperature_2m_mean": [
+          8.7,
+          12.6,
+          12.9,
+          13,
+          13.9,
+          13.8,
+          11.7
+        ],
+        "precipitation_sum": [
+          0,
+          0,
+          1.7,
+          3,
+          0.4,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          23.4,
+          19.7,
+          21.3,
+          16.6,
+          15.1,
+          8.3,
+          13.7
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-11",
+      "photoSha256": "db6835bd52f95b86e4fe14cc8702571f2c56282112a6fd5e2b93c76106af7184",
+      "sourceDate": "2022-12-21",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2022-12-14&end_date=2022-12-28&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:54.143Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2022-12-14",
+          "2022-12-15",
+          "2022-12-16",
+          "2022-12-17",
+          "2022-12-18",
+          "2022-12-19",
+          "2022-12-20",
+          "2022-12-21",
+          "2022-12-22",
+          "2022-12-23",
+          "2022-12-24",
+          "2022-12-25",
+          "2022-12-26",
+          "2022-12-27",
+          "2022-12-28"
+        ],
+        "temperature_2m_mean": [
+          12.2,
+          11.7,
+          9.9,
+          5.1,
+          8.7,
+          12.6,
+          12.9,
+          13,
+          13.9,
+          13.8,
+          11.7,
+          11.6,
+          11.9,
+          11.3,
+          10.6
+        ],
+        "precipitation_sum": [
+          7.1,
+          4.7,
+          2.7,
+          0,
+          0,
+          0,
+          1.7,
+          3,
+          0.4,
+          0,
+          0,
+          0,
+          0.2,
+          0.1,
+          0
+        ],
+        "wind_speed_10m_max": [
+          17.2,
+          21.2,
+          19.4,
+          10.8,
+          23.4,
+          19.7,
+          21.3,
+          16.6,
+          15.1,
+          8.3,
+          13.7,
+          16.5,
+          11.1,
+          6,
+          15.7
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-12",
+      "photoSha256": "7b5222c726571fc21ae70996bdef48e0d7a587e769f21b5a07956df6c7fb1c13",
+      "sourceDate": "2024-07-15",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2024-07-12&end_date=2024-07-18&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:55.416Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2024-07-12",
+          "2024-07-13",
+          "2024-07-14",
+          "2024-07-15",
+          "2024-07-16",
+          "2024-07-17",
+          "2024-07-18"
+        ],
+        "temperature_2m_mean": [
+          20.3,
+          18.5,
+          23.2,
+          24.5,
+          22.1,
+          23.3,
+          26
+        ],
+        "precipitation_sum": [
+          12.7,
+          0,
+          0,
+          7.5,
+          0.3,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          20.8,
+          9.2,
+          12.7,
+          22.5,
+          15.6,
+          9.4,
+          13.2
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-12",
+      "photoSha256": "7b5222c726571fc21ae70996bdef48e0d7a587e769f21b5a07956df6c7fb1c13",
+      "sourceDate": "2024-07-15",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2024-07-08&end_date=2024-07-22&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:56.681Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2024-07-08",
+          "2024-07-09",
+          "2024-07-10",
+          "2024-07-11",
+          "2024-07-12",
+          "2024-07-13",
+          "2024-07-14",
+          "2024-07-15",
+          "2024-07-16",
+          "2024-07-17",
+          "2024-07-18",
+          "2024-07-19",
+          "2024-07-20",
+          "2024-07-21",
+          "2024-07-22"
+        ],
+        "temperature_2m_mean": [
+          22.5,
+          25.1,
+          24.5,
+          26.8,
+          20.3,
+          18.5,
+          23.2,
+          24.5,
+          22.1,
+          23.3,
+          26,
+          26.5,
+          26.5,
+          18.9,
+          19.6
+        ],
+        "precipitation_sum": [
+          0,
+          0.8,
+          0,
+          17.6,
+          12.7,
+          0,
+          0,
+          7.5,
+          0.3,
+          0,
+          0,
+          0,
+          2.3,
+          21.7,
+          0
+        ],
+        "wind_speed_10m_max": [
+          19,
+          22.2,
+          14.9,
+          20,
+          20.8,
+          9.2,
+          12.7,
+          22.5,
+          15.6,
+          9.4,
+          13.2,
+          11.7,
+          24.5,
+          29.2,
+          17.1
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-13",
+      "photoSha256": "c55b6c069554e1142b8baf72ea97454089e147a651248b062c740583296c4ec5",
+      "sourceDate": "2023-01-19",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2023-01-16&end_date=2023-01-22&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:57.962Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2023-01-16",
+          "2023-01-17",
+          "2023-01-18",
+          "2023-01-19",
+          "2023-01-20",
+          "2023-01-21",
+          "2023-01-22"
+        ],
+        "temperature_2m_mean": [
+          6.2,
+          6.1,
+          3.8,
+          3.6,
+          2.7,
+          1.8,
+          0.4
+        ],
+        "precipitation_sum": [
+          12,
+          11.7,
+          5.4,
+          18.1,
+          0.7,
+          1.5,
+          0
+        ],
+        "wind_speed_10m_max": [
+          32.7,
+          37.1,
+          25.1,
+          19.4,
+          21.4,
+          26.3,
+          24.8
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-13",
+      "photoSha256": "c55b6c069554e1142b8baf72ea97454089e147a651248b062c740583296c4ec5",
+      "sourceDate": "2023-01-19",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2023-01-12&end_date=2023-01-26&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:48:59.227Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2023-01-12",
+          "2023-01-13",
+          "2023-01-14",
+          "2023-01-15",
+          "2023-01-16",
+          "2023-01-17",
+          "2023-01-18",
+          "2023-01-19",
+          "2023-01-20",
+          "2023-01-21",
+          "2023-01-22",
+          "2023-01-23",
+          "2023-01-24",
+          "2023-01-25",
+          "2023-01-26"
+        ],
+        "temperature_2m_mean": [
+          8.3,
+          9.8,
+          9,
+          7.4,
+          6.2,
+          6.1,
+          3.8,
+          3.6,
+          2.7,
+          1.8,
+          0.4,
+          0.6,
+          1.6,
+          0.9,
+          2.6
+        ],
+        "precipitation_sum": [
+          0,
+          2.7,
+          0,
+          2.5,
+          12,
+          11.7,
+          5.4,
+          18.1,
+          0.7,
+          1.5,
+          0,
+          0,
+          0,
+          0,
+          0.7
+        ],
+        "wind_speed_10m_max": [
+          13.6,
+          22.5,
+          10.4,
+          23.2,
+          32.7,
+          37.1,
+          25.1,
+          19.4,
+          21.4,
+          26.3,
+          24.8,
+          19.1,
+          14.9,
+          18.8,
+          17.7
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-14",
+      "photoSha256": "e4ae633ed48ba9d3eba2d49d4477ab5e71b99a65e0ad2e971f71e3b6c9234fa8",
+      "sourceDate": "2024-07-15",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2024-07-12&end_date=2024-07-18&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:49:00.488Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2024-07-12",
+          "2024-07-13",
+          "2024-07-14",
+          "2024-07-15",
+          "2024-07-16",
+          "2024-07-17",
+          "2024-07-18"
+        ],
+        "temperature_2m_mean": [
+          20.3,
+          18.5,
+          23.2,
+          24.5,
+          22.1,
+          23.3,
+          26
+        ],
+        "precipitation_sum": [
+          12.7,
+          0,
+          0,
+          7.5,
+          0.3,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          20.8,
+          9.2,
+          12.7,
+          22.5,
+          15.6,
+          9.4,
+          13.2
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "garonne-archive-14",
+      "photoSha256": "e4ae633ed48ba9d3eba2d49d4477ab5e71b99a65e0ad2e971f71e3b6c9234fa8",
+      "sourceDate": "2024-07-15",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=43.6044&longitude=1.4433&start_date=2024-07-08&end_date=2024-07-22&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:49:01.750Z",
+      "requestedCoordinates": {
+        "lat": 43.6044,
+        "lon": 1.4433
+      },
+      "gridCoordinates": {
+        "lat": 43.5,
+        "lon": 1.5
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2024-07-08",
+          "2024-07-09",
+          "2024-07-10",
+          "2024-07-11",
+          "2024-07-12",
+          "2024-07-13",
+          "2024-07-14",
+          "2024-07-15",
+          "2024-07-16",
+          "2024-07-17",
+          "2024-07-18",
+          "2024-07-19",
+          "2024-07-20",
+          "2024-07-21",
+          "2024-07-22"
+        ],
+        "temperature_2m_mean": [
+          22.5,
+          25.1,
+          24.5,
+          26.8,
+          20.3,
+          18.5,
+          23.2,
+          24.5,
+          22.1,
+          23.3,
+          26,
+          26.5,
+          26.5,
+          18.9,
+          19.6
+        ],
+        "precipitation_sum": [
+          0,
+          0.8,
+          0,
+          17.6,
+          12.7,
+          0,
+          0,
+          7.5,
+          0.3,
+          0,
+          0,
+          0,
+          2.3,
+          21.7,
+          0
+        ],
+        "wind_speed_10m_max": [
+          19,
+          22.2,
+          14.9,
+          20,
+          20.8,
+          9.2,
+          12.7,
+          22.5,
+          15.6,
+          9.4,
+          13.2,
+          11.7,
+          24.5,
+          29.2,
+          17.1
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "hoffselva-archive-01",
+      "photoSha256": "61ad61f4710970e32995f3dda87eed79f049cb45b6fc5dc75147eed64d9ac35a",
+      "sourceDate": "2014-05-12",
+      "days": 7,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=59.9133&longitude=10.7389&start_date=2014-05-09&end_date=2014-05-15&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:49:03.020Z",
+      "requestedCoordinates": {
+        "lat": 59.9133,
+        "lon": 10.7389
+      },
+      "gridCoordinates": {
+        "lat": 60,
+        "lon": 10.75
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2014-05-09",
+          "2014-05-10",
+          "2014-05-11",
+          "2014-05-12",
+          "2014-05-13",
+          "2014-05-14",
+          "2014-05-15"
+        ],
+        "temperature_2m_mean": [
+          7.6,
+          9.5,
+          9.9,
+          9.8,
+          10.8,
+          10.1,
+          10.2
+        ],
+        "precipitation_sum": [
+          0,
+          0.4,
+          1.6,
+          3.2,
+          8,
+          0,
+          0
+        ],
+        "wind_speed_10m_max": [
+          12.3,
+          8,
+          12.9,
+          12.6,
+          10.4,
+          14.6,
+          18.3
+        ]
+      }
+    },
+    {
+      "kind": "historical_weather_model_context",
+      "photoId": "hoffselva-archive-01",
+      "photoSha256": "61ad61f4710970e32995f3dda87eed79f049cb45b6fc5dc75147eed64d9ac35a",
+      "sourceDate": "2014-05-12",
+      "days": 15,
+      "model": "ERA5",
+      "nominalGridDegrees": 0.25,
+      "locationScope": "city_overview_not_camera",
+      "source": "Open-Meteo",
+      "sourceUrl": "https://archive-api.open-meteo.com/v1/archive?latitude=59.9133&longitude=10.7389&start_date=2014-05-05&end_date=2014-05-19&daily=temperature_2m_mean,precipitation_sum,wind_speed_10m_max&models=era5&timezone=UTC",
+      "fetchedAt": "2026-10-03T18:49:04.283Z",
+      "requestedCoordinates": {
+        "lat": 59.9133,
+        "lon": 10.7389
+      },
+      "gridCoordinates": {
+        "lat": 60,
+        "lon": 10.75
+      },
+      "timezone": "UTC",
+      "daily": {
+        "time": [
+          "2014-05-05",
+          "2014-05-06",
+          "2014-05-07",
+          "2014-05-08",
+          "2014-05-09",
+          "2014-05-10",
+          "2014-05-11",
+          "2014-05-12",
+          "2014-05-13",
+          "2014-05-14",
+          "2014-05-15",
+          "2014-05-16",
+          "2014-05-17",
+          "2014-05-18",
+          "2014-05-19"
+        ],
+        "temperature_2m_mean": [
+          7.2,
+          7.2,
+          4.7,
+          5.4,
+          7.6,
+          9.5,
+          9.9,
+          9.8,
+          10.8,
+          10.1,
+          10.2,
+          14.8,
+          14.7,
+          16.2,
+          17.3
+        ],
+        "precipitation_sum": [
+          2.2,
+          19.9,
+          12.8,
+          0.4,
+          0,
+          0.4,
+          1.6,
+          3.2,
+          8,
+          0,
+          0,
+          0,
+          0.1,
+          0.3,
+          4.6
+        ],
+        "wind_speed_10m_max": [
+          12.4,
+          15.1,
+          16.1,
+          14.3,
+          12.3,
+          8,
+          12.9,
+          12.6,
+          10.4,
+          14.6,
+          18.3,
+          11.7,
+          15.5,
+          9.1,
+          10.2
+        ]
+      }
+    }
+  ]
+}

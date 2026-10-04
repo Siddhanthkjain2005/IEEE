@@ -286,6 +286,7 @@ await test("All 39 public photo selections bind their own source context rather 
     assert.equal(context.props.place.id, library("lib/source-weather.ts").sourceWeatherAnchor(frame.reference.id).place.id);
   }
 });
+// Keep the original seven-day-only fixture to exercise missing-window recovery.
 const recordedArchive = JSON.parse(await readFile("public/source-weather-v1.json", "utf8"));
 function archiveFixture() {
   const runtime = hooks(), calls = [], downloads = []; let responder = async () => ({ ok: true, json: async () => recordedArchive });
@@ -298,7 +299,7 @@ function archiveFixture() {
 }
 await test("Opening archive loads only public recorded data and displays its original time", async () => {
   const fixture = archiveFixture(); assert.equal(fixture.calls.length, 0); await fixture.open();
-  assert.equal(fixture.calls.length, 1); assert.equal(fixture.calls[0].url, "/source-weather-v1.json");
+  assert.equal(fixture.calls.length, 1); assert.equal(fixture.calls[0].url, library("lib/source-weather.ts").SOURCE_WEATHER_ASSET);
   assert.match(textOf(fixture.render()), /Recorded archive · regional model/); assert.match(textOf(fixture.render()), /Capture time and timezone are unknown/);
 });
 await test("Selecting fifteen days never plots a retained seven-day series", async () => {

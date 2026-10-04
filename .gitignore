@@ -49,3 +49,6 @@ next-env.d.ts
 /work/
 /public/vendor/maplibre/
 *.tsbuildinfo
+
+# Unrelated local tool/configuration archive; not application source.
+/mdapi.zip

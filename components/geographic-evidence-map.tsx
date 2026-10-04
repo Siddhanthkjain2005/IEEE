@@ -6,7 +6,7 @@ import type { Report } from "@/lib/assessment";
 import { displayEvidenceTime, evidenceTimePrecision, referencePhotos, type ReferencePhoto } from "@/lib/references";
 import { isSyntheticRecord } from "@/lib/atlas";
 import { geographicBounds, geographicGroups, globeOverviewZoom, locationState, syntheticLocation } from "@/lib/geographic";
-import { defaultSatelliteDate, SATELLITE_CONTEXT, LANDSCAPE_CONTEXT, landscapeMapStyle, satelliteMapStyle, satelliteObservationDate, shiftSatelliteDate, utcDate, validSatelliteDate, type GeographicBasemap } from "@/lib/satellite-context";
+import { defaultSatelliteDate, EARTH_CONTEXT, SATELLITE_CONTEXT, LANDSCAPE_CONTEXT, earthMapStyle, landscapeMapStyle, satelliteMapStyle, satelliteObservationDate, shiftSatelliteDate, utcDate, validSatelliteDate, type GeographicBasemap } from "@/lib/satellite-context";
 
 import { europeanPlaces } from "@/lib/european-sites";
 import { EuropeanContext } from "./european-context";
@@ -50,7 +50,7 @@ export function GeographicEvidenceMap({ records, onOpen, publicContext = false, 
   const [listFilter, setListFilter] = useState<"all" | "unplotted">("all");
   const [revision, setRevision] = useState(0);
   const [mapStatus, setMapStatus] = useState<"loading" | "ready" | "limited" | "unavailable">("loading");
-  const [basemap, setBasemap] = useState<GeographicBasemap>(publicContext ? "street" : "satellite");
+  const [basemap, setBasemap] = useState<GeographicBasemap>(publicContext ? "earth" : "satellite");
   const [satelliteDate, setSatelliteDate] = useState(defaultSatelliteDate);
   const [dateDraft, setDateDraft] = useState(defaultSatelliteDate);
   const [dateError, setDateError] = useState<string | null>(null);
@@ -66,7 +66,7 @@ export function GeographicEvidenceMap({ records, onOpen, publicContext = false, 
   const observationDate = satelliteObservationDate(selected?.original.observedAt);
   const previousDate = shiftSatelliteDate(satelliteDate, -1);
   const nextDate = shiftSatelliteDate(satelliteDate, 1);
-  const maxZoom = basemap === "satellite" ? SATELLITE_CONTEXT.maxZoom : basemap === "landscape" ? LANDSCAPE_CONTEXT.maxZoom : 22;
+  const maxZoom = basemap === "earth" ? EARTH_CONTEXT.maxZoom : basemap === "satellite" ? SATELLITE_CONTEXT.maxZoom : basemap === "landscape" ? LANDSCAPE_CONTEXT.maxZoom : 22;
   const landscapeOutsideCoverage = basemap === "landscape" && selected?.field?.coordinates && (selected.field.coordinates.lat < LANDSCAPE_CONTEXT.bounds[1] || selected.field.coordinates.lat > LANDSCAPE_CONTEXT.bounds[3]);
 
   const selectCity = useCallback((id: string) => {
@@ -93,7 +93,7 @@ export function GeographicEvidenceMap({ records, onOpen, publicContext = false, 
         const camera = !overview && cameraRef.current?.locationSignature === locationSignature ? cameraRef.current : null;
         map = new lib.Map({
           container: container.current,
-          style: basemap === "satellite" ? satelliteMapStyle(satelliteDate) : basemap === "landscape" ? landscapeMapStyle() : "https://tiles.openfreemap.org/styles/dark",
+          style: basemap === "earth" ? earthMapStyle() : basemap === "satellite" ? satelliteMapStyle(satelliteDate) : basemap === "landscape" ? landscapeMapStyle() : "https://tiles.openfreemap.org/styles/dark",
           center: overview ? [10, 38] : camera?.center ?? (groups.length === 1 ? [groups[0].lon, groups[0].lat] : publicContext ? [europeanPlaces.find((p) => p.id === cityRef.current)!.lon, europeanPlaces.find((p) => p.id === cityRef.current)!.lat] : [0, 15]),
           zoom: overview ? globeOverviewZoom(container.current.clientWidth, container.current.clientHeight) : Math.min(camera?.zoom ?? (groups.length === 1 ? 13 : publicContext ? 12 : 1.15), maxZoom),
           bearing: camera?.bearing ?? 0,
@@ -105,7 +105,7 @@ export function GeographicEvidenceMap({ records, onOpen, publicContext = false, 
         mapRef.current = map;
         map.addControl(new lib.NavigationControl({ visualizePitch: true }), "top-right");
         const canvas = map.getCanvas();
-        canvas.setAttribute("aria-label", `${basemap === "satellite" ? `NASA satellite context requested for ${satelliteDate} UTC` : basemap === "landscape" ? "Historical 2021 annual Sentinel-2 landscape composite; detail available at zoom 6–14" : "Geographic street basemap"}. Recorded locations are also available in the location list.`);
+        canvas.setAttribute("aria-label", `${basemap === "earth" ? `${EARTH_CONTEXT.sourceName}; historical reference mosaic, not current or requested-day imagery` : basemap === "satellite" ? `NASA satellite context requested for ${satelliteDate} UTC; black areas have no imagery coverage` : basemap === "landscape" ? "Historical 2021 annual Sentinel-2 landscape composite; detail available at zoom 6–14" : "Geographic street basemap"}. Recorded locations are also available in the location list.`);
         const bounds = geographicBounds(groups);
         if (!overview && !camera && groups.length > 1 && bounds) map.fitBounds(bounds, { padding: 62, maxZoom: Math.min(14, maxZoom), duration: 0 });
         map.on("load", () => {
@@ -231,7 +231,7 @@ export function GeographicEvidenceMap({ records, onOpen, publicContext = false, 
     if (value === "globe") {
       overviewRef.current = true;
       map.jumpTo({ center: [10, 38], zoom: globeOverviewZoom(container.current?.clientWidth ?? 700, container.current?.clientHeight ?? 510), pitch: 0, bearing: 0 });
-      if (basemap !== "street") setBasemap("street");
+      if (basemap !== "earth") setBasemap("earth");
     } else { overviewRef.current = false; map.easeTo({ pitch: 0, duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 450 }); }
   }
   function chooseDate(value: string) {
@@ -244,9 +244,9 @@ export function GeographicEvidenceMap({ records, onOpen, publicContext = false, 
     setSatelliteDate(value);
   }
   const statusText = {
-    loading: basemap === "satellite" ? `Requesting NASA imagery for ${satelliteDate} UTC…` : basemap === "landscape" ? "Requesting 2021 annual landscape context…" : "Loading geographic basemap…",
-    ready: basemap === "satellite" ? `Tile requests complete · ${satelliteDate} UTC · coverage may be blank or obscured` : basemap === "landscape" ? "2021 annual composite · historical context · detail at zoom 6–14" : groups.length ? "Basemap ready · reported positions" : publicContext ? "European city context · no citizen positions invented" : "World view · no plottable coordinates",
-    limited: basemap === "satellite" ? "Satellite tiles unavailable or incomplete. Try another date or use the street map." : basemap === "landscape" ? "Historical imagery unavailable or incomplete. Retry or use the street map." : "Basemap data unavailable or incomplete. Use the location list.",
+    loading: basemap === "earth" ? "Loading NASA Blue Marble reference…" : basemap === "satellite" ? `Requesting NASA imagery for ${satelliteDate} UTC…` : basemap === "landscape" ? "Requesting 2021 annual landscape context…" : "Loading geographic basemap…",
+    ready: basemap === "earth" ? "Blue Marble · August 2004 reference · not current imagery" : basemap === "satellite" ? `Tile requests complete · ${satelliteDate} UTC · coverage may be blank or obscured` : basemap === "landscape" ? "2021 annual composite · historical context · detail at zoom 6–14" : groups.length ? "Basemap ready · reported positions" : publicContext ? "European city context · no citizen positions invented" : "World view · no plottable coordinates",
+    limited: basemap === "earth" ? "Earth reference unavailable or incomplete. Retry or use the street map." : basemap === "satellite" ? "Satellite tiles unavailable or incomplete. Try another date or use the street map." : basemap === "landscape" ? "Historical imagery unavailable or incomplete. Retry or use the street map." : "Basemap data unavailable or incomplete. Use the location list.",
     unavailable: "Mapping unavailable on this device. All records remain accessible.",
   }[mapStatus];
   const coordinates = selected?.field?.coordinates;
@@ -266,18 +266,21 @@ export function GeographicEvidenceMap({ records, onOpen, publicContext = false, 
     })}</div>}
     <div className="geo-projection-switch" role="group" aria-label="Geographic perspective"><div><span className="mc-kicker">GEOGRAPHIC PERSPECTIVE</span><small>City context and supplied positions stay distinct.</small></div><button type="button" aria-pressed={projection === "globe"} disabled={mapStatus === "loading" || mapStatus === "unavailable"} onClick={() => showProjection("globe")}><Globe2 size={16} /> Globe overview</button><button type="button" aria-pressed={projection === "mercator"} disabled={mapStatus === "loading" || mapStatus === "unavailable"} onClick={() => showProjection("mercator")}><MapPin size={15} /> Flat map</button></div>
     <div className="geo-context-controls">
-      <div className="geo-basemap-switch" role="group" aria-label="Map background"><button type="button" aria-pressed={basemap === "street"} onClick={() => setBasemap("street")}><MapPin size={15} /> Street map</button><button type="button" aria-pressed={basemap === "satellite"} onClick={() => setBasemap("satellite")}><Satellite size={16} /> NASA satellite</button><button type="button" aria-pressed={basemap === "landscape"} onClick={() => setBasemap("landscape")}><Globe2 size={16} /> Landscape · 2021</button></div>
+      <div className="geo-basemap-switch" role="group" aria-label="Map background"><button type="button" aria-pressed={basemap === "earth"} onClick={() => setBasemap("earth")}><Globe2 size={16} /> Earth reference</button><button type="button" aria-pressed={basemap === "street"} onClick={() => setBasemap("street")}><MapPin size={15} /> Street map</button><button type="button" aria-pressed={basemap === "satellite"} onClick={() => setBasemap("satellite")}><Satellite size={16} /> NASA satellite</button><button type="button" aria-pressed={basemap === "landscape"} onClick={() => setBasemap("landscape")}><Globe2 size={16} /> Landscape · 2021</button></div>
       {basemap === "satellite" ? <form className="geo-date-controls" onSubmit={(event) => { event.preventDefault(); chooseDate(dateDraft); }}>
         <button type="button" aria-label="Request previous UTC day" disabled={!previousDate} onClick={() => previousDate && chooseDate(previousDate)}><ChevronLeft size={17} /></button>
         <label><CalendarDays size={15} /><span>Requested day · UTC</span><input type="date" aria-label="Requested satellite day in UTC" aria-invalid={Boolean(dateError)} aria-describedby={dateError ? "geo-date-error" : "geo-satellite-limit"} min={SATELLITE_CONTEXT.firstDate} max={utcDate()} value={dateDraft} onChange={(event) => { setDateDraft(event.target.value); setDateError(null); }} required /></label>
         <button type="submit">Apply day</button><button type="button" aria-label="Request next UTC day" disabled={!nextDate} onClick={() => nextDate && chooseDate(nextDate)}><ChevronRight size={17} /></button>
-      </form> : basemap === "landscape" ? <div className="geo-landscape-hint"><p>2021 annual Sentinel-2 composite · historical landscape, not a current scene. Detail at zoom 6–14 from 10 m source bands.</p><button type="button" disabled={mapStatus === "loading" || mapStatus === "unavailable"} onClick={() => mapRef.current?.easeTo({ zoom: Math.max(6, mapRef.current.getZoom()), duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 500 })}>Zoom to landscape detail</button></div> : <p>Choose satellite for dated regional context around reported locations.</p>}
+      </form> : basemap === "landscape" ? <div className="geo-landscape-hint"><p>2021 annual Sentinel-2 composite · historical landscape, not a current scene. Detail at zoom 6–14 from 10 m source bands.</p><button type="button" disabled={mapStatus === "loading" || mapStatus === "unavailable"} onClick={() => mapRef.current?.easeTo({ zoom: Math.max(6, mapRef.current.getZoom()), duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 500 })}>Zoom to landscape detail</button></div> : basemap === "earth" ? <p><a href={EARTH_CONTEXT.documentationUrl} target="_blank" rel="noreferrer">NASA Blue Marble · August 2004</a>. Historical reference mosaic. Choose streets for city detail or satellite for a requested day.</p> : <p>Choose satellite for dated regional context around reported locations.</p>}
     </div>
+    {basemap === "satellite" && <div className="geo-coverage-note"><p>Black strips are gaps in the supplied daily imagery. No missing pixels have been filled or inferred.</p><button type="button" onClick={() => showProjection("globe")}>Show complete Earth overview</button></div>}
     {dateError && basemap === "satellite" && <p id="geo-date-error" className="geo-date-error" role="alert">{dateError} The map still requests {satelliteDate}.</p>}
     {landscapeOutsideCoverage && <p className="geo-date-error" role="status">The selected location is outside this historical layer’s latitude coverage (60°S–83°N). Its position and evidence remain available. <button type="button" onClick={() => setBasemap("street")}>Use street map</button></p>}
     <div className="geo-layout">
       <div className="geo-stage" data-projection={projection}>
-        <div ref={container} className="geo-map" />
+        <div className="geo-map-viewport"><div ref={container} className="geo-map" />
+          {basemap === "earth" && <div className="geo-imagery-label">Blue Marble · August 2004 reference</div>}
+        </div>
         <div className="geo-map-top"><span><MapPin size={14} /> {groups.length} exact location{groups.length === 1 ? "" : "s"}</span><button type="button" onClick={fitLocations} disabled={mapStatus === "loading" || mapStatus === "unavailable"}><Crosshair size={16} /> {groups.length ? "Fit locations" : publicContext ? `European overview${basemap === "landscape" ? " · streets" : ""}` : "World view"}</button></div>
         {((!groups.length && !publicContext) || mapStatus === "unavailable") && <div className="geo-map-message"><Globe2 size={32} /><h3>{mapStatus === "unavailable" ? "Your evidence is still here." : basemap === "street" ? "Coordinates make the connection." : "Explore Earth. Add evidence later."}</h3><p>{mapStatus === "unavailable" ? "The map needs WebGL and an available basemap connection. Inspect each record in the location list." : basemap === "landscape" ? "Historical 2021 landscape context. No observation positions are plotted. Pan and zoom to 6–14 for imagery; no site or visit is invented." : basemap === "satellite" ? "This is world satellite context. No observation positions are plotted. Pan and choose a date; supplied coordinates can connect your own records later." : "No records in this view have coordinates that this map can plot. Site names alone are never placed on the map."}</p></div>}
         <div className={`geo-map-status geo-status-${mapStatus}`}><span role="status"><i aria-hidden="true" />{statusText}</span>{(mapStatus === "limited" || mapStatus === "unavailable") && <div className="geo-map-recovery"><button type="button" onClick={() => { setMapStatus("loading"); setRevision((value) => value + 1); }}><RefreshCw size={14} /> Retry map</button>{basemap !== "street" && <button type="button" onClick={() => setBasemap("street")}>Use street map</button>}</div>}</div>
@@ -324,6 +327,6 @@ export function GeographicEvidenceMap({ records, onOpen, publicContext = false, 
     </section>}
     <div className="geo-records-heading"><div><p className="geo-kicker">ACCESSIBLE LOCATION INDEX</p><p>Select a record to inspect its location and provenance.</p></div><div className="geo-list-filter" role="group" aria-label="Location list filter"><button type="button" aria-pressed={listFilter === "all"} onClick={() => setListFilter("all")}>All records ({records.length})</button><button type="button" aria-pressed={listFilter === "unplotted"} onClick={() => setListFilter("unplotted")}>Not plotted ({unplottedCount})</button></div></div>
     <div className="geo-record-list">{listRecords.map((r) => <button type="button" key={r.id} className="geo-record" aria-pressed={r.id === selected?.id} onClick={() => selectReport(r)}><span className={`geo-record-icon${syntheticLocation(r) ? " geo-record-icon-synthetic" : ""}`}>{locationState(r) === "mapped" ? <MapPin size={17} /> : <MapPinOff size={17} />}</span><span><strong>{r.original.site || "Unnamed observation site"}</strong><small>{observationTime(r)}</small></span><span className="geo-record-label">{syntheticLocation(r) ? "Synthetic · " : ""}{locationLabel[locationState(r)]}</span><ArrowUpRight size={15} /></button>)}{!listRecords.length && <p className="geo-list-empty">{listFilter === "unplotted" && records.length ? "Every record in this view has plottable coordinates." : "No records in this view."}</p>}</div>
-    <footer className="geo-limits"><ShieldCheck size={16} /><p>Positions are reported metadata, not independently verified locations. A map marker does not establish a shared waterway, water safety or ecological condition. {syntheticCount > 0 && `${syntheticCount} records contain synthetic evidence or synthetic coordinates.`} {basemap === "satellite" ? "Satellite context: NASA GIBS / ESDIS · Terra MODIS." : basemap === "landscape" ? "Historical 2021 landscape: ESA WorldCover / Copernicus Sentinel data / Terrascope / VITO · CC BY 4.0." : "Basemap © OpenFreeMap / OpenMapTiles / OpenStreetMap contributors."}</p></footer>
+    <footer className="geo-limits"><ShieldCheck size={16} /><p>Positions are reported metadata, not independently verified locations. A map marker does not establish a shared waterway, water safety or ecological condition. {syntheticCount > 0 && `${syntheticCount} records contain synthetic evidence or synthetic coordinates.`} {basemap === "earth" ? "Historical reference: NASA Blue Marble · August 2004 / GIBS / ESDIS. Not current imagery." : basemap === "satellite" ? "Satellite context: NASA GIBS / ESDIS · Terra MODIS." : basemap === "landscape" ? "Historical 2021 landscape: ESA WorldCover / Copernicus Sentinel data / Terrascope / VITO · CC BY 4.0." : "Basemap © OpenFreeMap / OpenMapTiles / OpenStreetMap contributors."}</p></footer>
   </section>;
 }
