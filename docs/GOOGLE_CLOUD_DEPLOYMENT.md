@@ -81,7 +81,7 @@ The user explicitly approved storing four Groq credentials in Secret Manager wit
 
 The build registers the service-worker public path before compilation, then replaces it with the generated Workbox worker in the standalone public/client copies. The temporary source placeholder is removed. The hosted worker returned200.
 
-`.dockerignore` and `.gcloudignore` exclude local secrets and unnecessary files. The required `.openai/hosting.json` build configuration remains included. The latest geographic-section update uploaded325files/22.4MiB; source and2,898standalone files were scanned against configured credential values with zero matches. Relevant deployment/provisioning/verification logs also had zero matches. These checks are scoped evidence, not a general security audit.
+`.dockerignore` and `.gcloudignore` exclude local secrets and unnecessary files. The October5source publication removes the obsolete `.openai` metadata and its build dependency. Optional Cloudflare binding names can be provided through `CLOUDFLARE_D1_BINDING` and `CLOUDFLARE_R2_BINDING`; both are unset by default, preserving browser-local storage. The earlier geographic-section deployment uploaded325files/22.4MiB; source and2,898standalone files were scanned against configured credential values with zero matches. Relevant deployment/provisioning/verification logs also had zero matches. These checks are scoped evidence, not a general security audit.
 
 ## Verification
 
